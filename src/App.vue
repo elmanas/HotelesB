@@ -60,6 +60,15 @@ export default {
               Item</a
             >
           </li> -->
+
+          <!-- <router-link class="link" to="/Login">
+          <button>login</button>
+          </router-link>
+
+          <router-link class="link" to="/Registro">
+          <button>Register</button>
+          </router-link> -->
+          
         </ul>
       </div>
     </div>

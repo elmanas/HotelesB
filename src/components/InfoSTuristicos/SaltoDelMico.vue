@@ -31,10 +31,11 @@
       <center><h3>Salto del Mico</h3></center>
       <hr />
       <p style="padding: 10px; margin-top: -15px">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
-        dolor qui culpa quasi reprehenderit facilis odit voluptatibus molestiae
-        impedit at mollitia natus similique suscipit libero tempore saepe
-        eveniet dolore illo?
+        Salto del Mico: un mirador de ensueño en Barichara. A unos kilómetros de
+        Barichara se encuentra uno de los miradores naturales más importantes y
+        hermosos del país, el Salto del Mico. Este es el lugar idóneo para vivir
+        una aventura y experiencia única.Hoy, te invitamos a visitar este
+        maravilloso mirador.
       </p>
     </div>
 
@@ -42,58 +43,81 @@
       <i class="bi bi-bag-fill"></i> Reservar
     </button> -->
 
-    <div style="margin-top: 20px;" class="proveedores">
+    <div style="margin-top: 20px" class="proveedores">
       <center><h3>Visitalo</h3></center>
-      <p>Visitalo con uno de nuestros proveedores</p>
       <hr />
+      <center><p>Visitalo con uno de nuestros proveedores:</p></center>
 
       <!-- prov 1 -->
-      <div
-        style="
-          padding: 10px;
-          padding-bottom: 1px;
-          background-color: #ffffff;
-          /* align-items: center;
-          text-align: center; */
-          border-radius: 0 10px 10px 0; /* Redondear solo las esquinas superiores */
-          border-left: 5px solid #fd3838; /* Ancho y color del borde izquierdo */
-          box-shadow: 0px 5px 10px 1px #0000002e;
-          margin-bottom: 20px;
-        "
-      >
-        <h6>
-          Nombre:
-          <p>Hormiga recorridos Santander</p>
-        </h6>
-        <h6>
-          Telefono:
-          <p>3222431444</p>
-        </h6>
-      </div>
+      <!-- Contenedor de prov1 y prov2 -->
+      <div class="pro-container">
+        <!-- prov1 -->
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-radius: 0 10px 10px 0;
+            border-left: 5px solid #fd3838;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+            margin-bottom: 20px;
+          "
+        >
+          <h6>
+            Nombre:
+            <p>Hormiga recorridos Santander</p>
+          </h6>
+          <h6>
+            Telefono:
+            <p>3222431444</p>
+          </h6>
+        </div>
 
-      <!-- prov 2 -->
-      <div
-        style="
-          padding: 10px;
-          padding-bottom: 1px;
-          background-color: #ffffff;
-          /* align-items: center;
-          text-align: center; */
-          border-left: 5px solid #fd3838; /* Ancho y color del borde izquierdo */
-          border-radius: 0 10px 10px 0; /* Redondear solo las esquinas superiores */
-          box-shadow: 0px 5px 10px 1px #0000002e;
-        "
-      >
-        <h6>
-          Nombre:
-          <p>Agencia de turismo las rosas</p>
-        </h6>
-        <h6>
-          Telefono:
-          <p>3134717972</p>
-        </h6>
-      </div>
+        <!-- prov2 -->
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-left: 5px solid #fd3838;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+            margin-bottom: 20px;
+          "
+        >
+          <h6>
+            Nombre:
+            <p>Los corre caminos</p>
+          </h6>
+          <h6>
+            Telefono:
+            <p>3134738712</p>
+          </h6>
+        </div>
 
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-left: 5px solid #fd3838;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+          "
+        >
+          <h6>
+            Nombre:
+            <p>Agencia de turismo las rosas</p>
+          </h6>
+          <h6>
+            Telefono:
+            <p>3134717972</p>
+          </h6>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -101,25 +125,23 @@
 <script></script>
 
 <style scoped>
-
-.proveedores {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .proveedores {
-    grid-template-columns: 3fr;
+/* CSS para dispositivos con un ancho mínimo de 800px */
+@media (min-width: 800px) {
+  .pro-container {
+    display: flex; /* Utilizamos flexbox para los elementos hijos */
+    gap: 20px;
+  }
+  .pro {
+    flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
+    margin-bottom: 20px;
   }
 }
 
-
-h6{
+h6 {
   color: #000000;
 }
 
-h6 p{
+h6 p {
   color: #000000a7;
 }
 
