@@ -47,7 +47,7 @@ export default {
               >
             </li></router-link
           >
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link"
               ><i style="color: black" class="bi bi-house-fill"></i> Second
               Item</a
@@ -59,7 +59,7 @@ export default {
               ><i style="color: black" class="bi bi-house-fill"></i> Third
               Item</a
             >
-          </li>
+          </li> -->
         </ul>
       </div>
     </div>
