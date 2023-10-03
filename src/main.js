@@ -32,6 +32,15 @@ import SaltoDelMico from "../src/components/InfoSTuristicos/SaltoDelMico.vue";
 
 
 
+// Zona de administrador
+import RegitroHotel from "../src/components/Admin/RegitroHotel.vue";
+import RegistroHabitaciones from "../src/components/Admin/RegistroHabitaciones.vue";
+import EstadoHabitaciones from "../src/components/Admin/EstadoHabitaciones.vue";
+import VistaReservas from "../src/components/Admin/VistaReservas.vue";
+
+
+
+
 //definir rutas
 const routes = [
   {
@@ -45,6 +54,15 @@ const routes = [
   { path: "/Login", component: Login },
 
   { path: "/Registro", component: Registro },
+
+
+  { path: "/RegitroHotel", component: RegitroHotel },
+
+  { path: "/RegistroHabitaciones", component: RegistroHabitaciones },
+
+  { path: "/EstadoHabitaciones", component: EstadoHabitaciones },
+
+  { path: "/VistaReservas", component: VistaReservas },
 ];
 
 //objeto rutas - vue router

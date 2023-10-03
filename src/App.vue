@@ -61,13 +61,29 @@ export default {
             >
           </li> -->
 
-          <!-- <router-link class="link" to="/Login">
+          <router-link class="link" to="/Login">
           <button>login</button>
           </router-link>
 
           <router-link class="link" to="/Registro">
           <button>Register</button>
-          </router-link> -->
+          </router-link>
+
+          <router-link class="link" to="/RegitroHotel">
+          <button>1</button>
+          </router-link>
+
+          <router-link class="link" to="/RegistroHabitaciones">
+          <button>2</button>
+          </router-link>
+
+          <router-link class="link" to="/EstadoHabitaciones">
+          <button>3</button>
+          </router-link>
+
+          <router-link class="link" to="/VistaReservas">
+          <button>4</button>
+          </router-link>
           
         </ul>
       </div>
