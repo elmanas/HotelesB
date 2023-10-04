@@ -1,5 +1,4 @@
 <template>
-  <!-- Inicio de scroll de hoteles y sitios -->
   <main>
     <div class="galeria">
       <div class="Hoteles"><h5>Registra tu hotel</h5></div>
@@ -19,7 +18,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-sm-12 col-md-8 col-lg-8">
+                <div class="col-sm-12 col-md-8 col-lg-4">
                   <div class="mb-3">
                     <label class="form-label" for="direccion_hotel"
                       ><strong>Dirección *</strong></label
@@ -71,6 +70,9 @@
                       id="id_price_service-2"
                       placeholder="Teléfono de contacto"
                       name="tel_contacto"
+                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+                      pattern="[0-9]{10,}"
+                      title="Ingresa al menos 10 números"
                       required=""
                     />
                   </div>
@@ -81,7 +83,7 @@
                       ><strong>Correo *</strong></label
                     ><input
                       class="form-control"
-                      type="text"
+                      type="email"
                       id="id_price_service-3"
                       placeholder="Correo valido"
                       name="email"
@@ -98,19 +100,20 @@
                 class="btn btn-outline-danger btn"
                 role="button"
                 href="#"
-                style="margin-right: 5px;"
+                style="margin-right: 5px"
                 >Cancelar</a
               ><button
                 class="btn btn-outline-dark btn"
                 type="reset"
-                style="margin-right: 5px;"
+                style="margin-right: 5px"
               >
                 Limpiar</button
               ><button
                 class="btn btn-custom btn"
                 type="submit"
-                style="background: #fd3838; color: #fff;"
-              > <i class="bi bi-floppy-fill"></i>
+                style="background: #fd3838; color: #fff"
+              >
+                <i class="bi bi-floppy-fill"></i>
                 Registrar
               </button>
             </center>

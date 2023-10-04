@@ -50,12 +50,14 @@
                 <div class="mb-3">
                   <button
                     class="btn btn-primary d-block w-100"
-                    style="background: #fd3838"
+                    style="background: #fd3838; border-style: none;"
                   >
                     Iniciar Sesión
                   </button>
                 </div>
+                <router-link class="link" to="/Registro">
                 <p class="text-muted">¿No esta registrado? Regístrese&nbsp;</p>
+              </router-link>
               </form>
             </div>
           </div>

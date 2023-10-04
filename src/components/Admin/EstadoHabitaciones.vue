@@ -1,12 +1,258 @@
 <template>
-    <div class="Hoteles"><h5>Estado de las habitaciones</h5></div>
-  </template>
-  
-  <style>
+  <div class="galeria">
+    <div class="Hoteles"><h5>Estado de habitaciones</h5></div>
+    <div>
+      <!-- Botón para agregar nueva habitación -->
+      <button
+        style="margin-bottom: 10px; margin-top: 40px"
+        class="btn btn-dark"
+        @click="showAddModal"
+      >
+        <i class="material-icons">add_business</i>
+      </button>
+
+      <!-- Tabla de habitaciones -->
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead style="align-items: center; text-align: center">
+            <tr>
+              <th>Alias</th>
+              <th>Dirección</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(room, index) in rooms" :key="index">
+              <td>{{ room.alias }}</td>
+              <td>{{ room.direccion }}</td>
+              <td>{{ room.estado }}</td>
+              <td>
+                <div class="btn-container">
+                  <button class="btn btn-dark" @click="changeRoomStatus(index)">
+                    <i class="material-icons">change_circle</i>
+                  </button>
+                  <button class="btn btn-dark" @click="editRoom(index)">
+                    <i class="material-icons">edit</i>
+                  </button>
+                  <button class="btn btn-dark" @click="deleteRoom(index)">
+                    <i class="material-icons">delete</i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Modal para editar habitación -->
+      <div class="modal" tabindex="-1" role="dialog" ref="editModal">
+        <!-- Contenido del modal -->
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Editar Habitación</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                @click="hideEditModal"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <!-- Formulario de edición -->
+              <form>
+                <div class="mb-3">
+                  <label for="editAlias" class="form-label">Alias</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editAlias"
+                    v-model="editedRoom.alias"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="editDireccion" class="form-label"
+                    >Dirección</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editDireccion"
+                    v-model="editedRoom.direccion"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+                @click="hideEditModal"
+              >
+                Cancelar
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                @click="saveRoomChanges"
+              >
+                Guardar Cambios
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      rooms: [
+        {
+          alias: "Habitación 101",
+          direccion: "Calle 123",
+          estado: "Disponible",
+        },
+        {
+          alias: "Habitación 102",
+          direccion: "Calle 124",
+          estado: "Reservado",
+        },
+        { alias: "Habitación 103", direccion: "Calle 125", estado: "Ocupado" },
+      ],
+      editedRoom: { alias: "", direccion: "" },
+      editModalVisible: false,
+    };
+  },
+  methods: {
+    showAddModal() {
+      // Lógica para mostrar el modal de agregar nueva habitación
+    },
+    changeRoomStatus(index) {
+      // Lógica para cambiar el estado de la habitación
+    },
+    editRoom(index) {
+      // Lógica para abrir el modal de edición
+      this.editedRoom = { ...this.rooms[index] };
+      this.editModalVisible = true;
+    },
+    hideEditModal() {
+      // Lógica para cerrar el modal de edición
+      this.editModalVisible = false;
+    },
+    saveRoomChanges() {
+      // Lógica para guardar los cambios en la habitación editada
+    },
+    deleteRoom(index) {
+      // Lógica para eliminar la habitación
+    },
+  },
+};
+</script>
+
+<style scoped>
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Espacio entre los botones */
+}
+
+.btn {
+  border-radius: 50%; /* Redondear los botones */
+  padding: 5px; /* Agregar espacio interior para separar los iconos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.material-icons {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+.galeria {
+  padding: 16px;
+  margin-top: 8px;
+}
+
+h5 {
+  padding: 5px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.Hoteles {
+  background: linear-gradient(to right, #fd3838, transparent);
+  align-items: center;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
   .Hoteles {
-    background: linear-gradient(to right, #fd3838, transparent);
-    align-items: center;
+    background-color: #fd3838;
+    align-items: left;
     border-radius: 10px;
-    transition: 1s;
   }
-  </style>
+}
+
+
+/* Estilos para la tabla */
+.table-responsive {
+  border-radius: 10px; /* Redondear la tabla */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadir sombra a la tabla */
+  /* overflow: hidden; Para que la sombra no se desborde */
+}
+
+.table {
+  border-collapse: collapse; /* Para eliminar los espacios entre las celdas */
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
+}
+
+.btn-container {
+  display: flex;
+  gap: 5px; /* Espacio entre los botones */
+}
+
+.btn {
+  border-radius: 50%; /* Redondear los botones */
+  padding: 5px; /* Agregar espacio interior para separar los iconos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40; /* Color de fondo de los botones */
+  color: white; /* Color del texto de los botones */
+  border: none; /* Eliminar el borde de los botones */
+}
+
+.material-icons {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilos para scrollbar */
+.table-responsive::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #fd3838;
+  border-radius: 20px;
+}
+</style>

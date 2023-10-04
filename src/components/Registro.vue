@@ -27,7 +27,6 @@
                 </svg>
               </div>
               <form class="text-center" method="post">
-
                 <div class="mb-3">
                   <input
                     class="form-control"
@@ -78,12 +77,14 @@
                 <div class="mb-3">
                   <button
                     class="btn btn-primary d-block w-100"
-                    style="background: #fd3838; border-style: none;"
+                    style="background: #fd3838; border-style: none"
                   >
-                    Iniciar Sesión
+                    Registrarme
                   </button>
                 </div>
-                <p class="text-muted">¿No esta registrado? Regístrese&nbsp;</p>
+                <router-link class="link" to="/Login">
+                <p class="text-muted">¿Ya esta registrado? Inicie sesión&nbsp;</p>
+              </router-link>
               </form>
             </div>
           </div>
@@ -95,6 +96,11 @@
 </template>
 
 <style>
+
+.link {
+  text-decoration: none !important;
+}
+
 .bs-icon {
   --bs-icon-size: 0.75rem;
   display: flex;

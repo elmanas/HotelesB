@@ -1,5 +1,4 @@
 <template>
-  <!-- Inicio de scroll de hoteles y sitios -->
   <main>
     <div class="galeria">
       <div class="Hoteles"><h5>Registra tus habitaciones</h5></div>
@@ -47,7 +46,7 @@
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="capacidad_maxima"
                       ><strong>Capacidad máxima *</strong></label
@@ -71,7 +70,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="c_dobles"
                       ><strong>Camas dobles *</strong></label
@@ -90,7 +89,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="c_sencillas"
                       ><strong>Camas sencillas *</strong></label
@@ -109,7 +108,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="h_camarotes"
                       ><strong>Camarotes *</strong></label
@@ -128,39 +127,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label"><strong>Baño *</strong></label>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="banio"
-                        id="banio_privado"
-                        value="privado"
-                        required=""
-                      />
-                      <label class="form-check-label" for="banio_privado"
-                        >Privado</label
-                      >
-                    </div>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="banio"
-                        id="banio_compartido"
-                        value="compartido"
-                        required=""
-                      />
-                      <label class="form-check-label" for="banio_compartido"
-                        >Compartido</label
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="h_ventiladores"
                       ><strong>Ventiladores *</strong></label
@@ -179,7 +146,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
                     <label class="form-label" for="h_closet"
                       ><strong>Closet *</strong></label
@@ -198,108 +165,136 @@
                   </div>
                 </div>
 
-                <!-- <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-sm-12 col-md-4 col-lg-2">
                   <div class="mb-3">
-                    <strong>Imagenes *</strong>
+                    <label class="form-label" for="bano"
+                      ><strong>Baño *</strong></label
+                    >
+                    <select
+                      class="form-select"
+                      id="bano"
+                      name="bano"
+                      required=""
+                    >
+                      <option value="Privado">Privado</option>
+                      <option value="Compartido">Compartido</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2">
+                  <div class="mb-3">
+                    <label class="form-label" for="h_estado"
+                      ><strong>Estado *</strong></label
+                    >
+                    <select
+                      class="form-select"
+                      id="h_estado"
+                      name="h_estado"
+                      required=""
+                    >
+                      <option value="Disponible">Disponible</option>
+                      <option value="Reservado">Reservado</option>
+                      <option value="Ocupado">Ocupado</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-1">
+                  <div class="mb-3">
+                    <label class="form-label" for="h_servicios"
+                      ><strong>Wi-Fi *</strong></label
+                    >
+                    <select
+                      class="form-select"
+                      id="wifi"
+                      name="wifi"
+                      required=""
+                    >
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-1">
+                  <div class="mb-3">
+                    <label class="form-label" for="h_servicios"
+                      ><strong>TV *</strong></label
+                    >
+                    <select class="form-select" id="tv" name="tv" required="">
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2">
+                  <div class="mb-3">
+                    <label class="form-label" for="h_servicios"
+                      ><strong>Aire acondicionado *</strong></label
+                    >
+                    <select
+                      class="form-select"
+                      id="aire"
+                      name="aire"
+                      required=""
+                    >
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-2">
+                  <div class="mb-3">
+                    <label class="form-label" for="h_servicios"
+                      ><strong>Aseo *</strong></label
+                    >
+                    <select
+                      class="form-select"
+                      id="aseo"
+                      name="aseo"
+                      required=""
+                    >
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                  <div class="mb-3">
+                    <strong>4 Imágenes *</strong>
                     <input
+                      style="margin-top: 13px"
+                      :required="imagesSelected !== 4"
                       type="file"
                       ref="fileInput"
                       accept="image/*"
                       multiple
                       @change="handleFileUpload"
                     />
-                    Aquí se muestran las imagenes (Vista previa)
-                    <div v-for="(image, index) in uploadedImages" :key="index">
-                      <img style="height: 100px; border-radius: 10px;" :src="image" alt="Imagen" />
-                    </div>
-                  </div>
-                </div> -->
-
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label><strong>Servicios *</strong></label>
-                    <!-- Checkbox para el servicio de wifi -->
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="wifi"
-                        value="Wifi"
-                        v-model="selectedServices"
-                      />
-                      <label class="form-check-label" for="wifi">Wifi</label>
-                    </div>
-
-                    <!-- Checkbox para el servicio de TV -->
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="tv"
-                        value="TV"
-                        v-model="selectedServices"
-                      />
-                      <label class="form-check-label" for="tv">TV</label>
-                    </div>
-
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="arc"
-                        value="Aire acondicionado"
-                        v-model="selectedServices"
-                      />
-                      <label class="form-check-label" for="arc"
-                        >Aire acondicionado</label
-                      >
-                    </div>
-
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="vad"
-                        value="Ventilador adicional"
-                        v-model="selectedServices"
-                      />
-                      <label class="form-check-label" for="vad"
-                        >Ventilador adicional</label
-                      >
-                    </div>
-
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="aseo"
-                        value="Aseo (Temporada)"
-                        v-model="selectedServices"
-                      />
-                      <label class="form-check-label" for="aseo">Aseo</label>
-                    </div>
-                  </div>
-
-                  <!-- Mostrar los servicios seleccionados -->
-                  <div>
-                    <strong>Servicios Seleccionados:</strong>
-                    <ul
-                      style="
-                        padding: 10px;
-                        padding-bottom: 1px;
-                        background-color: #ffffff;
-                        border-radius: 0 10px 10px 0;
-                        border-left: 5px solid #fd3838;
-                        box-shadow: 0px 5px 10px 1px #0000002e;
-                        margin-bottom: 20px;
-                      "
+                    <!-- Contenedor de las imágenes con margen -->
+                    <div
+                      style="margin-top: 15px"
+                      class="d-flex flex-wrap gap-3"
                     >
-                      <li style="margin-left: 20px;" v-for="service in selectedServices" :key="service">
-                        {{ service }}
-                      </li>
-                    </ul>
+                      <div
+                        v-for="(image, index) in uploadedImages"
+                        :key="index"
+                        class="image-preview"
+                      >
+                        <img
+                          class="fixed-size-image"
+                          :src="image.src"
+                          :alt="image.alt"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
+                <!-- Fin registro habitaciones -->
               </div>
             </div>
           </div>
@@ -315,6 +310,7 @@
                 class="btn btn-outline-dark btn"
                 type="reset"
                 style="margin-right: 5px"
+                @click="clearImages"
               >
                 Limpiar</button
               ><button
@@ -339,7 +335,7 @@ export default {
   data() {
     return {
       uploadedImages: [], // Almacenar las imágenes cargadas
-      selectedServices: [], // Almacenar los servicios seleccionados
+      imagesSelected: 0, // Contador de imágenes seleccionadas
     };
   },
   methods: {
@@ -350,30 +346,32 @@ export default {
       // Recorrer los archivos seleccionados
       for (let i = 0; i < files.length; i++) {
         const file = files[i];
-
-        // Crear una URL temporal para la vista previa de la imagen
         const imageURL = URL.createObjectURL(file);
 
-        // Agregar la URL al array de imágenes cargadas
-        this.uploadedImages.push(imageURL);
+        this.uploadedImages.push({ src: imageURL, alt: "Imagen" });
       }
 
-      // Actualizar el texto según la cantidad de archivos seleccionados
-      this.selectedFileText =
-        files.length === 0
-          ? "Selecciona 4 imágenes..."
-          : `${files.length} imágenes seleccionadas`;
+      // Actualizar el contador de imágenes seleccionadas
+      this.imagesSelected = this.uploadedImages.length;
 
       // Limpiar el campo de entrada de archivos si es necesario
-      // fileInput.value = '';
-
-      // Puedes realizar otras acciones aquí, como enviar las imágenes al servidor si es necesario
+      fileInput.value = "";
+    },
+    clearImages() {
+      // Restablecer el array de imágenes cargadas
+      this.uploadedImages = [];
     },
   },
 };
 </script>
 
 <style scoped>
+.fixed-size-image {
+  width: 200px;
+  height: 150px; 
+  border-radius: 10px;
+}
+
 .link {
   text-decoration: none !important;
 }

@@ -67,7 +67,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: #fd3838;
             border-radius: 10px;
             padding: 2px;
           "
