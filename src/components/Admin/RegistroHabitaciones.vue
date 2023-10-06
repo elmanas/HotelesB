@@ -18,7 +18,7 @@
             </div>
             <div class="card-body">
               <div class="row">
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="alias_habitacion"
                       ><strong>Alias *</strong></label
@@ -26,13 +26,13 @@
                       class="form-control"
                       type="text"
                       id="alias_habitacion"
-                      placeholder="Para identificar la habitación"
+                      placeholder="Ej: Esquinera"
                       name="alias_habitacion"
                       required=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="direccion_habitacion"
                       ><strong>Dirección *</strong></label
@@ -40,16 +40,17 @@
                       class="form-control"
                       type="text"
                       id="direccion_habitacion"
-                      placeholder="Dirección de la habitación"
+                      placeholder="Ej: Calle 6A"
                       name="direccion_habitacion"
                       required=""
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-2">
+
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="capacidad_maxima"
-                      ><strong>Capacidad máxima *</strong></label
+                      ><strong>Capacidad max *</strong></label
                     >
                     <select
                       class="form-select"
@@ -70,7 +71,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="c_dobles"
                       ><strong>Camas dobles *</strong></label
@@ -81,15 +82,15 @@
                       name="c_dobles"
                       required=""
                     >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 doble</option>
+                      <option value="2">2 dobles</option>
+                      <option value="3">3 dobles</option>
+                      <option value="4">4 dobles</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="c_sencillas"
                       ><strong>Camas sencillas *</strong></label
@@ -100,15 +101,15 @@
                       name="c_sencillas"
                       required=""
                     >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 sencilla</option>
+                      <option value="2">2 sencillas</option>
+                      <option value="3">3 sencillas</option>
+                      <option value="4">4 sencillas</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_camarotes"
                       ><strong>Camarotes *</strong></label
@@ -119,15 +120,15 @@
                       name="h_camarotes"
                       required=""
                     >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 Camarote</option>
+                      <option value="2">2 Camarotes</option>
+                      <option value="3">3 Camarotes</option>
+                      <option value="4">4 Camarotes</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_ventiladores"
                       ><strong>Ventiladores *</strong></label
@@ -138,15 +139,15 @@
                       name="h_ventiladores"
                       required=""
                     >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 Ventilador</option>
+                      <option value="2">2 Ventiladores</option>
+                      <option value="3">3 Ventiladores</option>
+                      <option value="4">4 Ventiladores</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_closet"
                       ><strong>Closet *</strong></label
@@ -157,15 +158,15 @@
                       name="h_closet"
                       required=""
                     >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
+                      <option value="1">1 closet</option>
+                      <option value="2">2 closet</option>
+                      <option value="3">3 closet</option>
+                      <option value="4">4 closet</option>
                     </select>
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="bano"
                       ><strong>Baño *</strong></label
@@ -182,7 +183,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_estado"
                       ><strong>Estado *</strong></label
@@ -200,7 +201,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-1">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_servicios"
                       ><strong>Wi-Fi *</strong></label
@@ -217,7 +218,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-1">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_servicios"
                       ><strong>TV *</strong></label
@@ -229,10 +230,10 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_servicios"
-                      ><strong>Aire acondicionado *</strong></label
+                      ><strong>Ventilación *</strong></label
                     >
                     <select
                       class="form-select"
@@ -246,7 +247,7 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-2">
+                <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_servicios"
                       ><strong>Aseo *</strong></label
@@ -263,9 +264,10 @@
                   </div>
                 </div>
 
-                <div class="col-sm-12 col-md-4 col-lg-4">
+                <div class="col-15">
                   <div class="mb-3">
                     <strong>4 Imágenes *</strong>
+                    <br />
                     <input
                       style="margin-top: 13px"
                       :required="imagesSelected !== 4"
@@ -277,8 +279,8 @@
                     />
                     <!-- Contenedor de las imágenes con margen -->
                     <div
-                      style="margin-top: 15px"
-                      class="d-flex flex-wrap gap-3"
+                      style="margin-top: 15px; display: flex"
+                      class="d-flex flex-wrap gap-1"
                     >
                       <div
                         v-for="(image, index) in uploadedImages"
@@ -367,9 +369,11 @@ export default {
 
 <style scoped>
 .fixed-size-image {
-  width: 200px;
-  height: 150px; 
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
+  border-style: solid;
+  border-color: #fd3838;
 }
 
 .link {
@@ -394,11 +398,26 @@ h5 {
   transition: 1s;
 }
 
+/* Estilos para resoluciones de 1000px o más */
+@media screen and (min-width: 1000px) {
+  .row .col-6 {
+    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
+    max-width: 25%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .Hoteles {
     background-color: #fd3838;
     align-items: left;
     border-radius: 10px;
+  }
+
+  .d-flex {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos (opcional) */
+    flex-wrap: wrap;
   }
 }
 </style>

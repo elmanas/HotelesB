@@ -39,6 +39,7 @@ import RegitroHotel from "../src/components/Admin/RegitroHotel.vue";
 import RegistroHabitaciones from "../src/components/Admin/RegistroHabitaciones.vue";
 import EstadoHabitaciones from "../src/components/Admin/EstadoHabitaciones.vue";
 import VistaReservas from "../src/components/Admin/VistaReservas.vue";
+import RegistroProveedores from "../src/components/Admin/RegistroProveedores.vue";
 
 
 
@@ -65,6 +66,8 @@ const routes = [
   { path: "/EstadoHabitaciones", component: EstadoHabitaciones },
 
   { path: "/VistaReservas", component: VistaReservas },
+
+  { path: "/RegistroProveedores", component: RegistroProveedores },
 ];
 
 //objeto rutas - vue router

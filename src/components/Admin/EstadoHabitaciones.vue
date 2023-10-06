@@ -5,10 +5,11 @@
       <!-- Botón para agregar nueva habitación -->
       <button
         style="margin-bottom: 10px; margin-top: 40px"
-        class="btn btn-dark"
+        class="custom"
         @click="showAddModal"
       >
-        <i class="material-icons">add_business</i>
+        <i style="margin-right: 5px;" class="material-icons">add_business</i>
+        Añadir habitación
       </button>
 
       <!-- Tabla de habitaciones -->
@@ -17,7 +18,6 @@
           <thead style="align-items: center; text-align: center">
             <tr>
               <th>Alias</th>
-              <th>Dirección</th>
               <th>Estado</th>
               <th>Acciones</th>
             </tr>
@@ -25,7 +25,6 @@
           <tbody>
             <tr v-for="(room, index) in rooms" :key="index">
               <td>{{ room.alias }}</td>
-              <td>{{ room.direccion }}</td>
               <td>{{ room.estado }}</td>
               <td>
                 <div class="btn-container">
@@ -118,15 +117,13 @@ export default {
       rooms: [
         {
           alias: "Habitación 101",
-          direccion: "Calle 123",
           estado: "Disponible",
         },
         {
           alias: "Habitación 102",
-          direccion: "Calle 124",
           estado: "Reservado",
         },
-        { alias: "Habitación 103", direccion: "Calle 125", estado: "Ocupado" },
+        { alias: "Habitación 103", estado: "Ocupado" },
       ],
       editedRoom: { alias: "", direccion: "" },
       editModalVisible: false,
@@ -203,7 +200,6 @@ h5 {
   }
 }
 
-
 /* Estilos para la tabla */
 .table-responsive {
   border-radius: 10px; /* Redondear la tabla */
@@ -240,6 +236,17 @@ th {
   background-color: #343a40; /* Color de fondo de los botones */
   color: white; /* Color del texto de los botones */
   border: none; /* Eliminar el borde de los botones */
+}
+
+.custom{
+  background-color: #343a40;
+  border-style: none;
+  border-radius: 10px;
+  color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  display: flex;
 }
 
 .material-icons {

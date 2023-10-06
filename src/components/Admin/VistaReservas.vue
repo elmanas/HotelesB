@@ -119,25 +119,25 @@
                     />
                   </div>
                 </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="r_idtransferencia"
-                      ><strong>Saldo *</strong></label
-                    >
-                    <div
-                      style="
-                        background-color: #fd3838;
-                        margin-right: 200px;
-                        align-items: center;
-                        text-align: center;
-                        color: #fff;
-                        border-radius: 10px;
-                      "
-                    >
-                      <p style="align-items: center">$ 100.000</p>
+                  <div class="col-sm-12 col-md-4 col-lg-4">
+                    <div class="mb-3">
+                      <label class="form-label" for="r_idtransferencia"
+                        ><strong>Saldo *</strong></label
+                      >
+                      <div
+                        style="
+                          background-color: #fd3838;
+                          margin-right: 200px;
+                          align-items: center;
+                          text-align: center;
+                          color: #fff;
+                          border-radius: 10px;
+                        "
+                      >
+                        <p>$ 100.000</p>
+                      </div>
                     </div>
                   </div>
-                </div>
                 <!-- Fin de el registro de reservas -->
               </div>
             </div>
@@ -196,6 +196,14 @@ h5 {
   align-items: center;
   border-radius: 10px;
   transition: 1s;
+}
+
+/* Estilos para resoluciones de 1000px o más */
+@media screen and (min-width: 1000px) {
+  .row .col-6 {
+    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
+    max-width: 25%;
+  }
 }
 
 @media screen and (max-width: 500px) {
