@@ -26,7 +26,7 @@
                       class="form-control"
                       type="text"
                       id="id_name_service"
-                      placeholder="Dirección del hotel"
+                      placeholder="Ej: Calle 6A #3-20 Barrio Rojo"
                       name="direccion_hotel"
                       required=""
                     />

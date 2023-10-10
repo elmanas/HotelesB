@@ -3,14 +3,15 @@
     <div class="Hoteles"><h5>Estado de habitaciones</h5></div>
     <div>
       <!-- Botón para agregar nueva habitación -->
-      <button
-        style="margin-bottom: 10px; margin-top: 40px"
-        class="custom"
-        @click="showAddModal"
-      >
-        <i style="margin-right: 5px;" class="material-icons">add_business</i>
-        Añadir habitación
-      </button>
+      <center>
+        <button
+          style="margin-bottom: 5px; margin-top: 30px"
+          class="btn btn-dark"
+          @click="showAddModal"
+        >
+          <i class="material-icons">add_business</i>
+        </button>
+      </center>
 
       <!-- Tabla de habitaciones -->
       <div class="table-responsive">
@@ -131,25 +132,25 @@ export default {
   },
   methods: {
     showAddModal() {
-      // Lógica para mostrar el modal de agregar nueva habitación
+      // mostrar el modal de agregar nueva habitación
     },
     changeRoomStatus(index) {
-      // Lógica para cambiar el estado de la habitación
+      // cambiar el estado de la habitación
     },
     editRoom(index) {
-      // Lógica para abrir el modal de edición
+      // abrir el modal de edición
       this.editedRoom = { ...this.rooms[index] };
       this.editModalVisible = true;
     },
     hideEditModal() {
-      // Lógica para cerrar el modal de edición
+      // cerrar el modal de edición
       this.editModalVisible = false;
     },
     saveRoomChanges() {
-      // Lógica para guardar los cambios en la habitación editada
+      // guardar los cambios en la habitación editada
     },
     deleteRoom(index) {
-      // Lógica para eliminar la habitación
+      // eliminar la habitación
     },
   },
 };
@@ -238,7 +239,7 @@ th {
   border: none; /* Eliminar el borde de los botones */
 }
 
-.custom{
+.custom {
   background-color: #343a40;
   border-style: none;
   border-radius: 10px;
