@@ -251,6 +251,7 @@ export default {
 </script>
 
 <style scoped>
+
 .btn.btn-custom {
   /* Otros estilos de tu icono */
   transition: transform 0.3s; /* Transición de transformación */

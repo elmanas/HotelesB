@@ -1,4 +1,3 @@
-
 <template>
   <main>
     <div class="galeria">
@@ -21,14 +20,14 @@
               <div class="row">
                 <div class="col-6">
                   <div class="mb-3">
-                    <label class="form-label" for="alias_habitacion"
-                      ><strong>Alias *</strong></label
+                    <label class="form-label" for="n_sitio"
+                      ><strong>Nombre *</strong></label
                     ><input
                       class="form-control"
                       type="text"
-                      id="alias_habitacion"
-                      placeholder="Ej: Esquinera"
-                      name="alias_habitacion"
+                      id="n_sitio"
+                      placeholder="Ej: Juan Curí"
+                      name="n_sitio"
                       required=""
                     />
                   </div>
@@ -43,16 +42,17 @@
                           class="bi bi-file-earmark-arrow-up-fill"
                         ></i>
                       </p>
-                    <br />
-                    <input class="foto"
-                      :required="imagesSelected !== 4"
-                      type="file"
-                      ref="fileInput"
-                      accept="image/*"
-                      multiple
-                      @change="handleFileUpload"
-                    />
-                  </div>
+                      <br />
+                      <input
+                        class="foto"
+                        :required="imagesSelected !== 4"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
                     <!-- Contenedor de las imágenes con margen -->
                     <div
                       style="margin-top: 15px; display: flex"
@@ -73,236 +73,42 @@
                   </div>
                 </div>
 
+                <!-- proveedor 1 -->
                 <div class="col-6">
                   <div class="mb-3">
-                    <label class="form-label" for="capacidad_maxima"
-                      ><strong>Capacidad max *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="capacidad_maxima"
-                      name="capacidad_maxima"
+                    <label class="form-label" for="prov_1"
+                      ><strong>Proveedor 1 *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="prov_1"
+                      placeholder="Nombre"
+                      name="prov_1"
                       required=""
-                    >
-                      <option value="2">2 personas</option>
-                      <option value="3">3 personas</option>
-                      <option value="4">4 personas</option>
-                      <option value="5">5 personas</option>
-                      <option value="6">6 personas</option>
-                      <option value="7">7 personas</option>
-                      <option value="8">8 personas</option>
-                      <option value="9">9 personas</option>
-                      <option value="10">10 personas</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="c_dobles"
-                      ><strong>Camas dobles *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="c_dobles"
-                      name="c_dobles"
-                      required=""
-                    >
-                      <option value="1">1 doble</option>
-                      <option value="2">2 dobles</option>
-                      <option value="3">3 dobles</option>
-                      <option value="4">4 dobles</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="c_sencillas"
-                      ><strong>Camas sencillas *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="c_sencillas"
-                      name="c_sencillas"
-                      required=""
-                    >
-                      <option value="1">1 sencilla</option>
-                      <option value="2">2 sencillas</option>
-                      <option value="3">3 sencillas</option>
-                      <option value="4">4 sencillas</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_camarotes"
-                      ><strong>Camarotes *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_camarotes"
-                      name="h_camarotes"
-                      required=""
-                    >
-                      <option value="1">1 Camarote</option>
-                      <option value="2">2 Camarotes</option>
-                      <option value="3">3 Camarotes</option>
-                      <option value="4">4 Camarotes</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_ventiladores"
-                      ><strong>Ventiladores *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_ventiladores"
-                      name="h_ventiladores"
-                      required=""
-                    >
-                      <option value="1">1 Ventilador</option>
-                      <option value="2">2 Ventiladores</option>
-                      <option value="3">3 Ventiladores</option>
-                      <option value="4">4 Ventiladores</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_closet"
-                      ><strong>Closet *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_closet"
-                      name="h_closet"
-                      required=""
-                    >
-                      <option value="1">1 closet</option>
-                      <option value="2">2 closet</option>
-                      <option value="3">3 closet</option>
-                      <option value="4">4 closet</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="bano"
-                      ><strong>Baño *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="bano"
-                      name="bano"
-                      required=""
-                    >
-                      <option value="Privado">Privado</option>
-                      <option value="Compartido">Compartido</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_estado"
-                      ><strong>Estado *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_estado"
-                      name="h_estado"
-                      required=""
-                    >
-                      <option value="Disponible">Disponible</option>
-                      <option value="Reservado">Reservado</option>
-                      <option value="Ocupado">Ocupado</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>Wi-Fi *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="wifi"
-                      name="wifi"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>TV *</strong></label
-                    >
-                    <select class="form-select" id="tv" name="tv" required="">
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>Ventilación *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="aire"
-                      name="aire"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>Aseo *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="aseo"
-                      name="aseo"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-15">
-                  <div class="mb-3">
-                    <strong>4 Imágenes *</strong>
-                    <br />
-                    <input
-                      style="margin-top: 13px"
-                      :required="imagesSelected !== 4"
-                      type="file"
-                      ref="fileInput"
-                      accept="image/*"
-                      multiple
-                      @change="handleFileUpload"
                     />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <strong>Logo *</strong>
+                    <div class="logo">
+                      <p class="logop">
+                        <i
+                          style="color: #fd3838; font-size: 30px"
+                          class="bi bi-file-earmark-arrow-up-fill"
+                        ></i>
+                      </p>
+                      <br />
+                      <input
+                        class="foto"
+                        :required="imagesSelected !== 4"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
                     <!-- Contenedor de las imágenes con margen -->
                     <div
                       style="margin-top: 15px; display: flex"
@@ -322,7 +128,120 @@
                     </div>
                   </div>
                 </div>
-                <!-- Fin registro habitaciones -->
+
+                <!-- proveedor 2 -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="prov_2"
+                      ><strong>Proveedor 2 *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="prov_2"
+                      placeholder="Nombre"
+                      name="prov_2"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <strong>Logo *</strong>
+                    <div class="logo">
+                      <p class="logop">
+                        <i
+                          style="color: #fd3838; font-size: 30px"
+                          class="bi bi-file-earmark-arrow-up-fill"
+                        ></i>
+                      </p>
+                      <br />
+                      <input
+                        class="foto"
+                        :required="imagesSelected !== 4"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
+                    <!-- Contenedor de las imágenes con margen -->
+                    <div
+                      style="margin-top: 15px; display: flex"
+                      class="d-flex flex-wrap gap-1"
+                    >
+                      <div
+                        v-for="(image, index) in uploadedImages"
+                        :key="index"
+                        class="image-preview"
+                      >
+                        <img
+                          class="fixed-size-image"
+                          :src="image.src"
+                          :alt="image.alt"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- proveedor 3 -->
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="prov_3"
+                      ><strong>Proveedor 3 *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="prov_3"
+                      placeholder="Nombre"
+                      name="prov_3"
+                      required=""
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="mb-3">
+                    <strong>Logo *</strong>
+                    <div class="logo">
+                      <p class="logop">
+                        <i
+                          style="color: #fd3838; font-size: 30px"
+                          class="bi bi-file-earmark-arrow-up-fill"
+                        ></i>
+                      </p>
+                      <br />
+                      <input
+                        class="foto"
+                        :required="imagesSelected !== 4"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
+                    <!-- Contenedor de las imágenes con margen -->
+                    <div
+                      style="margin-top: 15px; display: flex"
+                      class="d-flex flex-wrap gap-1"
+                    >
+                      <div
+                        v-for="(image, index) in uploadedImages"
+                        :key="index"
+                        class="image-preview"
+                      >
+                        <img
+                          class="fixed-size-image"
+                          :src="image.src"
+                          :alt="image.alt"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Fin registro proveedores  -->
               </div>
             </div>
           </div>
@@ -394,7 +313,6 @@ export default {
 </script>
 
 <style scoped>
-
 .logo {
   position: relative;
   max-width: 30px;
@@ -418,8 +336,8 @@ export default {
   opacity: 0;
 }
 .fixed-size-image {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border-radius: 10px;
   border-style: solid;
   border-color: #fd3838;
@@ -450,7 +368,7 @@ h5 {
 /* Estilos para resoluciones de 1000px o más */
 @media screen and (min-width: 1000px) {
   .row .col-6 {
-    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
+    flex: 0 0 30%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
     max-width: 25%;
   }
 }
