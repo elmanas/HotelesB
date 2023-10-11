@@ -94,7 +94,7 @@ export default {
 
   <!-- Start: Footer Clean -->
 
-  <footer class="text-center py-4">
+  <!-- <footer style="background-color: rgba(168, 168, 168, 0.299); margin-top: 20px;" class="text-center py-4">
     <div class="container">
       <div class="row row-cols-1 row-cols-lg-3">
         <div class="col">
@@ -163,7 +163,7 @@ export default {
         </div>
       </div>
     </div>
-  </footer>
+  </footer> -->
   <!-- End: Footer Clean -->
   <!-- <router-link to="/GaleriaHotel1"><button>GaleriaHotel1</button></router-link> -->
 </template>

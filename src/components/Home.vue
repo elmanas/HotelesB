@@ -196,39 +196,28 @@
 
       <div class="lista-imagenes sitios-images">
         <div class="imagen-con-texto">
-
-
           <router-link class="link" to="/SaltoDelMico">
             <img src="https://i.ibb.co/R77C9hC/1.jpg" alt="imagen-principal" />
             <p class="text-hotel">Salto del mico</p>
           </router-link>
         </div>
 
-
         <div class="imagen-con-texto">
-
           <img src="https://i.ibb.co/GxS2JWX/2.jpg" alt="imagen-principal" />
           <p class="text-hotel">Catedral</p>
         </div>
 
-
         <div class="imagen-con-texto">
-
           <img src="https://i.ibb.co/WkgZkZJ/3.jpg" alt="imagen-principal" />
           <p class="text-hotel">Museo</p>
         </div>
 
-
         <div class="imagen-con-texto">
-
-
           <img src="https://i.ibb.co/xD9pTrH/4.jpg" alt="imagen-principal" />
           <p class="text-hotel">Juan Curí</p>
         </div>
 
-
         <div class="imagen-con-texto">
-
           <img src="https://i.ibb.co/nBwMT4W/5.jpg" alt="imagen-principal" />
           <p class="text-hotel">Pscinas</p>
         </div>
@@ -251,6 +240,14 @@ export default {
 </script>
 
 <style scoped>
+.imagen-con-texto {
+  transition: 0.5s;
+}
+
+.imagen-con-texto:hover {
+  filter: saturate(3);
+  transform: scale(1.01); /* Cambia el tamaño al pasar el mouse */
+}
 
 .btn.btn-custom {
   /* Otros estilos de tu icono */
@@ -313,7 +310,9 @@ export default {
 .galeria {
   padding: 16px;
   margin-top: 8px;
+  transform: 1s;
 }
+
 /* 
     .imagen-principal img {
       width: 100%;

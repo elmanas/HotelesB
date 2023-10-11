@@ -3,15 +3,25 @@
     <div class="Hoteles"><h5>Estado de habitaciones</h5></div>
     <div>
       <!-- Botón para agregar nueva habitación -->
-      <center>
-        <button
-          style="margin-bottom: 5px; margin-top: 30px"
-          class="btn btn-dark"
-          @click="showAddModal"
-        >
-          <i class="material-icons">add_business</i>
-        </button>
-      </center>
+      <div>
+        <div class="btn-group" role="group">
+          <button
+            style="margin-bottom: 5px; margin-top: 30px"
+            class="btn btn-dark" 
+            @click="showAddModal"
+          >
+            <i class="material-icons">add_box</i>
+          </button>
+
+          <button
+            style="margin-bottom: 5px; margin-top: 30px"
+            class="btn btn-dark"
+            @click=""
+          >
+            <i class="material-icons">sim_card_download</i>
+          </button>
+        </div>
+      </div>
 
       <!-- Tabla de habitaciones -->
       <div class="table-responsive">
@@ -36,7 +46,7 @@
                     <i class="material-icons">edit</i>
                   </button>
                   <button class="btn btn-dark" @click="deleteRoom(index)">
-                    <i class="material-icons">delete</i>
+                    <i class="material-icons">delete</i> 
                   </button>
                 </div>
               </td>
@@ -202,12 +212,6 @@ h5 {
 }
 
 /* Estilos para la tabla */
-.table-responsive {
-  border-radius: 10px; /* Redondear la tabla */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añadir sombra a la tabla */
-  /* overflow: hidden; Para que la sombra no se desborde */
-}
-
 .table {
   border-collapse: collapse; /* Para eliminar los espacios entre las celdas */
   width: 100%;
@@ -228,6 +232,7 @@ th {
   gap: 5px; /* Espacio entre los botones */
 }
 
+/* Botones de acción dentro de la tabla */
 .btn {
   border-radius: 50%; /* Redondear los botones */
   padding: 5px; /* Agregar espacio interior para separar los iconos */

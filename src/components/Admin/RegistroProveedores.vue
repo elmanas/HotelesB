@@ -50,25 +50,7 @@
                         ref="fileInput"
                         accept="image/*"
                         multiple
-                        @change="handleFileUpload"
                       />
-                    </div>
-                    <!-- Contenedor de las imágenes con margen -->
-                    <div
-                      style="margin-top: 15px; display: flex"
-                      class="d-flex flex-wrap gap-1"
-                    >
-                      <div
-                        v-for="(image, index) in uploadedImages"
-                        :key="index"
-                        class="image-preview"
-                      >
-                        <img
-                          class="fixed-size-image"
-                          :src="image.src"
-                          :alt="image.alt"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -101,30 +83,12 @@
                       <br />
                       <input
                         class="foto"
-                        :required="imagesSelected !== 4"
+                        :required="imagesSelected !== 1"
                         type="file"
                         ref="fileInput"
                         accept="image/*"
                         multiple
-                        @change="handleFileUpload"
                       />
-                    </div>
-                    <!-- Contenedor de las imágenes con margen -->
-                    <div
-                      style="margin-top: 15px; display: flex"
-                      class="d-flex flex-wrap gap-1"
-                    >
-                      <div
-                        v-for="(image, index) in uploadedImages"
-                        :key="index"
-                        class="image-preview"
-                      >
-                        <img
-                          class="fixed-size-image"
-                          :src="image.src"
-                          :alt="image.alt"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -157,30 +121,12 @@
                       <br />
                       <input
                         class="foto"
-                        :required="imagesSelected !== 4"
+                        :required="imagesSelected !== 1"
                         type="file"
                         ref="fileInput"
                         accept="image/*"
                         multiple
-                        @change="handleFileUpload"
                       />
-                    </div>
-                    <!-- Contenedor de las imágenes con margen -->
-                    <div
-                      style="margin-top: 15px; display: flex"
-                      class="d-flex flex-wrap gap-1"
-                    >
-                      <div
-                        v-for="(image, index) in uploadedImages"
-                        :key="index"
-                        class="image-preview"
-                      >
-                        <img
-                          class="fixed-size-image"
-                          :src="image.src"
-                          :alt="image.alt"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -213,30 +159,12 @@
                       <br />
                       <input
                         class="foto"
-                        :required="imagesSelected !== 4"
+                        :required="imagesSelected !== 1"
                         type="file"
                         ref="fileInput"
                         accept="image/*"
                         multiple
-                        @change="handleFileUpload"
                       />
-                    </div>
-                    <!-- Contenedor de las imágenes con margen -->
-                    <div
-                      style="margin-top: 15px; display: flex"
-                      class="d-flex flex-wrap gap-1"
-                    >
-                      <div
-                        v-for="(image, index) in uploadedImages"
-                        :key="index"
-                        class="image-preview"
-                      >
-                        <img
-                          class="fixed-size-image"
-                          :src="image.src"
-                          :alt="image.alt"
-                        />
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -277,40 +205,7 @@
   </main>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      uploadedImages: [], // Almacenar las imágenes cargadas
-      imagesSelected: 0, // Contador de imágenes seleccionadas
-    };
-  },
-  methods: {
-    handleFileUpload(event) {
-      const fileInput = this.$refs.fileInput;
-      const files = fileInput.files;
-
-      // Recorrer los archivos seleccionados
-      for (let i = 0; i < files.length; i++) {
-        const file = files[i];
-        const imageURL = URL.createObjectURL(file);
-
-        this.uploadedImages.push({ src: imageURL, alt: "Imagen" });
-      }
-
-      // Actualizar el contador de imágenes seleccionadas
-      this.imagesSelected = this.uploadedImages.length;
-
-      // Limpiar el campo de entrada de archivos si es necesario
-      fileInput.value = "";
-    },
-    clearImages() {
-      // Restablecer el array de imágenes cargadas
-      this.uploadedImages = [];
-    },
-  },
-};
-</script>
+<script></script>
 
 <style scoped>
 .logo {
@@ -318,6 +213,16 @@ export default {
   max-width: 30px;
   max-height: 40px;
   margin-top: 5px;
+  transition: 1s;
+}
+
+.logo:hover {
+  position: relative;
+  max-width: 30px;
+  max-height: 40px;
+  margin-top: 5px;
+  transform: scale(1.5); /* Cambia el tamaño al pasar el mouse */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.235); /* Agrega la sombra de fondo */
 }
 
 .logop {

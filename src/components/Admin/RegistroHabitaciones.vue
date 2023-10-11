@@ -267,16 +267,25 @@
                 <div class="col-15">
                   <div class="mb-3">
                     <strong>4 Imágenes *</strong>
-                    <br />
-                    <input
-                      style="margin-top: 13px"
-                      :required="imagesSelected !== 4"
-                      type="file"
-                      ref="fileInput"
-                      accept="image/*"
-                      multiple
-                      @change="handleFileUpload"
-                    />
+                    <div class="logo">
+                      <p class="logop">
+                        <i
+                          style="color: #fd3838; font-size: 30px"
+                          class="bi bi-file-earmark-arrow-up-fill"
+                        ></i>
+                      </p>
+                      <br />
+                      <input
+                        class="foto"
+                        style="margin-top: 13px"
+                        :required="imagesSelected !== 4"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
                     <!-- Contenedor de las imágenes con margen -->
                     <div
                       style="margin-top: 15px; display: flex"
@@ -368,6 +377,39 @@ export default {
 </script>
 
 <style scoped>
+.logo {
+  position: relative;
+  max-width: 30px;
+  max-height: 40px;
+  margin-top: 5px;
+  transition: 1s;
+}
+
+.logo:hover {
+  position: relative;
+  max-width: 30px;
+  max-height: 40px;
+  margin-top: 5px;
+  transform: scale(1.5); /* Cambia el tamaño al pasar el mouse */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.235); /* Agrega la sombra de fondo */
+}
+
+.logop {
+  color: #fff;
+  text-align: center;
+}
+
+.foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
 .fixed-size-image {
   width: 100px;
   height: 100px;

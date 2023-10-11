@@ -26,31 +26,22 @@
       />
     </div>
 
-    <!-- Descripción de la habitación -->
-    <div style="margin-top: 20px" class="descripcion-habitacion">
-      <center><h3>Salto del Mico</h3></center>
-      <hr />
-      <p style="padding: 10px; margin-top: -15px">
+    <!-- Descripción del sitio -->
+    <div class="galeria">
+      <div class="Hoteles"><h5>Descripción</h5></div>
+      <p style="padding: 10px">
         Salto del Mico: un mirador de ensueño en Barichara. A unos kilómetros de
         Barichara se encuentra uno de los miradores naturales más importantes y
         hermosos del país, el Salto del Mico. Este es el lugar idóneo para vivir
         una aventura y experiencia única.Hoy, te invitamos a visitar este
         maravilloso mirador.
       </p>
+      <div class="Hoteles"><h5>Proveedores</h5></div>
     </div>
 
-    <!-- <button type="button" class="btn btn-custom">
-      <i class="bi bi-bag-fill"></i> Reservar
-    </button> -->
-
     <div style="margin-top: 20px" class="proveedores">
-      <center><h3>Visitalo</h3></center>
-      <hr />
-      <center><p>Visitalo con uno de nuestros proveedores:</p></center>
-
-      <!-- prov 1 -->
-      <!-- Contenedor de prov1 y prov2 -->
-      <div class="pro-container">
+      <!-- Contenedor de prov1, prov2, prov3 -->
+      <div style="margin-top: -20px" class="pro-container">
         <!-- prov1 -->
         <div
           class="pro"
@@ -64,7 +55,18 @@
             margin-bottom: 20px;
           "
         >
-          <h6>
+          <center>
+            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+              <img
+                style="border-radius: 10px"
+                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                alt="Proveedor 1"
+                width="100"
+              />
+            </div>
+          </center>
+          <hr />
+          <h6 style="">
             Nombre:
             <p>Hormiga recorridos Santander</p>
           </h6>
@@ -87,6 +89,17 @@
             margin-bottom: 20px;
           "
         >
+          <center>
+            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+              <img
+                style="border-radius: 10px"
+                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                alt="Proveedor 1"
+                width="100"
+              />
+            </div>
+          </center>
+          <hr />
           <h6>
             Nombre:
             <p>Los corre caminos</p>
@@ -97,6 +110,7 @@
           </h6>
         </div>
 
+        <!-- prov3 -->
         <div
           class="pro"
           style="
@@ -108,6 +122,17 @@
             box-shadow: 0px 5px 10px 1px #0000002e;
           "
         >
+          <center>
+            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+              <img
+                style="border-radius: 10px"
+                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                alt="Proveedor 1"
+                width="100"
+              />
+            </div>
+          </center>
+          <hr />
           <h6>
             Nombre:
             <p>Agencia de turismo las rosas</p>
@@ -125,15 +150,55 @@
 <script></script>
 
 <style scoped>
+hr {
+  border: none; /* Quita el borde predeterminado */
+  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  height: 2px; /* Define el grosor de la línea horizontal */
+}
+
+.galeria {
+  padding: 16px;
+  margin-top: 8px;
+}
+
+h5 {
+  padding: 5px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.pro{
+  transition: 1s;
+}
+
+.pro:hover{
+  transition: 1s;
+}
+
+.Hoteles {
+  background: linear-gradient(to right, #fd3838, transparent);
+  align-items: center;
+  border-radius: 10px;
+  transition: 1s;
+}
+
 /* CSS para dispositivos con un ancho mínimo de 800px */
 @media (min-width: 800px) {
   .pro-container {
     display: flex; /* Utilizamos flexbox para los elementos hijos */
-    gap: 20px;
+    gap: 100px;
   }
   .pro {
     flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Hoteles {
+    background-color: #fd3838;
+    align-items: left;
+    border-radius: 10px;
   }
 }
 

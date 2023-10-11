@@ -21,24 +21,113 @@
     </div>
 
     <!-- Descripción de la habitación -->
-    <div style="margin-top: 20px;" class="descripcion-habitacion">
-      <center><h3>Descripción de la Habitación</h3></center>
-      <hr>
-      <p style="padding: 10px; margin-top: -15px;">
-        Esta es una habitación espaciosa con todas las comodidades que
-        necesitas para una estancia confortable. Cuenta con una cama king-size,
-        baño privado, televisión de pantalla plana y minibar. Además, ofrece
-        hermosas vistas al jardín.
-      </p>
-    </div>
+    <main>
+      <div class="galeria">
+        <div class="Hoteles"><h5>Descripción</h5></div>
+        <p style="padding: 10px">
+          Esta es una habitación espaciosa con todas las comodidades que
+          necesitas para una estancia confortable. Cuenta con una cama
+          king-size, baño privado, televisión de pantalla plana y minibar.
+          Además, ofrece hermosas vistas al jardín.
+        </p>
 
-    <button type="button" class="btn btn-custom"><i class="bi bi-bag-fill"></i> Reservar</button>
+        <div class="Hoteles"><h5>Servicios</h5></div>
+
+        <div style="margin-top: 20px; margin-bottom: -20px" class="container">
+          <div class="Lista">
+            <div class="row">
+              <div class="col-md-3 col-6">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-lock-fill"></i> Baño privado</li>
+                  <li><i class="bi bi-wind"></i> Ventiladores</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-6">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-backpack4-fill"></i> Closet</li>
+                  <li><i class="bi bi-wifi"></i> WiFi</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-6">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-tv-fill"></i> TV</li>
+                  <li><i class="bi bi-thermometer-snow"></i> Ventilación</li>
+                </ul>
+              </div>
+              <div class="col-md-3 col-6">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-trash3-fill"></i> Servicio de aseo</li>
+                  <li><i class="bi-currency-dollar"></i> 50.000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
   </div>
+  <hr />
+  <center>
+    <button type="button" class="btn btn-custom">
+      <i class="bi bi-backpack2-fill"></i> Reservar
+    </button>
+  </center>
 </template>
 
-
 <style scoped>
-.btn.btn-custom{
+hr {
+  border: none; /* Quita el borde predeterminado */
+  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  height: 2px; /* Define el grosor de la línea horizontal */
+}
+
+.galeria {
+  padding: 16px;
+  margin-top: 8px;
+}
+
+h5 {
+  padding: 5px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.Hoteles {
+  background: linear-gradient(to right, #fd3838, transparent);
+  align-items: center;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+/* CSS para dispositivos con un ancho mínimo de 800px */
+@media (min-width: 800px) {
+  .pro-container {
+    display: flex; /* Utilizamos flexbox para los elementos hijos */
+    gap: 20px;
+  }
+  .pro {
+    flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Hoteles {
+    background-color: #fd3838;
+    align-items: left;
+    border-radius: 10px;
+  }
+}
+
+h6 {
+  color: #000000;
+}
+
+h6 p {
+  color: #000000a7;
+}
+
+.btn.btn-custom {
   background-color: #fd3838;
   border-radius: 20px;
   color: #fff;
@@ -46,7 +135,7 @@
 
 hr {
   border: none; /* Quita el borde predeterminado */
-  background-color: #fd3838 ; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
   margin: 20px 0; /* Añade margen superior e inferior para separar del contenido */
 }
