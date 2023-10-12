@@ -58,11 +58,11 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 src="https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'"
                 alt="Proveedor 1"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -93,11 +93,11 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn"
                 alt="Proveedor 1"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -127,11 +127,11 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 src="https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn"
                 alt="Proveedor 1"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -264,7 +264,7 @@ body {
   position: relative;
   height: 250px;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 3px 0px rgb(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
   border-radius: 10px;
 }
 

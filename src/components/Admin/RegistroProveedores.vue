@@ -2,62 +2,34 @@
   <div class="contenedor-imagenes">
     <!-- Img 1 -->
     <div class="imagen">
-      <img :src="imageUrlA || 'https://i.ibb.co/R77C9hC/1.jpg'" 
-      alt="Img1" />
-
-
-      <!-- <input
-                class="foto"
-                style="margin-top: 13px"
-                :required="imagesSelectedA !== 1"
-                type="file"
-                accept="image/*"
-                @change="handleFileUploadA"
-              /> -->
-
-            <div class="logo">
-              <p class="logop">
-                <i
-                  style="color: #fd3838; font-size: 30px"
-                  class="bi bi-file-earmark-arrow-up-fill"
-                ></i>
-              </p>
-              <br />
-              <input
-                class="foto"
-                style="margin-top: 13px"
-                :required="imagesSelectedA !== 1"
-                type="file"
-                accept="image/*"
-                @change="handleFileUploadA"
-              />
-            </div>
-
-
-
-
-
+      <img :src="imageUrlA || ''" alt="Img1" />
     </div>
-
     <!-- Img 2 -->
     <div class="imagen">
-      <img :src="imageUrl || 'https://i.ibb.co/R77C9hC/1.jpg'" 
-      alt="Img2" />
+      <img :src="imageUrlB || ''" alt="Img2" />
     </div>
 
     <!-- Img 3 -->
     <div class="imagen">
-      <img
-      :src="imageUrl || 'https://i.ibb.co/R77C9hC/1.jpg'" 
-      alt="Img3" />
+      <img :src="imageUrlC || ''" alt="Img3" />
     </div>
 
     <!-- Img 4 -->
     <div class="imagen">
-      <img
-      :src="imageUrl || 'https://i.ibb.co/R77C9hC/1.jpg'" 
-      alt="Img4" />
+      <img :src="imageUrlD || ''" alt="Img4" />
     </div>
+
+    <!-- menu subida de imagenes del sitio -->
+
+
+
+
+
+
+
+
+
+    
 
     <div class="galeria col-12">
       <div class="Hoteles"><h5>Descripción</h5></div>
@@ -92,14 +64,14 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 5px; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 :src="
                   imageUrl ||
                   'https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'
                 "
                 alt="Proveedor 1"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -169,14 +141,14 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 :src="
                   imageUrl2 ||
                   'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn'
                 "
                 alt="Proveedor 2"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -246,14 +218,14 @@
           <center>
             <div style="float: center">
               <img
-                style="object-fit: cover; border-radius: 5px"
+                style="object-fit: cover; border-radius: 5px; border-radius: 100%; border-color: #fd3838; border-style: solid;"
                 :src="
                   imageUrl3 ||
                   'https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn'
                 "
                 alt="Proveedor 3"
-                width="150"
-                height="70"
+                width="100"
+                height="100"
               />
             </div>
           </center>
@@ -329,6 +301,15 @@ export default {
       // Para imagenes de sitio
       imageUrlA: "",
       imagesSelectedA: 0,
+
+      imageUrlB: "",
+      imagesSelectedB: 0,
+
+      imageUrlC: "",
+      imagesSelectedC: 0,
+
+      imageUrlD: "",
+      imagesSelectedD: 0,
     };
   },
   methods: {
@@ -371,12 +352,9 @@ export default {
       }
     },
 
+    // Para imagenes de sitio
 
-
-
-// Para imagenes de sitio
-
-handleFileUploadA(e) {
+    handleFileUploadA(e) {
       const file = e.target.files[0];
       if (file) {
         this.imagesSelectedA = 1; // Actualiza la validación
@@ -388,6 +366,46 @@ handleFileUploadA(e) {
         reader.readAsDataURL(file);
       }
     },
+
+    handleFileUploadB(e) {
+      const file = e.target.files[0];
+      if (file) {
+        this.imagesSelectedB = 1; // Actualiza la validación
+        // Puedes usar FileReader para mostrar la imagen en el elemento <img>
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageUrlB = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    },
+
+    handleFileUploadC(e) {
+      const file = e.target.files[0];
+      if (file) {
+        this.imagesSelectedC = 1; // Actualiza la validación
+        // Puedes usar FileReader para mostrar la imagen en el elemento <img>
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageUrlC = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    },
+
+    handleFileUploadD(e) {
+      const file = e.target.files[0];
+      if (file) {
+        this.imagesSelectedD = 1; // Actualiza la validación
+        // Puedes usar FileReader para mostrar la imagen en el elemento <img>
+        const reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageUrlD = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    },
+
 
   },
 };
@@ -538,7 +556,7 @@ body {
   position: relative;
   height: 250px;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 3px 0px rgb(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
   border-radius: 10px;
 }
 
@@ -642,6 +660,10 @@ body {
   .contenedor-imagenes .imagen {
     width: calc(33.333% - 10px);
     /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+
+  .pro{
+    min-width: 350px;
   }
 }
 
