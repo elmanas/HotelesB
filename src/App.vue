@@ -70,19 +70,23 @@ export default {
           </router-link>
 
           <router-link class="link" to="/RegitroHotel">
-          <button>1</button>
+          <button>Registro Hotel</button>
           </router-link>
 
           <router-link class="link" to="/RegistroHabitaciones">
-          <button>2</button>
+          <button>Registro Habitaciones</button>
           </router-link>
 
           <router-link class="link" to="/EstadoHabitaciones">
-          <button>3</button>
+          <button>Estado Habitaciones</button>
           </router-link>
 
           <router-link class="link" to="/VistaReservas">
-          <button>4</button>
+          <button>Reservar Habitación</button>
+          </router-link>
+
+          <router-link class="link" to="/RegistroProveedores">
+          <button>Registro Proveedores</button>
           </router-link>
           
         </ul>

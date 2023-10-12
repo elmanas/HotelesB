@@ -56,12 +56,13 @@
           "
         >
           <center>
-            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+            <div style="float: center">
               <img
-                style="border-radius: 10px"
-                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                style="object-fit: cover; border-radius: 5px"
+                src="https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'"
                 alt="Proveedor 1"
-                width="100"
+                width="150"
+                height="70"
               />
             </div>
           </center>
@@ -90,12 +91,13 @@
           "
         >
           <center>
-            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+            <div style="float: center">
               <img
-                style="border-radius: 10px"
-                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                style="object-fit: cover; border-radius: 5px"
+                src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn"
                 alt="Proveedor 1"
-                width="100"
+                width="150"
+                height="70"
               />
             </div>
           </center>
@@ -123,12 +125,13 @@
           "
         >
           <center>
-            <div style="float: center; margin-right: 10px; margin-bottom: 5px">
+            <div style="float: center">
               <img
-                style="border-radius: 10px"
-                src="https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg"
+                style="object-fit: cover; border-radius: 5px"
+                src="https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn"
                 alt="Proveedor 1"
-                width="100"
+                width="150"
+                height="70"
               />
             </div>
           </center>
@@ -167,11 +170,11 @@ h5 {
   color: #fff;
 }
 
-.pro{
+.pro {
   transition: 1s;
 }
 
-.pro:hover{
+.pro:hover {
   transition: 1s;
 }
 
