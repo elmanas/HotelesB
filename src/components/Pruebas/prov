@@ -1,119 +1,38 @@
 <template>
   <div class="contenedor-imagenes">
-    <div class="galeria col-12">
-    <div class="Hoteles"><h5>Imagenes <p style="margin-bottom: 5px; font-size: 13px;">ⓘ Seleccione 4 imagenes para el sitio turístico</p></h5></div>
-
-  </div>
     <!-- Img 1 -->
     <div class="imagen">
-      <img :src="imageUrlA || 'https://i.ibb.co/R77C9hC/1.jpg'" alt="Img1" />
-      <center>
-        <div class="logo">
-          <p class="logop">
-            <i
-              style="color: #fd3838; font-size: 30px"
-              class="bi bi-file-earmark-arrow-up-fill"
-            ></i>
-          </p>
-          <input
-            class="foto"
-            style="margin-top: 13px"
-            :required="imagesSelected1 !== 1"
-            type="file"
-            accept="image/*"
-            @change="handleFileUploadA"
-          />
-        </div>
-      </center>
+      <img :src="imageUrlA || ''" alt="Img1" />
     </div>
-
     <!-- Img 2 -->
     <div class="imagen">
-      <img
-        :src="imageUrlB || 'https://i.ibb.co/bWNfBGX/salto-del-mico-3.jpg'"
-        alt="Img2"
-      />
-      <center>
-        <div class="logo">
-          <p class="logop">
-            <i
-              style="color: #fd3838; font-size: 30px"
-              class="bi bi-file-earmark-arrow-up-fill"
-            ></i>
-          </p>
-          <input
-            class="foto"
-            style="margin-top: 13px"
-            :required="imagesSelected1 !== 1"
-            type="file"
-            accept="image/*"
-            @change="handleFileUploadB"
-          />
-        </div>
-      </center>
+      <img :src="imageUrlB || ''" alt="Img2" />
     </div>
 
     <!-- Img 3 -->
     <div class="imagen">
-      <img
-        :src="
-          imageUrlC ||
-          'https://i.ibb.co/2YZyyn6/salto-del-mico-portada-1280x720.jpg'
-        "
-        alt="Img3"
-      />
-      <center>
-        <div class="logo">
-          <p class="logop">
-            <i
-              style="color: #fd3838; font-size: 30px"
-              class="bi bi-file-earmark-arrow-up-fill"
-            ></i>
-          </p>
-          <input
-            class="foto"
-            style="margin-top: 13px"
-            :required="imagesSelected1 !== 1"
-            type="file"
-            accept="image/*"
-            @change="handleFileUploadC"
-          />
-        </div>
-      </center>
+      <img :src="imageUrlC || ''" alt="Img3" />
     </div>
 
     <!-- Img 4 -->
     <div class="imagen">
-      <img
-        :src="
-          imageUrlD ||
-          'https://i.ibb.co/qkZ1NcJ/59654668-447424319135365-1355230976015611055-n.jpg'
-        "
-        alt="Img4"
-      />
-      <center>
-        <div class="logo">
-          <p class="logop">
-            <i
-              style="color: #fd3838; font-size: 30px"
-              class="bi bi-file-earmark-arrow-up-fill"
-            ></i>
-          </p>
-          <input
-            class="foto"
-            style="margin-top: 13px"
-            :required="imagesSelected1 !== 1"
-            type="file"
-            accept="image/*"
-            @change="handleFileUploadD"
-          />
-        </div>
-      </center>
+      <img :src="imageUrlD || ''" alt="Img4" />
     </div>
 
-    <!-- Descripción del sitio -->
+    <!-- menu subida de imagenes del sitio -->
+
+
+
+
+
+
+
+
+
+    
+
     <div class="galeria col-12">
-      <div class="Hoteles"><h5>Descripción <p style="margin-bottom: 5px; font-size: 13px;">ⓘ Describa el sitio turístico</p></h5></div>
+      <div class="Hoteles"><h5>Descripción</h5></div>
       <textarea
         style="margin-top: 20px; margin-bottom: 20px"
         class="form-control"
@@ -123,24 +42,41 @@
         rows="4"
         required=""
       ></textarea>
-      <div class="Hoteles"><h5>Proveedores <p style="margin-bottom: 5px; font-size: 13px;">ⓘ Añada 3 proveedores que permitan visitar este sitio</p></h5></div>
+      <div class="Hoteles"><h5>Proveedores</h5></div>
     </div>
 
-    <div class="contenedor-proveedores">
-      <!-- prov 1 -->
-      <div class="proveedor">
-        <div class="elemento">
-          <img
-            :src="
-              imageUrl1 ||
-              'https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'
-            "
-            alt="Proveedor 1"
-            width="100"
-            height="100"
-            class="proveedor-imagen"
-          />
-          <div class="info-proveedor">
+    <div style="margin-top: 20px" class="proveedores">
+      <!-- Contenedor de prov1, prov2, prov3 -->
+      <div style="margin-top: -20px" class="pro-container">
+        <!-- prov1 -->
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-left: 5px solid #fd3838;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+            margin-bottom: 20px;
+          "
+        >
+          <center>
+            <div style="float: center">
+              <img
+                style="object-fit: cover; border-radius: 5px; border-radius: 100%; border-color: #fd3838; border-style: solid;"
+                :src="
+                  imageUrl ||
+                  'https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'
+                "
+                alt="Proveedor 1"
+                width="100"
+                height="100"
+              />
+            </div>
+          </center>
+          <hr />
+          <div class="mb-3">
             <label class="form-label" for="nombreProveedor1"
               ><strong>Nombre:</strong></label
             >
@@ -152,21 +88,22 @@
               value=""
               placeholder="Proveedor 1"
             />
-            <label
-              style="margin-top: 10px"
-              class="form-label"
-              for="telefonoProveedor1"
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="telefonoProveedor1"
               ><strong>Teléfono:</strong></label
             >
             <input
-              style="margin-bottom: 10px"
               class="form-control"
               type="number"
               id="telefonoProveedor1"
               name="telefonoProveedor1"
               value=""
-              placeholder="+57"
+              placeholder="Ej: 3222431440"
             />
+          </div>
+
+          <div class="mb-3">
             <strong>Logo *</strong>
             <div class="logo">
               <p class="logop">
@@ -179,30 +116,44 @@
               <input
                 class="foto"
                 style="margin-top: 13px"
-                :required="imagesSelected1 !== 1"
+                :required="imagesSelected !== 1"
                 type="file"
                 accept="image/*"
-                @change="handleFileUpload1"
+                @change="handleFileUpload"
               />
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- prov 2 -->
-      <div class="proveedor">
-        <div class="elemento">
-          <img
-            :src="
-              imageUrl2 ||
-              'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn'
-            "
-            alt="Proveedor 1"
-            width="100"
-            height="100"
-            class="proveedor-imagen"
-          />
-          <div class="info-proveedor">
+        <!-- prov2 -->
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-left: 5px solid #fd3838;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+            margin-bottom: 20px;
+          "
+        >
+          <center>
+            <div style="float: center">
+              <img
+                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
+                :src="
+                  imageUrl2 ||
+                  'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn'
+                "
+                alt="Proveedor 2"
+                width="100"
+                height="100"
+              />
+            </div>
+          </center>
+          <hr />
+          <div class="mb-3">
             <label class="form-label" for="nombreProveedor2"
               ><strong>Nombre:</strong></label
             >
@@ -214,21 +165,22 @@
               value=""
               placeholder="Proveedor 2"
             />
-            <label
-              style="margin-top: 10px"
-              class="form-label"
-              for="telefonoProveedor2"
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="telefonoProveedor2"
               ><strong>Teléfono:</strong></label
             >
             <input
-              style="margin-bottom: 10px"
               class="form-control"
               type="number"
               id="telefonoProveedor2"
               name="telefonoProveedor2"
               value=""
-              placeholder="+57"
+              placeholder="Ej: 3222431440"
             />
+          </div>
+
+          <div class="mb-3">
             <strong>Logo *</strong>
             <div class="logo">
               <p class="logop">
@@ -249,22 +201,36 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- prov 3 -->
-      <div class="proveedor">
-        <div class="elemento">
-          <img
-            :src="
-              imageUrl3 ||
-              'https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn'
-            "
-            alt="Proveedor 1"
-            width="100"
-            height="100"
-            class="proveedor-imagen"
-          />
-          <div class="info-proveedor">
+        <!-- prov3 -->
+        <div
+          class="pro"
+          style="
+            padding: 10px;
+            padding-bottom: 1px;
+            background-color: #ffffff;
+            border-left: 5px solid #fd3838;
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0px 5px 10px 1px #0000002e;
+            margin-bottom: 20px;
+          "
+        >
+          <center>
+            <div style="float: center">
+              <img
+                style="object-fit: cover; border-radius: 5px; border-radius: 100%; border-color: #fd3838; border-style: solid;"
+                :src="
+                  imageUrl3 ||
+                  'https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn'
+                "
+                alt="Proveedor 3"
+                width="100"
+                height="100"
+              />
+            </div>
+          </center>
+          <hr />
+          <div class="mb-3">
             <label class="form-label" for="nombreProveedor3"
               ><strong>Nombre:</strong></label
             >
@@ -276,21 +242,22 @@
               value=""
               placeholder="Proveedor 3"
             />
-            <label
-              style="margin-top: 10px"
-              class="form-label"
-              for="telefonoProveedor3"
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="telefonoProveedor3"
               ><strong>Teléfono:</strong></label
             >
             <input
-              style="margin-bottom: 10px"
               class="form-control"
               type="number"
               id="telefonoProveedor3"
               name="telefonoProveedor3"
               value=""
-              placeholder="+57"
+              placeholder="Ej: 3222431440"
             />
+          </div>
+
+          <div class="mb-3">
             <strong>Logo *</strong>
             <div class="logo">
               <p class="logop">
@@ -310,15 +277,11 @@
               />
             </div>
           </div>
+
+          <!-- Fin de proveedores -->
         </div>
       </div>
     </div>
-
-    <!-- ----------- -->
-
-    <!-- Contenedor proveedores -->
-
-    <!-- ----------- -->
   </div>
 </template>
 
@@ -326,8 +289,8 @@
 export default {
   data() {
     return {
-      imageUrl1: "", // Para almacenar la URL de la imagen cargada
-      imagesSelected1: 0, // Para validar que se haya seleccionado una imagen
+      imageUrl: "", // Para almacenar la URL de la imagen cargada
+      imagesSelected: 0, // Para validar que se haya seleccionado una imagen
 
       imageUrl2: "",
       imagesSelected2: 0,
@@ -350,14 +313,14 @@ export default {
     };
   },
   methods: {
-    handleFileUpload1(e) {
+    handleFileUpload(e) {
       const file = e.target.files[0];
       if (file) {
         this.imagesSelected = 1; // Actualiza la validación
         // Puedes usar FileReader para mostrar la imagen en el elemento <img>
         const reader = new FileReader();
         reader.onload = (e) => {
-          this.imageUrl1 = e.target.result;
+          this.imageUrl = e.target.result;
         };
         reader.readAsDataURL(file);
       }
@@ -442,6 +405,8 @@ export default {
         reader.readAsDataURL(file);
       }
     },
+
+
   },
 };
 </script>
@@ -460,7 +425,8 @@ export default {
   max-width: 30px;
   max-height: 40px;
   margin-top: 5px;
-  transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
+  transform: scale(1.5); /* Cambia el tamaño al pasar el mouse */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.235); /* Agrega la sombra de fondo */
 }
 
 .logop {
@@ -477,6 +443,12 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 0;
+}
+
+hr {
+  border: none; /* Quita el borde predeterminado */
+  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  height: 2px; /* Define el grosor de la línea horizontal */
 }
 
 .galeria {
@@ -505,12 +477,32 @@ h5 {
   transition: 1s;
 }
 
+/* CSS para dispositivos con un ancho mínimo de 800px */
+@media (min-width: 800px) {
+  .pro-container {
+    display: flex; /* Utilizamos flexbox para los elementos hijos */
+    gap: 100px;
+  }
+  .pro {
+    flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
+    margin-bottom: 20px;
+  }
+}
+
 @media screen and (max-width: 500px) {
   .Hoteles {
     background-color: #fd3838;
     align-items: left;
     border-radius: 10px;
   }
+}
+
+h6 {
+  color: #000000;
+}
+
+h6 p {
+  color: #000000a7;
 }
 
 .btn.btn-custom {
@@ -523,7 +515,7 @@ hr {
   border: none; /* Quita el borde predeterminado */
   background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
-  margin: 5px 0; /* Añade margen superior e inferior para separar del contenido */
+  margin: 20px 0; /* Añade margen superior e inferior para separar del contenido */
 }
 
 body {
@@ -534,6 +526,21 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
 }
+
+/* .galeria{
+          font-family:'open sans';
+      } */
+
+/* .galeria h1{
+          text-align: center;
+          margin: 20px 0 15px 0;
+          font-weight: 300px;
+      } */
+
+/* .linea{
+          border-top: 5px solid #dc7633;
+          margin-bottom: 40px;
+      } */
 
 .contenedor-imagenes {
   display: flex;
@@ -555,98 +562,94 @@ body {
 
 .imagen img {
   width: 100%;
-  height: 78%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px 10px 0 0; /* Redondea solo las dos esquinas superiores */
-}
-
-.contenedor-proveedores {
-  display: flex;
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: auto;
-  justify-content: space-around;
-  /* flex-wrap: wrap; */
-  border-radius: 10px;
-  gap: 5px;
-  margin-left: 5px;
-  margin-right: 5px;
-}
-
-.proveedor {
-  width: 40%;
-  position: relative;
-  margin-bottom: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
   border-radius: 10px;
 }
 
-.elemento {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  height: 100%; /* Contenedor crecerá automáticamente para adaptarse al contenido */
-}
-
-.proveedor-imagen {
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fd383872;
   width: 100%;
-  max-height: 100px; /* Tamaño fijo para la imagen */
-  object-fit: cover;
-  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #fd38385b;
+  height: 0%;
+  transition: 0.5s ease;
+  overflow: hidden;
 }
 
-.info-proveedor {
-  flex: 1;
-  padding: 10px 0;
-  overflow: hidden; /* Para manejar el desbordamiento del texto */
+.overlay button {
+  color: #fff;
+  font-weight: 30;
+  font-size: 20px;
+  position: absolute;
+  top: 92%;
+  right: -10px;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-.info-proveedor h6 {
-  margin: 0;
+.round-btn {
+  border-radius: 50%; /* Hace que el botón sea redondo */
+  width: 30px; /* Define el ancho del botón */
+  height: 30px; /* Define la altura del botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; /* Tamaño del icono */
+  background-color: #fd383872;
+  border-style: none;
 }
 
-.info-proveedor p {
-  margin: 0;
+.overlay h2 {
+  color: #fff;
+  font-weight: 30;
+  font-size: 20px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-p {
-  font-size: 15px;
+.overlay h3 {
+  color: #fff;
+  font-weight: 30;
+  font-size: 20px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  text-align: center;
+  transform: translate(-50%, -50%);
 }
 
-h6 {
-  font-weight: bold;
-  color: #3c3c3c;
+/* .overlay h4 {
+        color: #fff;
+        font-weight: 30;
+        font-size: 20px;
+        position: absolute;
+        top: 5%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+      } */
+
+.imagen:hover .overlay {
+  height: 100%;
+  cursor: pointer;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 2000px) {
   .contenedor-imagenes {
-    width: 60%;
+    width: 90%;
   }
 
   .contenedor-imagenes .imagen {
     width: calc(25% - 10px); /* Dividir en filas de 4 con espaciado */
   }
-
-  .contenedor-proveedores {
-    display: flex;
-
-    margin: auto;
-    justify-content: space-around;
-    /* flex-wrap: wrap; */
-    border-radius: 10px;
-    gap: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
-  }
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (max-width: 800px) {
   .contenedor-imagenes {
     width: 90%;
   }
@@ -655,36 +658,12 @@ h6 {
   }
 
   .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
+    width: calc(33.333% - 10px);
     /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
   }
-}
 
-@media screen and (min-width: 800px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  .pro{
+    min-width: 350px;
   }
 }
 

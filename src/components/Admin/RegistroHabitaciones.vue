@@ -266,8 +266,11 @@
 
                 <div class="col-15">
                   <div class="mb-3">
-                    <strong>4 Imágenes *</strong>
-                    <div class="logo">
+                    <strong>Imágenes *</strong>
+                    <p>
+                      {{ imagesSelected }} imágenes seleccionadas (Máximo 4)
+                    </p>
+                    <div style="margin-top: -15px" class="logo">
                       <p class="logop">
                         <i
                           style="color: #fd3838; font-size: 30px"
@@ -303,6 +306,18 @@
                         />
                       </div>
                     </div>
+                    <button
+                      style="
+                        background-color: #fd3838;
+                        color: #fff;
+                        margin-top: 20px;
+                      "
+                      class="btn btn-custom btn"
+                      @click="clearImages"
+                      v-if="uploadedImages.length > 0"
+                    >
+                      <i class="bi bi-trash3-fill"></i> Limpiar Imágenes
+                    </button>
                   </div>
                 </div>
                 <!-- Fin registro habitaciones -->
@@ -321,7 +336,6 @@
                 class="btn btn-outline-dark btn"
                 type="reset"
                 style="margin-right: 5px"
-                @click="clearImages"
               >
                 Limpiar</button
               ><button
@@ -351,26 +365,35 @@ export default {
   },
   methods: {
     handleFileUpload(event) {
+      if (this.imagesSelected >= 4) {
+        // Límite de 4 imágenes alcanzado, no permitir más
+        return;
+      }
+
       const fileInput = this.$refs.fileInput;
       const files = fileInput.files;
 
       // Recorrer los archivos seleccionados
       for (let i = 0; i < files.length; i++) {
+        if (this.imagesSelected >= 4) {
+          // Límite de 4 imágenes alcanzado, no permitir más
+          break;
+        }
+
         const file = files[i];
         const imageURL = URL.createObjectURL(file);
 
         this.uploadedImages.push({ src: imageURL, alt: "Imagen" });
+        this.imagesSelected++;
       }
-
-      // Actualizar el contador de imágenes seleccionadas
-      this.imagesSelected = this.uploadedImages.length;
 
       // Limpiar el campo de entrada de archivos si es necesario
       fileInput.value = "";
     },
     clearImages() {
-      // Restablecer el array de imágenes cargadas
+      // Restablecer el array de imágenes cargadas y el contador
       this.uploadedImages = [];
+      this.imagesSelected = 0;
     },
   },
 };
@@ -390,8 +413,7 @@ export default {
   max-width: 30px;
   max-height: 40px;
   margin-top: 5px;
-  transform: scale(1.5); /* Cambia el tamaño al pasar el mouse */
-  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.235); /* Agrega la sombra de fondo */
+  transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
 }
 
 .logop {
@@ -413,9 +435,11 @@ export default {
 .fixed-size-image {
   width: 100px;
   height: 100px;
+  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
+  object-fit: cover;
   border-radius: 10px;
   border-style: solid;
-  border-color: #fd3838;
+  border-color: #fd38385b;
 }
 
 .link {
@@ -446,6 +470,14 @@ h5 {
     flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
     max-width: 25%;
   }
+
+  .contenedor-imagenes {
+    width: 60%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px); /* Dividir en filas de 4 con espaciado */
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -457,9 +489,63 @@ h5 {
 
   .d-flex {
     display: flex;
-    justify-content: center; /* Centra horizontalmente los elementos */
-    align-items: center; /* Centra verticalmente los elementos (opcional) */
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contenedor-imagenes {
+    width: 100%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 80%;
+  }
+
+  .contenedor-imagenes .imagen {
+    /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
+    width: calc(50% - 10px); /* Dividir en filas de 2 con espaciado */
   }
 }
 </style>

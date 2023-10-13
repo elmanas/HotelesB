@@ -91,6 +91,65 @@
                     />
                   </div>
                 </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <strong>Imagen principal *</strong>
+                    <p>
+                      {{ imagesSelected }} imágenes seleccionadas (Máximo 1)
+                    </p>
+                    <div style="margin-top: -15px" class="logo">
+                      <p class="logop">
+                        <i
+                          style="color: #fd3838; font-size: 30px"
+                          class="bi bi-file-earmark-arrow-up-fill"
+                        ></i>
+                      </p>
+                      <br />
+                      <input
+                        class="foto"
+                        style="margin-top: 13px"
+                        :required="imagesSelected !== 1"
+                        type="file"
+                        ref="fileInput"
+                        accept="image/*"
+                        multiple
+                        @change="handleFileUpload"
+                      />
+                    </div>
+                    <!-- Contenedor de las imágenes con margen -->
+                    <div
+                      style="margin-top: 15px; display: flex"
+                      class="d-flex flex-wrap gap-1"
+                    >
+                      <div
+                        v-for="(image, index) in uploadedImages"
+                        :key="index"
+                        class="image-preview"
+                      >
+                        <img
+                          class="fixed-size-image"
+                          :src="image.src"
+                          :alt="image.alt"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      style="
+                        background-color: #fd3838;
+                        color: #fff;
+                        margin-top: 20px;
+                      "
+                      class="btn btn-custom btn"
+                      @click="clearImages"
+                      v-if="uploadedImages.length > 0"
+                    >
+                      <i class="bi bi-trash3-fill"></i> Limpiar Imágenes
+                    </button>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </div>
@@ -125,9 +184,92 @@
   </main>
 </template>
 
-<script></script>
+<script>export default {
+  data() {
+    return {
+      uploadedImages: [], // Almacenar las imágenes cargadas
+      imagesSelected: 0, // Contador de imágenes seleccionadas
+    };
+  },
+  methods: {
+    handleFileUpload(event) {
+      if (this.imagesSelected >= 1) {
+        // Límite de 1 imágenes alcanzado, no permitir más
+        return;
+      }
+
+      const fileInput = this.$refs.fileInput;
+      const files = fileInput.files;
+
+      // Recorrer los archivos seleccionados
+      for (let i = 0; i < files.length; i++) {
+        if (this.imagesSelected >= 1) {
+          // Límite de 4 imágenes alcanzado, no permitir más
+          break;
+        }
+
+        const file = files[i];
+        const imageURL = URL.createObjectURL(file);
+
+        this.uploadedImages.push({ src: imageURL, alt: "Imagen" });
+        this.imagesSelected++;
+      }
+
+      // Limpiar el campo de entrada de archivos si es necesario
+      fileInput.value = "";
+    },
+    clearImages() {
+      // Restablecer el array de imágenes cargadas y el contador
+      this.uploadedImages = [];
+      this.imagesSelected = 0;
+    },
+  },
+};</script>
 
 <style scoped>
+
+.logo {
+  position: relative;
+  max-width: 30px;
+  max-height: 40px;
+  margin-top: 5px;
+  transition: 1s;
+}
+
+.logo:hover {
+  position: relative;
+  max-width: 30px;
+  max-height: 40px;
+  margin-top: 5px;
+  transform: scale(1.1); /* Cambia el tamaño al pasar el mouse */
+}
+
+.logop {
+  color: #fff;
+  text-align: center;
+}
+
+.foto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.fixed-size-image {
+  width: 100px;
+  height: 100px;
+  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
+  object-fit: cover;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #fd38385b;
+}
+
 .link {
   text-decoration: none !important;
 }

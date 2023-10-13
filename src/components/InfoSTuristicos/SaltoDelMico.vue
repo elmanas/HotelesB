@@ -39,126 +39,70 @@
       <div class="Hoteles"><h5>Proveedores</h5></div>
     </div>
 
-    <div style="margin-top: 20px" class="proveedores">
-      <!-- Contenedor de prov1, prov2, prov3 -->
-      <div style="margin-top: -20px" class="pro-container">
-        <!-- prov1 -->
-        <div
-          class="pro"
-          style="
-            padding: 10px;
-            padding-bottom: 1px;
-            background-color: #ffffff;
-            border-radius: 0 10px 10px 0;
-            border-left: 5px solid #fd3838;
-            box-shadow: 0px 5px 10px 1px #0000002e;
-            margin-bottom: 20px;
-          "
-        >
-          <center>
-            <div style="float: center">
-              <img
-                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
-                src="https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'"
-                alt="Proveedor 1"
-                width="100"
-                height="100"
-              />
-            </div>
-          </center>
-          <hr />
-          <h6 style="">
-            Nombre:
-            <p>Hormiga recorridos Santander</p>
-          </h6>
-          <h6>
-            Telefono:
+    <div class="contenedor-proveedores">
+      <div class="proveedor">
+        <div class="elemento">
+          <img
+            src="https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn"
+            alt="Imagen 1"
+            class="proveedor-imagen"
+          />
+          <div class="info-proveedor">
+            <hr />
+            <h6>Nombre:</h6>
+            <p style="margin-bottom: 10px">HCulona Barichara</p>
+            <h6>Teléfono:</h6>
             <p>3222431444</p>
-          </h6>
+          </div>
         </div>
+      </div>
 
-        <!-- prov2 -->
-        <div
-          class="pro"
-          style="
-            padding: 10px;
-            padding-bottom: 1px;
-            background-color: #ffffff;
-            border-left: 5px solid #fd3838;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0px 5px 10px 1px #0000002e;
-            margin-bottom: 20px;
-          "
-        >
-          <center>
-            <div style="float: center">
-              <img
-                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
-                src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn"
-                alt="Proveedor 1"
-                width="100"
-                height="100"
-              />
-            </div>
-          </center>
-          <hr />
-          <h6>
-            Nombre:
-            <p>Los corre caminos</p>
-          </h6>
-          <h6>
-            Telefono:
-            <p>3134738712</p>
-          </h6>
+      <div class="proveedor">
+        <div class="elemento">
+          <img
+            src="https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn"
+            alt="Imagen 1"
+            class="proveedor-imagen"
+          />
+          <div class="info-proveedor">
+            <hr />
+            <h6>Nombre:</h6>
+            <p style="margin-bottom: 10px">SUXpress Barichara</p>
+            <h6>Teléfono:</h6>
+            <p>3222431444</p>
+          </div>
         </div>
+      </div>
 
-        <!-- prov3 -->
-        <div
-          class="pro"
-          style="
-            padding: 10px;
-            padding-bottom: 1px;
-            background-color: #ffffff;
-            border-left: 5px solid #fd3838;
-            border-radius: 0 10px 10px 0;
-            box-shadow: 0px 5px 10px 1px #0000002e;
-          "
-        >
-          <center>
-            <div style="float: center">
-              <img
-                style="object-fit: cover; border-radius: 100%; border-color: #fd3838; border-style: solid;"
-                src="https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn"
-                alt="Proveedor 1"
-                width="100"
-                height="100"
-              />
-            </div>
-          </center>
-          <hr />
-          <h6>
-            Nombre:
-            <p>Agencia de turismo las rosas</p>
-          </h6>
-          <h6>
-            Telefono:
-            <p>3134717972</p>
-          </h6>
+      <div class="proveedor">
+        <div class="elemento">
+          <img
+            src="https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn"
+            alt="Imagen 1"
+            class="proveedor-imagen"
+          />
+          <div class="info-proveedor">
+            <hr />
+            <h6>Nombre:</h6>
+            <p style="margin-bottom: 10px">Recorridos BCarlos</p>
+            <h6>Teléfono:</h6>
+            <p>3222431444</p>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- ----------- -->
+
+    <!-- Contenedor proveedores -->
+
+    <!-- ----------- -->
   </div>
 </template>
 
 <script></script>
 
 <style scoped>
-hr {
-  border: none; /* Quita el borde predeterminado */
-  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
-  height: 2px; /* Define el grosor de la línea horizontal */
-}
-
 .galeria {
   padding: 16px;
   margin-top: 8px;
@@ -185,32 +129,12 @@ h5 {
   transition: 1s;
 }
 
-/* CSS para dispositivos con un ancho mínimo de 800px */
-@media (min-width: 800px) {
-  .pro-container {
-    display: flex; /* Utilizamos flexbox para los elementos hijos */
-    gap: 100px;
-  }
-  .pro {
-    flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
-    margin-bottom: 20px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .Hoteles {
     background-color: #fd3838;
     align-items: left;
     border-radius: 10px;
   }
-}
-
-h6 {
-  color: #000000;
-}
-
-h6 p {
-  color: #000000a7;
 }
 
 .btn.btn-custom {
@@ -223,7 +147,7 @@ hr {
   border: none; /* Quita el borde predeterminado */
   background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
-  margin: 20px 0; /* Añade margen superior e inferior para separar del contenido */
+  margin: 5px 0; /* Añade margen superior e inferior para separar del contenido */
 }
 
 body {
@@ -234,21 +158,6 @@ body {
   box-sizing: border-box;
   font-family: sans-serif;
 }
-
-/* .galeria{
-          font-family:'open sans';
-      } */
-
-/* .galeria h1{
-          text-align: center;
-          margin: 20px 0 15px 0;
-          font-weight: 300px;
-      } */
-
-/* .linea{
-          border-top: 5px solid #dc7633;
-          margin-bottom: 40px;
-      } */
 
 .contenedor-imagenes {
   display: flex;
@@ -275,89 +184,93 @@ body {
   border-radius: 10px;
 }
 
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #fd383872;
-  width: 100%;
-  height: 0%;
-  transition: 0.5s ease;
-  overflow: hidden;
-}
-
-.overlay button {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 92%;
-  right: -10px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.round-btn {
-  border-radius: 50%; /* Hace que el botón sea redondo */
-  width: 30px; /* Define el ancho del botón */
-  height: 30px; /* Define la altura del botón */
+.contenedor-proveedores {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; /* Tamaño del icono */
-  background-color: #fd383872;
-  border-style: none;
+  max-width: 1200px; /* Ancho máximo del contenedor */
+  margin: auto;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  border-radius: 10px;
+  gap: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
-.overlay h2 {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+.proveedor {
+  width: 40%;
+  position: relative;
+  margin-bottom: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
+  border-radius: 10px;
 }
 
-.overlay h3 {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
+.elemento {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  height: 100%; /* Contenedor crecerá automáticamente para adaptarse al contenido */
 }
 
-/* .overlay h4 {
-        color: #fff;
-        font-weight: 30;
-        font-size: 20px;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-      } */
-
-.imagen:hover .overlay {
-  height: 100%;
-  cursor: pointer;
+.proveedor-imagen {
+  width: 100%;
+  max-height: 100px; /* Tamaño fijo para la imagen */
+  object-fit: cover;
+  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #fd38385b;
 }
 
-@media screen and (max-width: 2000px) {
+.info-proveedor {
+  flex: 1;
+  padding: 10px 0;
+  overflow: hidden; /* Para manejar el desbordamiento del texto */
+}
+
+.info-proveedor h6 {
+  margin: 0;
+}
+
+.info-proveedor p {
+  margin: 0;
+}
+
+p {
+  font-size: 15px;
+}
+
+h6 {
+  font-weight: bold;
+  color: #3c3c3c;
+}
+
+@media screen and (min-width: 1000px) {
   .contenedor-imagenes {
-    width: 90%;
+    width: 60%;
   }
 
   .contenedor-imagenes .imagen {
     width: calc(25% - 10px); /* Dividir en filas de 4 con espaciado */
   }
+
+  .contenedor-proveedores {
+    display: flex;
+
+    margin: auto;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    border-radius: 10px;
+    gap: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 900px) {
   .contenedor-imagenes {
     width: 90%;
   }
@@ -366,7 +279,35 @@ body {
   }
 
   .contenedor-imagenes .imagen {
-    width: calc(33.333% - 10px);
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
     /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
   }
 }
