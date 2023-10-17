@@ -68,11 +68,16 @@
   </div>
   <hr />
   <center>
-    <button type="button" class="btn btn-custom">
+    <button type="button" 
+    class="btn btn-custom">
       <i class="bi bi-backpack2-fill"></i> Reservar
     </button>
   </center>
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 hr {

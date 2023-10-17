@@ -6,15 +6,17 @@
       <div>
         <div class="btn-group" role="group">
           <button
-            style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
-            class="btns btn-dark"
+            style="margin-bottom: 5px; margin-top: 30px"
+            class="btn btn-dark"
+            @click="showAddModal"
           >
             <i class="material-icons">add_box</i>
           </button>
 
           <button
             style="margin-bottom: 5px; margin-top: 30px"
-            class="btns btn-dark"
+            class="btn btn-dark"
+            @click=""
           >
             <i class="material-icons">sim_card_download</i>
           </button>
@@ -39,22 +41,12 @@
               <td>{{ proveedor.sitio }}</td>
               <td>
                 <div class="btn-container">
-                  <!-- boton que abre el modal -->
-                  <button
-                    type="button"
-                    class="btns btn btn-dark"
-                    data-bs-toggle="modal"
-                    data-bs-target="#editarp"
-                  >
+                  <button class="btn btn-dark" @click="editproveedor(index)">
                     <i class="material-icons">edit</i>
                   </button>
-                  <!-- boton que abre el modal -->
-
-                  <!-- boton que elimina el proveedor -->
-                  <button type="button" class="btns btn btn-dark">
+                  <button class="btn btn-dark" @click="deleteproveedor(index)">
                     <i class="material-icons">delete</i>
                   </button>
-                  <!-- boton que elimina el proveedor -->
                 </div>
               </td>
             </tr>
@@ -62,51 +54,80 @@
         </table>
       </div>
 
-      <!-- espacio para el modal -->
-      <div
-        class="modal fade"
-        id="editarp"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
+      <!-- Modal para editar habitación -->
+      <div class="modal" tabindex="-1" role="dialog" ref="editModal">
+        <!-- Contenido del modal -->
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Editar proveedor
-              </h1>
+              <h5 class="modal-title">Editar Proveedor</h5>
               <button
                 type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
+                class="close"
+                data-dismiss="modal"
                 aria-label="Close"
-              ></button>
+                @click="hideEditModal"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
             </div>
             <div class="modal-body">
-              Espacio para traer los datos del proveedor seleccionado
+              <!-- Formulario de edición -->
+              <form>
+                <div class="mb-3">
+                  <label for="editAlias" class="form-label">Alias</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editAlias"
+                    v-model="editedproveedor.alias"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="editTel" class="form-label"
+                    >Telefono</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editTel"
+                    v-model="editedproveedor.tel"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="editSite" class="form-label"
+                    >Telefono</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="editSite"
+                    v-model="editedproveedor.sitio"
+                  />
+                </div>
+              </form>
             </div>
             <div class="modal-footer">
               <button
                 type="button"
-                style="background-color: #343a40; border-style: none"
                 class="btn btn-secondary"
-                data-bs-dismiss="modal"
+                data-dismiss="modal"
+                @click="hideEditModal"
               >
                 Cancelar
               </button>
               <button
                 type="button"
-                style="background-color: #fd3838; border-style: none"
                 class="btn btn-primary"
+                @click="saveproveedorChanges"
               >
-                Editar
+                Guardar Cambios
               </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- espacio para el modal -->
     </div>
   </div>
 </template>
@@ -128,7 +149,29 @@ export default {
         },
         { alias: "Recorridos BCarlos", tel: "3222431444", sitio: "Museo" },
       ],
+      editedproveedor: { alias: "", tel: "", sitio: "" },
+      editModalVisible: false,
     };
+  },
+  methods: {
+    showAddModal() {
+      // mostrar el modal de agregar nueva habitación
+    },
+    editproveedor(index) {
+      // abrir el modal de edición
+      this.editedproveedor = { ...this.proveedores[index] };
+      this.editModalVisible = true;
+    },
+    hideEditModal() {
+      // cerrar el modal de edición
+      this.editModalVisible = false;
+    },
+    saveproveedorChanges() {
+      // guardar los cambios en la habitación editada
+    },
+    deleteproveedor(index) {
+      // eliminar la habitación
+    },
   },
 };
 </script>
@@ -140,7 +183,7 @@ export default {
   gap: 5px; /* Espacio entre los botones */
 }
 
-.btns {
+.btn {
   border-radius: 50%; /* Redondear los botones */
   padding: 5px; /* Agregar espacio interior para separar los iconos */
   display: flex;
@@ -200,7 +243,7 @@ th {
 }
 
 /* Botones de acción dentro de la tabla */
-.btns {
+.btn {
   border-radius: 50%; /* Redondear los botones */
   padding: 5px; /* Agregar espacio interior para separar los iconos */
   display: flex;
@@ -209,6 +252,17 @@ th {
   background-color: #343a40; /* Color de fondo de los botones */
   color: white; /* Color del texto de los botones */
   border: none; /* Eliminar el borde de los botones */
+}
+
+.custom {
+  background-color: #343a40;
+  border-style: none;
+  border-radius: 10px;
+  color: #f2f2f2;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  display: flex;
 }
 
 .material-icons {

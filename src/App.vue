@@ -47,14 +47,21 @@ export default {
               >
             </li></router-link
           >
-          <!-- <li class="nav-item">
-            <a class="nav-link"
-              ><i style="color: black" class="bi bi-house-fill"></i> Second
-              Item</a
-            >
-          </li>
 
+          <!-- Icono carrito -->
           <li class="nav-item">
+            <a
+              class="nav-link"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#carrito"
+            >
+              <i style="color: black" class="bi bi-cart4"></i> Carrito
+            </a>
+          </li>
+          <!-- Icono carrito -->
+
+          <!-- <li class="nav-item">
             <a class="nav-link"
               ><i style="color: black" class="bi bi-house-fill"></i> Third
               Item</a
@@ -62,42 +69,87 @@ export default {
           </li> -->
 
           <router-link class="link" to="/Login">
-          <button>login</button>
+            <button>login</button>
           </router-link>
 
           <router-link class="link" to="/Registro">
-          <button>Register</button>
+            <button>Register</button>
           </router-link>
 
           <router-link class="link" to="/RegitroHotel">
-          <button>Registro Hotel</button>
+            <button>Registro Hotel</button>
           </router-link>
 
           <router-link class="link" to="/RegistroHabitaciones">
-          <button>Registro Habitaciones</button>
+            <button>Registro Habitaciones</button>
           </router-link>
 
           <router-link class="link" to="/EstadoHabitaciones">
-          <button>Estado Habitaciones</button>
+            <button>Estado Habitaciones</button>
+          </router-link>
+
+          <router-link class="link" to="/EstadoProveedores">
+            <button>Estado Proveedores</button>
           </router-link>
 
           <router-link class="link" to="/VistaReservas">
-          <button>Reservar Habitación</button>
+            <button>Reservar Habitación</button>
           </router-link>
 
           <router-link class="link" to="/RegistroProveedores">
-          <button>Registro Proveedores</button>
+            <button>Registro Proveedores</button>
           </router-link>
-          
         </ul>
       </div>
     </div>
+
+    <!-- Modal que hace de carrito de compras -->
+    <div class="modal fade" id="carrito" tabindex="-1">
+      <div class="modal-dialog modal-lg modal-right">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Habitaciones seleccioandas</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <ul id="carrito-lista" class="list-group">
+              <!-- Contenido del carrito de compras (Habitaciones) -->
+            </ul>
+            <p id="precioTotalModal" style="margin-top: 10px;" class="text-center">Total: $0</p>
+            <!-- Suma de todos los productos -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              style="background-color: #343a40; border-style: none;"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <button
+              type="button"
+              style="background-color: #fd3838; border-style: none"
+              class="btn btn-danger"
+              id="vaciarCarrito"
+            >
+              Vaciar Carrito
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal que hace de carrito de compras -->
   </nav>
   <!-- End: Navbar With Button -->
   <router-view></router-view>
 
   <!-- Start: Footer Clean -->
-
   <!-- <footer style="background-color: rgba(168, 168, 168, 0.299); margin-top: 20px;" class="text-center py-4">
     <div class="container">
       <div class="row row-cols-1 row-cols-lg-3">
@@ -168,9 +220,12 @@ export default {
       </div>
     </div>
   </footer> -->
+
   <!-- End: Footer Clean -->
   <!-- <router-link to="/GaleriaHotel1"><button>GaleriaHotel1</button></router-link> -->
 </template>
+
+<script></script>
 
 <style scoped>
 .link {
@@ -231,5 +286,11 @@ export default {
 
 .bs-icon.bs-icon-circle {
   border-radius: 50%;
+}
+
+hr {
+  border: none; /* Quita el borde predeterminado */
+  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  height: 2px; /* Define el grosor de la línea horizontal */
 }
 </style>

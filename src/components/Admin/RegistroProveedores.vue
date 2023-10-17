@@ -3,7 +3,7 @@
     <div class="galeria">
       <div class="Hoteles"><h5>Registra un sitio</h5></div>
       <!-- Start: Ludens - Create-Edit Form -->
-      <div class="container" style="margin-top: 20px; margin-bottom: 20px">
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px;">
         <form enctype="multipart/form-data" method="post">
           <div class="card shadow mb-3">
             <div class="card-header py-3">
@@ -83,7 +83,7 @@
                       class="form-control"
                       type="text"
                       id="id_name_snombre_Sitioervice"
-                      placeholder="Ej: Salto del mico"
+                      placeholder="Ej: Catedral"
                       name="nombre_Sitio"
                       required=""
                     />
@@ -127,7 +127,7 @@
                 </div>
               </div>
 
-              <div
+              <center><div
                 style="margin-top: 10px"
                 class="contenedor-proveedores"
                 v-if="incluyeProveedores === '2'"
@@ -135,7 +135,7 @@
                 <!-- prov 1 -->
                 <div class="proveedor">
                   <div class="elemento">
-                    <img
+                    <center><img
                       :src="
                         imageUrl1 ||
                         'https://th.bing.com/th/id/OIG.IkfOuRHhwhRzXmOnFN9y?pid=ImgGn'
@@ -144,7 +144,7 @@
                       width="100"
                       height="100"
                       class="proveedor-imagen"
-                    />
+                    /></center>
                     <div class="info-proveedor">
                       <label class="form-label" for="nombreProveedor1"
                         ><strong>Nombre:</strong></label
@@ -197,7 +197,7 @@
                 <!-- prov 2 -->
                 <div class="proveedor">
                   <div class="elemento">
-                    <img
+                    <center><img
                       :src="
                         imageUrl2 ||
                         'https://th.bing.com/th/id/OIG.CO2sHWK_IEYIwzXsC2hX?pid=ImgGn'
@@ -206,7 +206,7 @@
                       width="100"
                       height="100"
                       class="proveedor-imagen"
-                    />
+                    /></center>
                     <div class="info-proveedor">
                       <label class="form-label" for="nombreProveedor2"
                         ><strong>Nombre:</strong></label
@@ -259,7 +259,7 @@
                 <!-- prov 3 -->
                 <div class="proveedor">
                   <div class="elemento">
-                    <img
+                    <center><img
                       :src="
                         imageUrl3 ||
                         'https://th.bing.com/th/id/OIG.Z1Z.XXzP91MG18xmF3dm?pid=ImgGn'
@@ -268,7 +268,7 @@
                       width="100"
                       height="100"
                       class="proveedor-imagen"
-                    />
+                    /></center>
                     <div class="info-proveedor">
                       <label class="form-label" for="nombreProveedor3"
                         ><strong>Nombre:</strong></label
@@ -317,7 +317,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div></center>
             </div>
           </div>
           <div class="text-end mb-3">
@@ -575,13 +575,12 @@ hr {
 }
 
 .proveedor-imagen {
-  width: 100%;
-  max-height: 100px; /* Tamaño fijo para la imagen */
+  max-width: auto; /* Establece el ancho de la imagen en su tamaño original */
+  max-height: 100px; /* Altura máxima fija para la imagen */
   object-fit: cover;
-  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
+  overflow: hidden;
   border-radius: 10px;
-  border-style: solid;
-  border-color: #fd38385b;
+  border: 3px solid #fd38385b;
 }
 
 .info-proveedor {
@@ -619,6 +618,10 @@ h6 {
     margin-left: 5px;
     margin-right: 5px;
   }
+
+  .container{
+    max-width: 700px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -632,5 +635,14 @@ h6 {
     margin-bottom: 5px;
     border-radius: 10px;
   }
+
+  .contenedor-proveedores {
+  max-width: 200px; /* Ancho máximo del contenedor */
+  margin: auto;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  border-radius: 10px;
+  gap: 5px;
+}
 }
 </style>
