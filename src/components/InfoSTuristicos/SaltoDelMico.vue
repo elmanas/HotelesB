@@ -173,7 +173,7 @@ body {
   position: relative;
   height: 250px;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -200,7 +200,6 @@ body {
   width: 40%;
   position: relative;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.283);
   border-radius: 10px;
 }
 
@@ -323,11 +322,6 @@ h6 {
   .contenedor-imagenes .imagen {
     /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
     width: calc(50% - 10px); /* Dividir en filas de 2 con espaciado */
-  }
-
-  .overlay {
-    height: 100%;
-    background-color: #dc773300;
   }
 }
 </style>

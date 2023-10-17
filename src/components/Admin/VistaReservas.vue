@@ -4,7 +4,7 @@
       <div class="Hoteles"><h5>Reservar una habitación</h5></div>
       <!-- Start: Ludens - Create-Edit Form -->
       <div
-        class="container-fluid"
+        class="container"
         style="margin-top: 20px; margin-bottom: 20px"
       >
         <form enctype="multipart/form-data" method="post">

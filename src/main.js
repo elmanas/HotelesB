@@ -1,9 +1,6 @@
 import { createApp } from "vue";
 import { createRouter, createWebHashHistory } from "vue-router";
 // import './style.css'
-// import 'bootstrap'
-// import 'bootstrap/dist/css/bootstrap.min.css'
-
 
 
 
@@ -34,10 +31,12 @@ import SaltoDelMico from "../src/components/InfoSTuristicos/SaltoDelMico.vue";
 
 
 
+
 // Zona de administrador
 import RegitroHotel from "../src/components/Admin/RegitroHotel.vue";
 import RegistroHabitaciones from "../src/components/Admin/RegistroHabitaciones.vue";
 import EstadoHabitaciones from "../src/components/Admin/EstadoHabitaciones.vue";
+import EstadoProveedores from "../src/components/Admin/EstadoProveedores.vue";
 import VistaReservas from "../src/components/Admin/VistaReservas.vue";
 import RegistroProveedores from "../src/components/Admin/RegistroProveedores.vue";
 
@@ -64,6 +63,8 @@ const routes = [
   { path: "/RegistroHabitaciones", component: RegistroHabitaciones },
 
   { path: "/EstadoHabitaciones", component: EstadoHabitaciones },
+
+  { path: "/EstadoProveedores", component: EstadoProveedores },
 
   { path: "/VistaReservas", component: VistaReservas },
 

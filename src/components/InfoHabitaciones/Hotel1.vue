@@ -178,7 +178,7 @@ body {
   position: relative;
   height: 250px;
   margin-bottom: 5px;
-  box-shadow: 0px 0px 3px 0px rgb(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
 }
 
@@ -261,9 +261,9 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (min-width: 1000px) {
   .contenedor-imagenes {
-    width: 90%;
+    width: 60%;
   }
 
   .contenedor-imagenes .imagen {
@@ -271,7 +271,7 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 900px) {
   .contenedor-imagenes {
     width: 90%;
   }
@@ -280,8 +280,41 @@ body {
   }
 
   .contenedor-imagenes .imagen {
-    width: calc(33.333% - 10px);
+    width: calc(25% - 10px);
     /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    width: calc(25% - 10px);
+    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .contenedor-imagenes {
+    width: 90%;
+  }
+  .contenedor-imagenes .imagen {
+    width: 48%;
+  }
+
+  .contenedor-imagenes .imagen {
+    /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
+    width: calc(25% - 10px); /* Dividir en filas de 2 con espaciado */
+  }
+
+  .overlay {
+    height: 100%;
+    background-color: #dc773300;
   }
 }
 
@@ -296,11 +329,6 @@ body {
   .contenedor-imagenes .imagen {
     /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
     width: calc(50% - 10px); /* Dividir en filas de 2 con espaciado */
-  }
-
-  .overlay {
-    height: 100%;
-    background-color: #dc773300;
   }
 }
 </style>

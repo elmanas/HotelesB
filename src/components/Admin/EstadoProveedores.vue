@@ -1,6 +1,6 @@
 <template>
   <div class="galeria">
-    <div class="Hoteles"><h5>Estado de habitaciones</h5></div>
+    <div class="Hoteles"><h5>Estado de proveedores</h5></div>
     <div>
       <!-- Botón para agregar nueva habitación -->
       <div>
@@ -23,31 +23,28 @@
         </div>
       </div>
 
-      <!-- Tabla de habitaciones -->
+      <!-- Tabla de proveedores -->
       <div class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>
-              <th>Alias</th>
-              <th>Estado</th>
-              <th>Precio</th>
+              <th>Nombre</th>
+              <th>Telefono</th>
+              <th>Sitio</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(room, index) in rooms" :key="index">
-              <td>{{ room.alias }}</td>
-              <td>{{ room.estado }}</td>
-              <td>{{ Number(room.precio) }}</td>
+            <tr v-for="(proveedor, index) in proveedores" :key="index">
+              <td>{{ proveedor.alias }}</td>
+              <td>{{ proveedor.tel }}</td>
+              <td>{{ proveedor.sitio }}</td>
               <td>
                 <div class="btn-container">
-                  <button class="btn btn-dark" @click="changeRoomStatus(index)">
-                    <i class="material-icons">change_circle</i>
-                  </button>
-                  <button class="btn btn-dark" @click="editRoom(index)">
+                  <button class="btn btn-dark" @click="editproveedor(index)">
                     <i class="material-icons">edit</i>
                   </button>
-                  <button class="btn btn-dark" @click="deleteRoom(index)">
+                  <button class="btn btn-dark" @click="deleteproveedor(index)">
                     <i class="material-icons">delete</i>
                   </button>
                 </div>
@@ -63,7 +60,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Editar Habitación</h5>
+              <h5 class="modal-title">Editar Proveedor</h5>
               <button
                 type="button"
                 class="close"
@@ -83,27 +80,30 @@
                     type="text"
                     class="form-control"
                     id="editAlias"
-                    v-model="editedRoom.alias"
+                    v-model="editedproveedor.alias"
                   />
                 </div>
                 <div class="mb-3">
-                  <label for="editDireccion" class="form-label"
-                    >Dirección</label
+                  <label for="editTel" class="form-label"
+                    >Telefono</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    id="editDireccion"
-                    v-model="editedRoom.direccion"
+                    id="editTel"
+                    v-model="editedproveedor.tel"
                   />
                 </div>
+
                 <div class="mb-3">
-                  <label for="editPrecio" class="form-label">Precio</label>
+                  <label for="editSite" class="form-label"
+                    >Telefono</label
+                  >
                   <input
                     type="text"
                     class="form-control"
-                    id="editPrecio"
-                    v-model="editedRoom.precio"
+                    id="editSite"
+                    v-model="editedproveedor.sitio"
                   />
                 </div>
               </form>
@@ -112,15 +112,15 @@
               <button
                 type="button"
                 class="btn btn-secondary"
+                data-dismiss="modal"
                 @click="hideEditModal"
               >
                 Cancelar
               </button>
-
               <button
                 type="button"
                 class="btn btn-primary"
-                @click="saveRoomChanges"
+                @click="saveproveedorChanges"
               >
                 Guardar Cambios
               </button>
@@ -136,20 +136,20 @@
 export default {
   data() {
     return {
-      rooms: [
+      proveedores: [
         {
-          alias: "Habitación 101",
-          estado: "Disponible",
-          precio: 50000,
+          alias: "HCulona Barichara",
+          tel: "3222431444",
+          sitio: "Catedral",
         },
         {
-          alias: "Habitación 102",
-          estado: "Reservado",
-          precio: 50000,
+          alias: "SUXpress Barichara  ",
+          tel: "3222431444",
+          sitio: "SaltoM",
         },
-        { alias: "Habitación 103", estado: "Ocupado", precio: 50000 },
+        { alias: "Recorridos BCarlos", tel: "3222431444", sitio: "Museo" },
       ],
-      editedRoom: { alias: "", direccion: "" },
+      editedproveedor: { alias: "", tel: "", sitio: "" },
       editModalVisible: false,
     };
   },
@@ -157,22 +157,19 @@ export default {
     showAddModal() {
       // mostrar el modal de agregar nueva habitación
     },
-    changeRoomStatus(index) {
-      // cambiar el estado de la habitación
-    },
-    editRoom(index) {
+    editproveedor(index) {
       // abrir el modal de edición
-      this.editedRoom = { ...this.rooms[index] };
+      this.editedproveedor = { ...this.proveedores[index] };
       this.editModalVisible = true;
     },
     hideEditModal() {
       // cerrar el modal de edición
       this.editModalVisible = false;
     },
-    saveRoomChanges() {
+    saveproveedorChanges() {
       // guardar los cambios en la habitación editada
     },
-    deleteRoom(index) {
+    deleteproveedor(index) {
       // eliminar la habitación
     },
   },

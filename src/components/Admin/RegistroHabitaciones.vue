@@ -4,7 +4,7 @@
       <div class="Hoteles"><h5>Registra tus habitaciones</h5></div>
       <!-- Start: Ludens - Create-Edit Form -->
       <div
-        class="container-fluid"
+        class="container"
         style="margin-top: 20px; margin-bottom: 20px"
       >
         <form enctype="multipart/form-data" method="post">
@@ -264,6 +264,24 @@
                   </div>
                 </div>
 
+                <!-- Descripción del hotel -->
+                <div
+                  style="margin-bottom: 15px"
+                  class="col-sm-12 col-md-12 col-lg-2"
+                >
+                  <label class="form-label" for="nombre_hotel"
+                    ><strong>Descripción *</strong></label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="descripcionSitio"
+                    placeholder="Describa la habitación..."
+                    name="descripcionSitio"
+                    rows="1"
+                    required=""
+                  ></textarea>
+                </div>
+
                 <div class="col-15">
                   <div class="mb-3">
                     <strong>Imágenes *</strong>
@@ -471,12 +489,9 @@ h5 {
     max-width: 25%;
   }
 
-  .contenedor-imagenes {
-    width: 60%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px); /* Dividir en filas de 4 con espaciado */
+  .col-lg-2 {
+    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
+    max-width: 25%;
   }
 }
 
