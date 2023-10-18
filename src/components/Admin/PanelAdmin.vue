@@ -6,10 +6,10 @@
       <div class="contenedor">
         <center>
           <div class="contenedor-conciertos">
-            <router-link class="lg4" to="/RegitroHotel" title="RegistrarHotel">
+            <router-link class="lg4" to="/PanelHoteles" title="PanelHoteles">
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="RegistrarHotel">
-                  <center><h6>Administrar Hoteles</h6></center>
+                <div class="textos" title="PanelHoteles">
+                  <center><h6>Hoteles</h6></center>
 
                   <i class="material-icons">settings</i>
                 </div>
@@ -18,46 +18,46 @@
 
             <router-link
               class="lg4"
-              to="/RegistroHabitaciones"
-              title="RegistroHabitaciones"
+              to="/PanelSitios"
+              title="PanelSitios"
             >
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="RegistroHabitaciones">
-                  <center><h6>Administrar Sitios </h6></center>
+                <div class="textos" title="PanelSitios">
+                  <center><h6>Sitios Turísticos </h6></center>
 
-                  <i class="material-icons">monetization_on</i>
+                  <i class="material-icons">map</i>
                 </div>
               </div>
             </router-link>
 
             <router-link
               class="lg4"
-              to="/EstadoHabitaciones"
-              title="EstadoHabitaciones"
+              to="/PanelProveedores"
+              title="PanelProveedores"
             >
               <div
                 class="card"
                 style="background-color: #ffffff"
-                title="EstadoHabitaciones"
+                title="PanelProveedores"
               >
                 <div class="textos">
-                  <center><h6>Administrar Proveedores</h6></center>
+                  <center><h6>Proveedores</h6></center>
 
-                  <i class="material-icons">shopping_cart</i>
+                  <i class="material-icons">grade</i>
                 </div>
               </div>
             </router-link>
 
-            <router-link class="lg4" to="/VistaReservas" title="VistaReservas">
+            <router-link class="lg4" to="/PanelUsuarios" title="PanelUsuarios">
               <div
                 class="card"
                 style="background-color: #ffffff"
-                title="VistaReservas"
+                title="PanelUsuarios"
               >
                 <div class="textos">
-                  <center><h6>Administrar Usuarios</h6></center>
+                  <center><h6>Usuarios</h6></center>
 
-                  <i class="material-icons">transform</i>
+                  <i class="material-icons">manage_accounts</i>
                 </div>
               </div>
             </router-link>
@@ -186,7 +186,7 @@ h5 {
 
     /* Grid */
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 }
@@ -216,8 +216,14 @@ h5 {
 
     /* Grid */
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .material-icons {
+  font-size: 5em;
+  margin-top: 10%;
+  /* color: teal; */
+}
 }
 </style>

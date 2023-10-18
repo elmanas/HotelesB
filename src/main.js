@@ -40,6 +40,12 @@ import EstadoProveedores from "../src/components/Admin/EstadoProveedores.vue";
 import VistaReservas from "../src/components/Admin/VistaReservas.vue";
 import RegistroProveedores from "../src/components/Admin/RegistroProveedores.vue";
 import PanelAdmin from "../src/components/Admin/PanelAdmin.vue";
+import PanelHoteles from "../src/components/Admin/AdminHoteles/PanelHoteles.vue";
+import PanelProveedores from "../src/components/Admin/AdminProveedores/PanelProveedores.vue";
+import PanelSitios from "../src/components/Admin/AdminSitios/PanelSitios.vue";
+import PanelHabitaciones from "../src/components/Admin/AdminHabitaciones/PanelHabitaciones.vue";
+import PanelUsuarios from "../src/components/Admin/AdminUsuarios/PanelUsuarios.vue";
+
 
 
 
@@ -71,7 +77,18 @@ const routes = [
 
   { path: "/RegistroProveedores", component: RegistroProveedores },
 
+
   { path: "/PanelAdmin", component: PanelAdmin},
+
+  { path: "/PanelHoteles", component: PanelHoteles},
+
+  { path: "/PanelProveedores", component: PanelProveedores},
+
+  { path: "/PanelSitios", component: PanelSitios},
+
+  { path: "/PanelHabitaciones", component: PanelHabitaciones},
+
+  { path: "/PanelUsuarios", component: PanelUsuarios},
 ];
 
 //objeto rutas - vue router

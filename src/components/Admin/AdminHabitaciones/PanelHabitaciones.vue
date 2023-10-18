@@ -1,22 +1,107 @@
 <template>
-  <main>
     <div class="galeria">
-      <div class="Hoteles"><h5>Registra tus habitaciones</h5></div>
-      <!-- Start: Ludens - Create-Edit Form -->
-      <div
-        class="container"
-        style="margin-top: 20px; margin-bottom: 20px"
+      <div class="Hoteles"><h5>Administrar habitaciones </h5></div>
+      <div>
+        <!-- Botón para agregar nueva habitación -->
+        <div>
+          <div class="btn-group" role="group">
+            <button
+              style="margin-bottom: 5px; margin-top: 30px"
+              class="btns btn btn-dark"
+              @click="showAddModal"
+            >
+              <i class="material-icons">add_box</i>
+            </button>
+          </div>
+        </div>
+  
+        <!-- Tabla de habitaciones -->
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead style="align-items: center; text-align: center">
+              <tr>
+                <th>Alias</th>
+                <th>Estado</th>
+                <th>Precio</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(room, index) in rooms" :key="index">
+                <td>{{ room.alias }}</td>
+                <td>{{ room.estado }}</td>
+                <td>{{ Number(room.precio) }}</td>
+                <td>
+                  <div class="btn-container">
+                    <button class="btns btn btn-dark" @click="changeRoomStatus(index)">
+                      <i class="material-icons">change_circle</i>
+                    </button>
+                    <button 
+                    type="button"
+                    class="btns btn btn-dark"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editarp"
+                    @click="editRoom(index)">
+                      <i class="material-icons">edit</i>
+                    </button>
+                    <button class="btns btn btn-dark" @click="deleteRoom(index)">
+                      <i class="material-icons">delete</i>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+  
+  <!-- espacio para el modal -->
+  <div
+        class="modal fade modal-small"
+        id="editarp"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
       >
-        <form enctype="multipart/form-data" method="post">
-          <div class="card shadow mb-3">
-            <div class="card-header py-3">
-              <p class="text-primary m-0 fw-bold">
-                <span style="color: rgb(253, 56, 56)"
-                  >Rellene los campos obligatorios *</span
-                >
-              </p>
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Editar habitación
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
-            <div class="card-body">
+            <div class="modal-body">
+              <div class="col-15">
+                <div class="mb-3">
+                  <strong>Imágenes *</strong>
+                  <p>{{ imagesSelected }} imágenes seleccionadas (Máximo 4)</p>
+                  <div style="margin-top: -15px" class="logo">
+                    <p class="logop">
+                      <i
+                        style="color: #fd3838; font-size: 30px"
+                        class="bi bi-file-earmark-arrow-up-fill"
+                      ></i>
+                    </p>
+                    <br />
+                    <input
+                      class="foto"
+                      style="margin-top: 13px"
+                      :required="imagesSelected !== 4"
+                      type="file"
+                      ref="fileInput"
+                      accept="image/*"
+                      multiple
+                      @change="handleFileUpload"
+                    />
+                  </div>
+                </div>
+              </div>
+
               <div class="row">
                 <div class="col-6">
                   <div class="mb-3">
@@ -26,7 +111,6 @@
                       class="form-control"
                       type="text"
                       id="alias_habitacion"
-                      placeholder="Ej: Esquinera"
                       name="alias_habitacion"
                       required=""
                     />
@@ -40,7 +124,6 @@
                       class="form-control"
                       type="text"
                       id="direccion_habitacion"
-                      placeholder="Ej: Calle 6A"
                       name="direccion_habitacion"
                       required=""
                     />
@@ -233,7 +316,6 @@
                       class="form-control"
                       type="number"
                       id="precio_habitacion"
-                      placeholder="$"
                       name="precio_habitacion"
                       required=""
                     />
@@ -251,149 +333,87 @@
                   <textarea
                     class="form-control"
                     id="descripcionSitio"
-                    placeholder="Describa..."
                     name="descripcionSitio"
                     rows="1"
                     required=""
                   ></textarea>
                 </div>
 
-                <div class="col-15">
-                  <div class="mb-3">
-                    <strong>Imágenes *</strong>
-                    <p>
-                      {{ imagesSelected }} imágenes seleccionadas (Máximo 4)
-                    </p>
-                    <div style="margin-top: -15px" class="logo">
-                      <p class="logop">
-                        <i
-                          style="color: #fd3838; font-size: 30px"
-                          class="bi bi-file-earmark-arrow-up-fill"
-                        ></i>
-                      </p>
-                      <br />
-                      <input
-                        class="foto"
-                        style="margin-top: 13px"
-                        :required="imagesSelected !== 4"
-                        type="file"
-                        ref="fileInput"
-                        accept="image/*"
-                        multiple
-                        @change="handleFileUpload"
-                      />
-                    </div>
-                    <!-- Contenedor de las imágenes con margen -->
-                    <div
-                      style="margin-top: 15px; display: flex"
-                      class="d-flex flex-wrap gap-1"
-                    >
-                      <div
-                        v-for="(image, index) in uploadedImages"
-                        :key="index"
-                        class="image-preview"
-                      >
-                        <img
-                          class="fixed-size-image"
-                          :src="image.src"
-                          :alt="image.alt"
-                        />
-                      </div>
-                    </div>
-                    <button
-                      style="
-                        background-color: #fd3838;
-                        color: #fff;
-                        margin-top: 20px;
-                      "
-                      class="btn btn-custom btn"
-                      @click="clearImages"
-                      v-if="uploadedImages.length > 0"
-                    >
-                      <i class="bi bi-trash3-fill"></i> Limpiar Imágenes
-                    </button>
-                  </div>
-                </div>
-                <!-- Fin registro habitaciones -->
+
               </div>
             </div>
-          </div>
-          <div class="text-end mb-3">
-            <center>
-              <a
-                class="btn btn-outline-danger btn"
-                role="button"
-                href="#"
-                style="margin-right: 5px"
-                >Cancelar</a
-              ><button
-                class="btn btn-outline-dark btn"
-                type="reset"
-                style="margin-right: 5px"
+            <div class="modal-footer">
+              <button
+                type="button"
+                style="background-color: #343a40; border-style: none"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
               >
-                Limpiar</button
-              ><button
-                class="btn btn-custom btn"
-                type="submit"
-                style="background: #fd3838; color: #fff"
-              >
-                <i class="bi bi-floppy-fill"></i>
-                Registrar
+                Cancelar
               </button>
-            </center>
+              <button
+                type="button"
+                style="background-color: #fd3838; border-style: none"
+                class="btn btn-primary"
+              >
+                Editar
+              </button>
+            </div>
           </div>
-        </form>
+        </div>
       </div>
-      <!-- End: Ludens - Create-Edit Form -->
+      <!-- espacio para el modal -->
+      </div>
     </div>
-  </main>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      uploadedImages: [], // Almacenar las imágenes cargadas
-      imagesSelected: 0, // Contador de imágenes seleccionadas
-    };
-  },
-  methods: {
-    handleFileUpload(event) {
-      if (this.imagesSelected >= 4) {
-        // Límite de 4 imágenes alcanzado, no permitir más
-        return;
-      }
-
-      const fileInput = this.$refs.fileInput;
-      const files = fileInput.files;
-
-      // Recorrer los archivos seleccionados
-      for (let i = 0; i < files.length; i++) {
-        if (this.imagesSelected >= 4) {
-          // Límite de 4 imágenes alcanzado, no permitir más
-          break;
-        }
-
-        const file = files[i];
-        const imageURL = URL.createObjectURL(file);
-
-        this.uploadedImages.push({ src: imageURL, alt: "Imagen" });
-        this.imagesSelected++;
-      }
-
-      // Limpiar el campo de entrada de archivos si es necesario
-      fileInput.value = "";
+  </template>
+  
+  <script>
+  export default {
+    data() {
+      return {
+        rooms: [
+          {
+            alias: "Habitación 001",
+            estado: "Disponible",
+            precio: 50000,
+          },
+        ],
+        editedRoom: { alias: "", direccion: "" },
+        editModalVisible: false,
+      };
     },
-    clearImages() {
-      // Restablecer el array de imágenes cargadas y el contador
-      this.uploadedImages = [];
-      this.imagesSelected = 0;
+    methods: {
+      showAddModal() {
+        // mostrar el modal de agregar nueva habitación
+      },
+      changeRoomStatus(index) {
+        // cambiar el estado de la habitación
+      },
+      editRoom(index) {
+        // abrir el modal de edición
+        this.editedRoom = { ...this.rooms[index] };
+        this.editModalVisible = true;
+      },
+      hideEditModal() {
+        // cerrar el modal de edición
+        this.editModalVisible = false;
+      },
+      saveRoomChanges() {
+        // guardar los cambios en la habitación editada
+      },
+      deleteRoom(index) {
+        // eliminar la habitación
+      },
     },
-  },
-};
-</script>
+  };
+  </script>
+  
+  <style scoped>
 
-<style scoped>
+.modal-small .modal-dialog {
+  transform: translateY(0%); /* Alinea verticalmente el modal */
+}
+
 .logo {
   position: relative;
   max-width: 30px;
@@ -426,117 +446,106 @@ export default {
   opacity: 0;
 }
 
-.fixed-size-image {
-  width: 100px;
-  height: 100px;
-  overflow: hidden; /* Para manejar el desbordamiento de la imagen */
-  object-fit: cover;
-  border-radius: 10px;
-  border-style: solid;
-  border-color: #fd38385b;
-}
-
-.link {
-  text-decoration: none !important;
-}
-
-.galeria {
-  padding: 16px;
-  margin-top: 8px;
-}
-
-h5 {
-  padding: 5px;
-  margin-left: 5px;
-  color: #fff;
-}
-
-.Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
-  align-items: center;
-  border-radius: 10px;
-  transition: 1s;
-}
-
-/* Estilos para resoluciones de 1000px o más */
-@media screen and (min-width: 1000px) {
-  .row .col-6 {
-    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
-    max-width: 25%;
-  }
-
-  .col-lg-2 {
-    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
-    max-width: 25%;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .Hoteles {
-    background-color: #fd3838;
-    align-items: left;
-    border-radius: 10px;
-  }
-
-  .d-flex {
+  .btn-container {
     display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
+    justify-content: center;
+    gap: 5px; /* Espacio entre los botones */
   }
 
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  
+  .material-icons {
+    font-size: 20px; /* Tamaño del icono */
   }
-}
-
-@media screen and (min-width: 800px) {
-  .contenedor-imagenes {
-    width: 90%;
+  
+  .galeria {
+    padding: 16px;
+    margin-top: 8px;
   }
-  .contenedor-imagenes .imagen {
-    width: 48%;
+  
+  h5 {
+    padding: 5px;
+    margin-left: 5px;
+    color: #fff;
   }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
+  
+  .Hoteles {
+    background: linear-gradient(to right, #fd3838, transparent);
+    align-items: center;
+    border-radius: 10px;
+    transition: 1s;
   }
-}
-
-@media screen and (min-width: 600px) {
-  .contenedor-imagenes {
-    width: 90%;
+  
+  @media screen and (max-width: 500px) {
+    .Hoteles {
+      background-color: #fd3838;
+      align-items: left;
+      border-radius: 10px;
+    }
   }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .contenedor-imagenes {
+  
+  /* Estilos para la tabla */
+  .table {
+    border-collapse: collapse; /* Para eliminar los espacios entre las celdas */
     width: 100%;
   }
-  .contenedor-imagenes .imagen {
-    width: 80%;
+  
+  th,
+  td {
+    text-align: center;
+    padding: 10px;
+  }
+  
+  th {
+    background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
+  }
+  
+  .btn-container {
+    display: flex;
+    gap: 5px; /* Espacio entre los botones */
   }
 
-  .contenedor-imagenes .imagen {
-    /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
-    width: calc(50% - 10px); /* Dividir en filas de 2 con espaciado */
-  }
+  .btns {
+  border-radius: 50%; /* Redondear los botones */
+  padding: 5px; /* Agregar espacio interior para separar los iconos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-</style>
+  
+  /* Botones de acción dentro de la tabla */
+  .btns {
+    border-radius: 50%; /* Redondear los botones */
+    padding: 5px; /* Agregar espacio interior para separar los iconos */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #343a40; /* Color de fondo de los botones */
+    color: white; /* Color del texto de los botones */
+    border: none; /* Eliminar el borde de los botones */
+  }
+  
+  .custom {
+    background-color: #343a40;
+    border-style: none;
+    border-radius: 10px;
+    color: #f2f2f2;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    display: flex;
+  }
+  
+  .material-icons {
+    font-size: 20px; /* Tamaño del icono */
+  }
+  
+  /* Estilos para scrollbar */
+  .table-responsive::-webkit-scrollbar {
+    height: 7px;
+  }
+  
+  .table-responsive::-webkit-scrollbar-thumb {
+    background-color: #fd3838;
+    border-radius: 20px;
+  }
+  </style>

@@ -99,6 +99,10 @@ export default {
           <router-link class="link" to="/RegistroProveedores">
             <button>Registro Proveedores</button>
           </router-link>
+
+          <router-link class="link" to="/PanelAdmin">
+            <button>Panel Admin</button>
+          </router-link>
         </ul>
       </div>
     </div>

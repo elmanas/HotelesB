@@ -1,6 +1,6 @@
 <template>
   <div class="galeria">
-    <div class="Hoteles"><h5>Estado de proveedores</h5></div>
+    <div class="Hoteles"><h5>Admistrar sitios turísticos</h5></div>
     <div>
       <!-- Botón para agregar nueva habitación -->
       <div>
@@ -11,32 +11,25 @@
           >
             <i class="material-icons">add_box</i>
           </button>
-
-          <button
-            style="margin-bottom: 5px; margin-top: 30px"
-            class="btns btn-dark"
-          >
-            <i class="material-icons">sim_card_download</i>
-          </button>
         </div>
       </div>
 
-      <!-- Tabla de proveedores -->
+      <!-- Tabla de hoteles -->
       <div class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>
               <th>Nombre</th>
-              <th>Telefono</th>
-              <th>Sitio</th>
+              <th>Proveedor</th>
+              <th>Descripción</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(proveedor) in proveedores">
-              <td>{{ proveedor.alias }}</td>
-              <td>{{ proveedor.tel }}</td>
-              <td>{{ proveedor.sitio }}</td>
+            <tr v-for="psitios in sitios">
+              <td>{{ psitios.nombre }}</td>
+              <td>{{ psitios.proveedor }}</td>
+              <td>{{ psitios.descripcion }}</td>
               <td>
                 <div class="btn-container">
                   <!-- boton que abre el modal -->
@@ -50,11 +43,11 @@
                   </button>
                   <!-- boton que abre el modal -->
 
-                  <!-- boton que elimina el proveedor -->
+                  <!-- boton que elimina el hotel -->
                   <button type="button" class="btns btn btn-dark">
                     <i class="material-icons">delete</i>
                   </button>
-                  <!-- boton que elimina el proveedor -->
+                  <!-- boton que debe elimina el hotel -->
                 </div>
               </td>
             </tr>
@@ -74,7 +67,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Editar proveedor
+                Editar hotel
               </h1>
               <button
                 type="button"
@@ -84,7 +77,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              Espacio para traer los datos del proveedor seleccionado
+              Espacio para traer los datos del hotel seleccionado
             </div>
             <div class="modal-footer">
               <button
@@ -115,18 +108,13 @@
 export default {
   data() {
     return {
-      proveedores: [
+      sitios: [
         {
-          alias: "HCulona Barichara",
-          tel: "3222431444",
-          sitio: "Catedral",
+          nombre: "Salto del mico",
+          proveedor: "SUXpress Barichara",
+          descripcion:
+            "Mirador de ensueño...",
         },
-        {
-          alias: "SUXpress Barichara  ",
-          tel: "3222431444",
-          sitio: "SaltoM",
-        },
-        { alias: "Recorridos BCarlos", tel: "3222431444", sitio: "Museo" },
       ],
     };
   },
@@ -134,6 +122,9 @@ export default {
 </script>
 
 <style scoped>
+.link {
+  text-decoration: none !important;
+}
 .btn-container {
   display: flex;
   justify-content: center;
