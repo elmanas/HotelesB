@@ -17,7 +17,7 @@ export default {
       <a class="navbar-brand d-flex align-items-center" href="#"
         ><span
           class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-          style="background: #fd3838"
+          style="background:  #b7642d "
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -84,20 +84,20 @@ export default {
             <button>Registro Habitaciones</button>
           </router-link>
 
-          <router-link class="link" to="/EstadoHabitaciones">
-            <button>Estado Habitaciones</button>
-          </router-link>
-
-          <router-link class="link" to="/EstadoProveedores">
-            <button>Estado Proveedores</button>
-          </router-link>
-
           <router-link class="link" to="/VistaReservas">
             <button>Reservar Habitación</button>
           </router-link>
 
           <router-link class="link" to="/RegistroProveedores">
             <button>Registro Proveedores</button>
+          </router-link>
+
+          <router-link class="link" to="/RegistroSitio">
+            <button>Registro Sitio</button>
+          </router-link>
+
+          <router-link class="link" to="/PanelSuperUsuario">
+            <button>PanelSuperUsuario</button>
           </router-link>
 
           <router-link class="link" to="/PanelAdmin">
@@ -138,7 +138,7 @@ export default {
             </button>
             <button
               type="button"
-              style="background-color: #fd3838; border-style: none"
+              style="background-color:  #b7642d ; border-style: none"
               class="btn btn-danger"
               id="vaciarCarrito"
             >
@@ -165,7 +165,7 @@ export default {
             <li class="list-inline-item me-4">
               <div
                 class="bs-icon-circle bs-icon-primary bs-icon"
-                style="background: #fd3838"
+                style="background:  #b7642d "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -184,7 +184,7 @@ export default {
             <li class="list-inline-item me-4">
               <div
                 class="bs-icon-circle bs-icon-primary bs-icon"
-                style="background: #fd3838"
+                style="background:  #b7642d "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -203,7 +203,7 @@ export default {
             <li class="list-inline-item">
               <div
                 class="bs-icon-circle bs-icon-primary bs-icon"
-                style="background: #fd3838"
+                style="background:  #b7642d "
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -294,7 +294,7 @@ export default {
 
 hr {
   border: none; /* Quita el borde predeterminado */
-  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  background-color:  #b7642d ; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
 }
 </style>

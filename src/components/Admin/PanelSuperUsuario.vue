@@ -2,26 +2,58 @@
   <!-- Inicio de scroll de hoteles y sitios -->
   <main>
     <div class="galeria">
-      <div class="Hoteles"><h5>Administra tu hotel</h5></div>
+      <div class="Hoteles"><h5>Administrar</h5></div>
       <div class="contenedor">
         <center>
           <div class="contenedor-conciertos">
-            <router-link class="lg4" to="/" title="APanelHotel">
+            <router-link class="lg4" to="/PanelHoteles" title="SUPanelHoteles">
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="APanelHotel">
-                  <center><h6>Mi Hotel</h6></center>
+                <div class="textos" title="SUPanelHoteles">
+                  <center><h6>Hoteles</h6></center>
 
                   <i class="material-icons">settings</i>
                 </div>
               </div>
             </router-link>
 
-            <router-link class="lg4" to="/" title="APanelHabitaciones">
+            <router-link class="lg4" to="/PanelSitios" title="PanelSitios">
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="APanelHabitaciones">
-                  <center><h6>Mis Habitaciones</h6></center>
+                <div class="textos" title="PanelSitios">
+                  <center><h6>Sitios Turísticos</h6></center>
 
-                  <i class="material-icons">holiday_village</i>
+                  <i class="material-icons">map</i>
+                </div>
+              </div>
+            </router-link>
+
+            <router-link
+              class="lg4"
+              to="/PanelProveedores"
+              title="PanelProveedores"
+            >
+              <div
+                class="card"
+                style="background-color: #ffffff"
+                title="PanelProveedores"
+              >
+                <div class="textos">
+                  <center><h6>Proveedores</h6></center>
+
+                  <i class="material-icons">grade</i>
+                </div>
+              </div>
+            </router-link>
+
+            <router-link class="lg4" to="/PanelUsuarios" title="PanelUsuarios">
+              <div
+                class="card"
+                style="background-color: #ffffff"
+                title="PanelUsuarios"
+              >
+                <div class="textos">
+                  <center><h6>Usuarios</h6></center>
+
+                  <i class="material-icons">manage_accounts</i>
                 </div>
               </div>
             </router-link>
@@ -78,7 +110,7 @@ h5 {
 
   /* Flexbox */
   /* display: flex;
-      gap: 20px; */
+	gap: 20px; */
 
   /* Grid */
   display: grid;
@@ -89,9 +121,9 @@ h5 {
 .contenedor-conciertos {
   /* Flexbox */
   /* width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
 
   /* Grid */
   display: grid;
@@ -137,16 +169,16 @@ h5 {
 
   /* Grid */
   /* display: grid;
-      grid-template-rows: 1fr auto; */
+	grid-template-rows: 1fr auto; */
 }
 
 @media screen and (max-width: 900px) {
   .contenedor-conciertos {
     /* Flexbox */
     /* width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
 
     /* Grid */
     display: grid;
@@ -159,9 +191,9 @@ h5 {
   .contenedor-conciertos {
     /* Flexbox */
     /* width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
 
     /* Grid */
     display: grid;
@@ -174,9 +206,9 @@ h5 {
   .contenedor-conciertos {
     /* Flexbox */
     /* width: 70%;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px; */
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
 
     /* Grid */
     display: grid;

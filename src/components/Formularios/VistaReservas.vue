@@ -11,7 +11,7 @@
           <div class="card shadow mb-3">
             <div class="card-header py-3">
               <p class="text-primary m-0 fw-bold">
-                <span style="color: rgb(253, 56, 56)"
+                <span style="color:  #b7642d"
                   >Rellene los campos obligatorios *</span
                 >
               </p>
@@ -151,7 +151,7 @@
               ><button
                 class="btn btn-custom btn"
                 type="submit"
-                style="background: #fd3838; color: #fff"
+                style="background:  #b7642d; color: #fff"
               >
                 <i class="bi bi-backpack2-fill"></i>
                 Reservar
@@ -184,7 +184,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right,  #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -192,7 +192,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color: #fd3838;
+    background-color:  #b7642d;
     align-items: left;
     border-radius: 10px;
   }

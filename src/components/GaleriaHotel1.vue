@@ -5,7 +5,7 @@
     <div style="margin-bottom: 20px; display: inline-block">
       <div class="input-group">
         <span
-          style="background-color: #fd3838; color: #fff"
+          style="background-color:  #b7642d; color: #fff"
           class="input-group-text"
           id="addon-wrapping"
           >Fecha de ingreso</span
@@ -17,7 +17,7 @@
     <div style="display: inline-block">
       <div class="input-group">
         <span
-          style="background-color: #fd3838; color: #fff"
+          style="background-color:  #b7642d; color: #fff"
           class="input-group-text"
           id="addon-wrapping"
           >Fecha del egreso</span
@@ -41,7 +41,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -67,7 +67,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: #fd3838;
+            background-color:  #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -101,7 +101,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -121,7 +121,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -153,7 +153,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -173,7 +173,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -205,7 +205,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -225,7 +225,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -257,7 +257,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -280,7 +280,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -312,7 +312,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -336,7 +336,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -368,7 +368,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -400,7 +400,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -432,7 +432,7 @@
           style="
             display: inline-flex;
             align-items: center;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -456,7 +456,7 @@
             display: inline-flex;
             align-items: center;
             margin-top: 15px;
-            background-color: ##fd3838;
+            background-color: # #b7642d;
             border-radius: 10px;
             padding: 2px;
           "
@@ -538,7 +538,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #fd383872;
+  background-color:  #b7642d72;
   width: 100%;
   height: 0%;
   transition: 0.5s ease;
@@ -564,7 +564,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 18px; /* Tamaño del icono */
-  background-color: #fd383872;
+  background-color:  #b7642d72;
   border-style: none;
 }
 
@@ -609,7 +609,7 @@ body {
 h2 {
   display: inline-flex;
   align-items: center;
-  background-color: #fd3838;
+  background-color:  #b7642d;
   border-radius: 10px;
   padding: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega la sombra de fondo */
@@ -618,7 +618,7 @@ h2 {
 h3 {
   display: inline-flex;
   align-items: center;
-  background-color: #fd3838;
+  background-color:  #b7642d;
   border-radius: 10px;
   padding: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Agrega la sombra de fondo */

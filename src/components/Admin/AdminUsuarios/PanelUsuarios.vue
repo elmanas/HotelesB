@@ -10,7 +10,7 @@
               style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
               class="btns btn-dark"
             >
-              <i class="material-icons">person_add</i>
+              <i class="material-icons">add_box</i>
             </button>
           </router-link>
         </div>
@@ -47,11 +47,11 @@
                   </button>
                   <!-- boton que abre el modal -->
 
-                  <!-- boton que elimina el hotel -->
+                  <!-- boton que debe elimina el usuario -->
                   <button type="button" class="btns btn btn-dark">
                     <i class="material-icons">delete</i>
                   </button>
-                  <!-- boton que debe elimina el hotel -->
+                  <!-- boton que debe elimina el usuario -->
                 </div>
               </td>
             </tr>
@@ -61,7 +61,7 @@
 
       <!-- espacio para el modal -->
       <div
-        class="modal fade"
+        class="modal fade modal-small"
         id="editarp"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
@@ -71,7 +71,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Editar hotel
+                Editar usuario
               </h1>
               <button
                 type="button"
@@ -81,7 +81,66 @@
               ></button>
             </div>
             <div class="modal-body">
-              Espacio para traer los datos del hotel seleccionado
+              <div class="row">
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="nombre_usuario"
+                      ><strong>Nombre *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="nombre_usuario"
+                      name="nombre_usuario"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="correo_usuario"
+                      ><strong>Correo *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="correo_usuario"
+                      name="correo_usuario"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="tel_usuario"
+                      ><strong>Telefono *</strong></label
+                    ><input
+                      class="form-control"
+                      type="number"
+                      id="tel_usuario"
+                      name="tel_usuario"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="rol_usuario"
+                      ><strong>Rol *</strong></label
+                    ><select
+                      class="form-select"
+                      id="rol_usuario"
+                      name="rol_usuario"
+                      required=""
+                    >
+                      <option value="U">Usuario</option>
+                      <option value="A">Admin</option>
+                      <option value="SU">Super Usuario</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="modal-footer">
               <button
@@ -117,7 +176,7 @@ export default {
           nombre: "Carlos Ramos",
           correo: "ramosc@gmail.com",
           tel: "3222431440",
-          rol: "Admin",
+          rol: "Usuario",
         },
       ],
     };
@@ -126,6 +185,14 @@ export default {
 </script>
 
 <style scoped>
+/* Estilo para el modal más pequeño */
+.modal-small .modal-dialog {
+  max-width: 300px; /* Establece el ancho deseado */
+  margin: 0 auto; /* Centra horizontalmente el modal */
+  top: 50%; /* Coloca el modal en el centro vertical */
+  transform: translateY(-50%); /* Alinea verticalmente el modal */
+}
+
 .link {
   text-decoration: none !important;
 }

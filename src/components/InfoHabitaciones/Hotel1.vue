@@ -82,7 +82,7 @@
 <style scoped>
 hr {
   border: none; /* Quita el borde predeterminado */
-  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  background-color:  #b7642d; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
 }
 
@@ -98,7 +98,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right,  #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -118,7 +118,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color: #fd3838;
+    background-color:  #b7642d;
     align-items: left;
     border-radius: 10px;
   }
@@ -133,14 +133,14 @@ h6 p {
 }
 
 .btn.btn-custom {
-  background-color: #fd3838;
+  background-color:  #b7642d;
   border-radius: 20px;
   color: #fff;
 }
 
 hr {
   border: none; /* Quita el borde predeterminado */
-  background-color: #fd3838; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  background-color:  #b7642d; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
   margin: 20px 0; /* Añade margen superior e inferior para separar del contenido */
 }
@@ -198,7 +198,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  background-color: #fd383872;
+  background-color:  #b7642d72;
   width: 100%;
   height: 0%;
   transition: 0.5s ease;
@@ -224,7 +224,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 18px; /* Tamaño del icono */
-  background-color: #fd383872;
+  background-color:  #b7642d72;
   border-style: none;
 }
 

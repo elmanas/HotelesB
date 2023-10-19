@@ -1,61 +1,88 @@
 <template>
-    <div class="galeria">
-      <div class="Hoteles"><h5>Administrar habitaciones </h5></div>
+  <div class="galeria">
+    <div class="Hoteles"><h5>Administrar habitaciones</h5></div>
+    <div>
+      <!-- Botón para agregar nueva habitación -->
       <div>
-        <!-- Botón para agregar nueva habitación -->
-        <div>
-          <div class="btn-group" role="group">
+        <div class="btn-group" role="group">
+          <router-link class="link" to="/RegistroHabitaciones">
             <button
               style="margin-bottom: 5px; margin-top: 30px"
               class="btns btn btn-dark"
               @click="showAddModal"
             >
               <i class="material-icons">add_box</i>
-            </button>
-          </div>
+            </button></router-link
+          >
         </div>
-  
-        <!-- Tabla de habitaciones -->
-        <div class="table-responsive">
-          <table class="table table-bordered">
-            <thead style="align-items: center; text-align: center">
-              <tr>
-                <th>Alias</th>
-                <th>Estado</th>
-                <th>Precio</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(room, index) in rooms" :key="index">
-                <td>{{ room.alias }}</td>
-                <td>{{ room.estado }}</td>
-                <td>{{ Number(room.precio) }}</td>
-                <td>
-                  <div class="btn-container">
-                    <button class="btns btn btn-dark" @click="changeRoomStatus(index)">
-                      <i class="material-icons">change_circle</i>
-                    </button>
-                    <button 
+      </div>
+
+      <!-- Tabla de habitaciones -->
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead style="align-items: center; text-align: center">
+            <tr>
+              <th>Alias</th>
+              <th>Estado</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(room, index) in rooms" :key="index">
+              <td>{{ room.alias }}</td>
+              <td>{{ room.estado }}</td>
+              <td>{{ Number(room.precio) }}</td>
+              <td>
+                <div class="btn-container">
+                  <button
                     type="button"
                     class="btns btn btn-dark"
                     data-bs-toggle="modal"
                     data-bs-target="#editarp"
-                    @click="editRoom(index)">
-                      <i class="material-icons">edit</i>
-                    </button>
-                    <button class="btns btn btn-dark" @click="deleteRoom(index)">
-                      <i class="material-icons">delete</i>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-  
-  <!-- espacio para el modal -->
-  <div
+                    @click="editRoom(index)"
+                  >
+                    <i class="material-icons">edit</i>
+                  </button>
+                  <button class="btns btn btn-dark" @click="deleteRoom(index)">
+                    <i class="material-icons">delete</i>
+                  </button>
+
+                  <!-- separador -->
+                  <div class="separator"></div>
+
+                  <button
+                    style="background-color: green"
+                    class="custom btn btn-dark"
+                    title="Disponible"
+                  >
+                    <i class="material-icons">done</i>
+                  </button>
+
+                  <button
+                    style="background-color: orange"
+                    class="custom btn btn-dark"
+                    title="Rerservada"
+                  >
+                    <i class="material-icons">done_all</i>
+                  </button>
+
+                  <button
+                    style="background-color: #fd3838"
+                    class="custom btn btn-dark"
+                    title="Ocupada"
+                  >
+                    <i class="material-icons">close</i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- espacio para el modal -->
+      <div
         class="modal fade modal-small"
         id="editarp"
         tabindex="-1"
@@ -323,23 +350,18 @@
                 </div>
 
                 <!-- Descripción del hotel -->
-                <div
-                  style="margin-bottom: 15px"
-                  class="col-6"
-                >
-                  <label class="form-label" for="nombre_hotel"
+                <div style="margin-bottom: 15px" class="col-6">
+                  <label class="form-label" for="des_habitacion"
                     ><strong>Descripción *</strong></label
                   >
                   <textarea
                     class="form-control"
-                    id="descripcionSitio"
-                    name="descripcionSitio"
+                    id="des_habitacion"
+                    name="des_habitacion"
                     rows="1"
                     required=""
                   ></textarea>
                 </div>
-
-
               </div>
             </div>
             <div class="modal-footer">
@@ -363,52 +385,55 @@
         </div>
       </div>
       <!-- espacio para el modal -->
-      </div>
     </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        rooms: [
-          {
-            alias: "Habitación 001",
-            estado: "Disponible",
-            precio: 50000,
-          },
-        ],
-        editedRoom: { alias: "", direccion: "" },
-        editModalVisible: false,
-      };
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      rooms: [
+        {
+          alias: "Habitación 001",
+          estado: "Disponible",
+          precio: 50000,
+        },
+      ],
+      editedRoom: { alias: "", direccion: "" },
+      editModalVisible: false,
+    };
+  },
+  methods: {
+    showAddModal() {
+      // mostrar el modal de agregar nueva habitación
     },
-    methods: {
-      showAddModal() {
-        // mostrar el modal de agregar nueva habitación
-      },
-      changeRoomStatus(index) {
-        // cambiar el estado de la habitación
-      },
-      editRoom(index) {
-        // abrir el modal de edición
-        this.editedRoom = { ...this.rooms[index] };
-        this.editModalVisible = true;
-      },
-      hideEditModal() {
-        // cerrar el modal de edición
-        this.editModalVisible = false;
-      },
-      saveRoomChanges() {
-        // guardar los cambios en la habitación editada
-      },
-      deleteRoom(index) {
-        // eliminar la habitación
-      },
+    editRoom(index) {
+      // abrir el modal de edición
+      this.editedRoom = { ...this.rooms[index] };
+      this.editModalVisible = true;
     },
-  };
-  </script>
-  
-  <style scoped>
+    hideEditModal() {
+      // cerrar el modal de edición
+      this.editModalVisible = false;
+    },
+    saveRoomChanges() {
+      // guardar los cambios en la habitación editada
+    },
+    deleteRoom(index) {
+      // eliminar la habitación
+    },
+  },
+};
+</script>
+
+<style scoped>
+.separator {
+  width: 1px; /* Ancho de la línea vertical */
+  height: 30px; /* Altura de la línea vertical */
+  background-color: #38383835; /* Color de la línea */
+  margin: 0 5px; /* Espacio entre los botones y la línea */
+}
 
 .modal-small .modal-dialog {
   transform: translateY(0%); /* Alinea verticalmente el modal */
@@ -446,106 +471,104 @@
   opacity: 0;
 }
 
-  .btn-container {
-    display: flex;
-    justify-content: center;
-    gap: 5px; /* Espacio entre los botones */
-  }
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Espacio entre los botones */
+}
 
-  
-  .material-icons {
-    font-size: 20px; /* Tamaño del icono */
-  }
-  
-  .galeria {
-    padding: 16px;
-    margin-top: 8px;
-  }
-  
-  h5 {
-    padding: 5px;
-    margin-left: 5px;
-    color: #fff;
-  }
-  
+.material-icons {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+.galeria {
+  padding: 16px;
+  margin-top: 8px;
+}
+
+h5 {
+  padding: 5px;
+  margin-left: 5px;
+  color: #fff;
+}
+
+.Hoteles {
+  background: linear-gradient(to right, #fd3838, transparent);
+  align-items: center;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+@media screen and (max-width: 500px) {
   .Hoteles {
-    background: linear-gradient(to right, #fd3838, transparent);
-    align-items: center;
+    background-color: #fd3838;
+    align-items: left;
     border-radius: 10px;
-    transition: 1s;
   }
-  
-  @media screen and (max-width: 500px) {
-    .Hoteles {
-      background-color: #fd3838;
-      align-items: left;
-      border-radius: 10px;
-    }
-  }
-  
-  /* Estilos para la tabla */
-  .table {
-    border-collapse: collapse; /* Para eliminar los espacios entre las celdas */
-    width: 100%;
-  }
-  
-  th,
-  td {
-    text-align: center;
-    padding: 10px;
-  }
-  
-  th {
-    background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
-  }
-  
-  .btn-container {
-    display: flex;
-    gap: 5px; /* Espacio entre los botones */
-  }
+}
 
-  .btns {
+/* Estilos para la tabla */
+.table {
+  border-collapse: collapse; /* Para eliminar los espacios entre las celdas */
+  width: 100%;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #f2f2f2; /* Color de fondo para las celdas del encabezado */
+}
+
+.btn-container {
+  display: flex;
+  gap: 5px; /* Espacio entre los botones */
+}
+
+.btns {
   border-radius: 50%; /* Redondear los botones */
   padding: 5px; /* Agregar espacio interior para separar los iconos */
   display: flex;
   align-items: center;
   justify-content: center;
 }
-  
-  /* Botones de acción dentro de la tabla */
-  .btns {
-    border-radius: 50%; /* Redondear los botones */
-    padding: 5px; /* Agregar espacio interior para separar los iconos */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #343a40; /* Color de fondo de los botones */
-    color: white; /* Color del texto de los botones */
-    border: none; /* Eliminar el borde de los botones */
-  }
-  
-  .custom {
-    background-color: #343a40;
-    border-style: none;
-    border-radius: 10px;
-    color: #f2f2f2;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    display: flex;
-  }
-  
-  .material-icons {
-    font-size: 20px; /* Tamaño del icono */
-  }
-  
-  /* Estilos para scrollbar */
-  .table-responsive::-webkit-scrollbar {
-    height: 7px;
-  }
-  
-  .table-responsive::-webkit-scrollbar-thumb {
-    background-color: #fd3838;
-    border-radius: 20px;
-  }
-  </style>
+
+/* Botones de acción dentro de la tabla */
+.btns {
+  border-radius: 50%; /* Redondear los botones */
+  padding: 5px; /* Agregar espacio interior para separar los iconos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #343a40; /* Color de fondo de los botones */
+  color: white; /* Color del texto de los botones */
+  border: none; /* Eliminar el borde de los botones */
+}
+
+.custom {
+  border-radius: 50%; /* Redondear los botones */
+  padding: 5px; /* Agregar espacio interior para separar los iconos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* Color del texto de los botones */
+  border: none; /* Eliminar el borde de los botones */
+}
+
+.material-icons {
+  font-size: 20px; /* Tamaño del icono */
+}
+
+/* Estilos para scrollbar */
+.table-responsive::-webkit-scrollbar {
+  height: 7px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background-color: #fd3838;
+  border-radius: 20px;
+}
+</style>

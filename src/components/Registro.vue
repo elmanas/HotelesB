@@ -11,7 +11,7 @@
             >
               <div
                 class="bs-icon-xl bs-icon-circle bs-icon-primary bs-icon my-4"
-                style="background: #fd3838"
+                style="background:  #b7642d"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@
                 <div class="mb-3">
                   <button
                     class="btn btn-primary d-block w-100"
-                    style="background: #fd3838; border-style: none"
+                    style="background:  #b7642d; border-style: none"
                   >
                     Registrarme
                   </button>

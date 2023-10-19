@@ -33,13 +33,18 @@ import SaltoDelMico from "../src/components/InfoSTuristicos/SaltoDelMico.vue";
 
 
 // Zona de administrador
-import RegitroHotel from "../src/components/Admin/RegitroHotel.vue";
-import RegistroHabitaciones from "../src/components/Admin/RegistroHabitaciones.vue";
-import EstadoHabitaciones from "../src/components/Admin/EstadoHabitaciones.vue";
-import EstadoProveedores from "../src/components/Admin/EstadoProveedores.vue";
-import VistaReservas from "../src/components/Admin/VistaReservas.vue";
-import RegistroProveedores from "../src/components/Admin/RegistroProveedores.vue";
+import RegitroHotel from "../src/components/Formularios/RegitroHotel.vue";
+import RegistroHabitaciones from "../src/components/Formularios/RegistroHabitaciones.vue";
+
+import VistaReservas from "../src/components/Formularios/VistaReservas.vue";
+import RegistroSitio from "../src/components/Formularios/RegistroSitio.vue";
+import RegistroProveedores from "../src/components/Formularios/RegistroProveedores.vue";
+
+// Paneles Roles
+import PanelSuperUsuario from "../src/components/Admin/PanelSuperUsuario.vue";
 import PanelAdmin from "../src/components/Admin/PanelAdmin.vue";
+
+
 import PanelHoteles from "../src/components/Admin/AdminHoteles/PanelHoteles.vue";
 import PanelProveedores from "../src/components/Admin/AdminProveedores/PanelProveedores.vue";
 import PanelSitios from "../src/components/Admin/AdminSitios/PanelSitios.vue";
@@ -69,16 +74,21 @@ const routes = [
 
   { path: "/RegistroHabitaciones", component: RegistroHabitaciones },
 
-  { path: "/EstadoHabitaciones", component: EstadoHabitaciones },
 
-  { path: "/EstadoProveedores", component: EstadoProveedores },
 
   { path: "/VistaReservas", component: VistaReservas },
+
+  { path: "/RegistroSitio", component: RegistroSitio },
 
   { path: "/RegistroProveedores", component: RegistroProveedores },
 
 
+// Paneles Roles
+  { path: "/PanelSuperUsuario", component: PanelSuperUsuario},
+
   { path: "/PanelAdmin", component: PanelAdmin},
+
+
 
   { path: "/PanelHoteles", component: PanelHoteles},
 

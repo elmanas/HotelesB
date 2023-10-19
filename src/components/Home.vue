@@ -245,7 +245,7 @@ export default {
 }
 
 .imagen-con-texto:hover {
-  filter: saturate(3);
+  filter: saturate(2);
   transform: scale(1.01); /* Cambia el tamaño al pasar el mouse */
 }
 
@@ -277,7 +277,7 @@ export default {
 .text-hotel {
   margin-right: 10px;
   text-align: center;
-  background-color: #fd3838;
+  background-color:  #b7642d ;
   color: #fff;
   border-radius: 0 0 10px 10px; /* Redondear solo las esquinas superiores */
 }
@@ -288,13 +288,13 @@ export default {
 }
 
 .lista-imagenes::-webkit-scrollbar-thumb {
-  background-color: #fd3838;
+  background-color:  #b7642d ;
   border-radius: 20px;
 }
 
 /* Estilos para botones de scroll */
 .btn.btn-custom {
-  background-color: #fd383800;
+  background-color:  #b7642d 00;
   color: #fff;
 }
 
@@ -343,14 +343,14 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right,  #b7642d , transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
 }
 
 .Sitios {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right,  #b7642d , transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -412,13 +412,13 @@ h5 {
   }
 
   .Sitios {
-    background: #fd3838;
+    background:  #b7642d ;
     align-items: center;
     border-radius: 10px;
   }
 
   .Hoteles {
-    background-color: #fd3838;
+    background-color:  #b7642d ;
     align-items: left;
     border-radius: 10px;
   }

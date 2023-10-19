@@ -5,12 +5,13 @@
       <!-- Botón para agregar nuevo hotel -->
       <div>
         <div class="btn-group" role="group">
+          <router-link class="link" to="/RegitroHotel">
           <button
             style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
             class="btns btn-dark"
           >
             <i class="material-icons">add_box</i>
-          </button>
+          </button></router-link>
         </div>
       </div>
 
@@ -164,7 +165,7 @@
                       ><strong>Telefono *</strong></label
                     ><input
                       class="form-control"
-                      type="text"
+                      type="number"
                       id="tel_hotel"
                       name="tel_hotel"
                       required=""

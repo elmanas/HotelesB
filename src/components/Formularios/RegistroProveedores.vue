@@ -1,107 +1,31 @@
 <template>
   <main>
     <div class="galeria">
-      <div class="Hoteles"><h5>Registra tu hotel</h5></div>
+      <div class="Hoteles"><h5>Registra un proveedor</h5></div>
       <!-- Start: Ludens - Create-Edit Form -->
-      <div
-        class="container"
-        style="margin-top: 20px; margin-bottom: 20px"
-      >
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px">
         <form enctype="multipart/form-data" method="post">
           <div class="card shadow mb-3">
             <div class="card-header py-3">
               <p class="text-primary m-0 fw-bold">
-                <span style="color: rgb(253, 56, 56)"
+                <span style="color:  #b7642d"
                   >Rellene los campos obligatorios *</span
                 >
               </p>
             </div>
+
             <div class="card-body">
               <div class="row">
-                <div class="col-sm-12 col-md-8 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="direccion_hotel"
-                      ><strong>Dirección *</strong></label
-                    ><input
-                      class="form-control"
-                      type="text"
-                      id="id_name_service"
-                      placeholder="Ej: Calle 6A #3-20 Barrio Rojo"
-                      name="direccion_hotel"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="nombre_hotel"
-                      ><strong>Nombre *</strong></label
-                    ><input
-                      class="form-control"
-                      type="text"
-                      id="id_price_service"
-                      placeholder="Nombre del hotel"
-                      name="nombre_hotel"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="representante_legal"
-                      ><strong>Representante&nbsp;legal *</strong></label
-                    ><input
-                      class="form-control"
-                      type="text"
-                      id="id_price_service-1"
-                      placeholder="Nombre del representante"
-                      name="representante_legal"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="tel_contacto"
-                      ><strong>Teléfono&nbsp;*</strong></label
-                    ><input
-                      class="form-control"
-                      type="text"
-                      id="id_price_service-2"
-                      placeholder="Teléfono de contacto"
-                      name="tel_contacto"
-                      oninput="this.value = this.value.replace(/[^0-9]/g, '')"
-                      pattern="[0-9]{10,}"
-                      title="Ingresa al menos 10 números"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <div class="col-sm-12 col-md-4 col-lg-4">
-                  <div class="mb-3">
-                    <label class="form-label" for="email"
-                      ><strong>Correo *</strong></label
-                    ><input
-                      class="form-control"
-                      type="email"
-                      id="id_price_service-3"
-                      placeholder="Correo valido"
-                      name="email"
-                      required=""
-                    />
-                  </div>
-                </div>
-
                 <div class="col-15">
                   <div class="mb-3">
-                    <strong>Imagen principal *</strong>
+                    <strong>Logo *</strong>
                     <p>
                       {{ imagesSelected }} imágenes seleccionadas (Máximo 1)
                     </p>
                     <div style="margin-top: -15px" class="logo">
                       <p class="logop">
                         <i
-                          style="color: #fd3838; font-size: 30px"
+                          style="color:  #b7642d; font-size: 30px"
                           class="bi bi-file-earmark-arrow-up-fill"
                         ></i>
                       </p>
@@ -117,9 +41,10 @@
                         @change="handleFileUpload"
                       />
                     </div>
+
                     <!-- Contenedor de las imágenes con margen -->
                     <div
-                      style="margin-top: 15px; display: flex"
+                      style="margin-top: 20px"
                       class="d-flex flex-wrap gap-1"
                     >
                       <div
@@ -134,9 +59,10 @@
                         />
                       </div>
                     </div>
+
                     <button
                       style="
-                        background-color: #fd3838;
+                        background-color:  #b7642d;
                         color: #fff;
                         margin-top: 20px;
                       "
@@ -149,7 +75,35 @@
                   </div>
                 </div>
 
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="nombre_proveedor"
+                      ><strong>Nombre *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="nombre_proveedor"
+                      placeholder="Ej: Sprex Aguilas"
+                      name="nombre_proveedor"
+                      required=""
+                    />
+                  </div>
+                </div>
 
+                <div class="col-6">
+                  <div class="mb-3">
+                    <label class="form-label" for="nombre_proveedor"
+                      ><strong>Telefono *</strong></label
+                    ><input
+                      class="form-control"
+                      type="number"
+                      id="nombre_proveedor"
+                      placeholder="Ej: 3222431440"
+                      name="nombre_proveedor"
+                      required=""
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -170,7 +124,7 @@
               ><button
                 class="btn btn-custom btn"
                 type="submit"
-                style="background: #fd3838; color: #fff"
+                style="background:  #b7642d; color: #fff"
               >
                 <i class="bi bi-floppy-fill"></i>
                 Registrar
@@ -184,14 +138,17 @@
   </main>
 </template>
 
-<script>export default {
+<script>
+export default {
   data() {
     return {
+      // imagenesSitios
       uploadedImages: [], // Almacenar las imágenes cargadas
       imagesSelected: 0, // Contador de imágenes seleccionadas
     };
   },
   methods: {
+    // imagenesSitios
     handleFileUpload(event) {
       if (this.imagesSelected >= 1) {
         // Límite de 1 imágenes alcanzado, no permitir más
@@ -204,7 +161,7 @@
       // Recorrer los archivos seleccionados
       for (let i = 0; i < files.length; i++) {
         if (this.imagesSelected >= 1) {
-          // Límite de 4 imágenes alcanzado, no permitir más
+          // Límite de 1 imágenes alcanzado, no permitir más
           break;
         }
 
@@ -224,10 +181,10 @@
       this.imagesSelected = 0;
     },
   },
-};</script>
+};
+</script>
 
 <style scoped>
-
 .logo {
   position: relative;
   max-width: 30px;
@@ -267,7 +224,7 @@
   object-fit: cover;
   border-radius: 10px;
   border-style: solid;
-  border-color: #fd38385b;
+  border-color:  #b7642d5b;
 }
 
 .link {
@@ -286,7 +243,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right,  #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -294,9 +251,23 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color: #fd3838;
+    background-color:  #b7642d;
     align-items: left;
     border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .d-flex {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos (opcional) */
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .container {
+    max-width: 700px;
   }
 }
 </style>
