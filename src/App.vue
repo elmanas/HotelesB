@@ -17,7 +17,7 @@ export default {
       <a class="navbar-brand d-flex align-items-center" href="#"
         ><span
           class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center me-2 bs-icon"
-          style="background:  #b7642d "
+          style="background: #b7642d"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -108,11 +108,11 @@ export default {
     </div>
 
     <!-- Modal que hace de carrito de compras -->
-    <div class="modal fade" id="carrito" tabindex="-1">
+    <div class="modal fade modal-small" id="carrito" tabindex="-1">
       <div class="modal-dialog modal-lg modal-right">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Habitaciones seleccioandas</h5>
+            <h5 class="modal-title">Por reservar</h5>
             <button
               type="button"
               class="btn-close"
@@ -122,27 +122,93 @@ export default {
           </div>
           <div class="modal-body">
             <ul id="carrito-lista" class="list-group">
-              <!-- Contenido del carrito de compras (Habitaciones) -->
+              <div
+                style="
+                  background-color: #b7642d14;
+                  padding: 10px 10px 1px;
+                  border-radius: 5px;
+                "
+                id="habitaciones"
+                class="mb-3"
+              >
+                <!-- Habitación 1 -->
+                <div
+                  style="margin-bottom: 10px"
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <p class="mb-0">Habitación 1</p>
+                  <span
+                    class="badge custom-badge badge-pill"
+                    style="background-color: #343a40; color: white"
+                    >$50.000</span
+                  >
+
+                  <button
+                    style="background: #b7642d; border-style: none"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Eliminar
+                  </button>
+                </div>
+
+                <!-- Habitación 2 -->
+                <div
+                  style="margin-bottom: 10px"
+                  class="d-flex justify-content-between align-items-center"
+                >
+                  <p class="mb-0">Habitación 2</p>
+                  <span
+                    class="badge custom-badge badge-pill"
+                    style="background-color: #343a40; color: white"
+                    >$50.000</span
+                  >
+
+                  <button
+                    style="background: #b7642d; border-style: none"
+                    class="btn btn-danger btn-sm"
+                  >
+                    Eliminar
+                  </button>
+                </div>
+              </div>
             </ul>
-            <p id="precioTotalModal" style="margin-top: 10px;" class="text-center">Total: $0</p>
+            <center>
+              <p
+                id="precioTotalModal"
+                style="
+                  font-size: 12px;
+                  font-weight: bold;
+                  background-color: #b7642d14;
+                  color: rgb(0, 0, 0);
+                  border-radius: 5px;
+                  max-width: 140px;
+                  margin-bottom: 1px;
+                "
+                class="text-center"
+              >
+                Total: $100.000
+              </p>
+            </center>
+
             <!-- Suma de todos los productos -->
           </div>
           <div class="modal-footer">
             <button
               type="button"
-              style="background-color: #343a40; border-style: none;"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Cerrar
-            </button>
-            <button
-              type="button"
-              style="background-color:  #b7642d ; border-style: none"
+              style="background-color: #343a40; border-style: none"
               class="btn btn-danger"
               id="vaciarCarrito"
             >
               Vaciar Carrito
+            </button>
+
+            <button
+              type="button"
+              style="background-color: #b7642d; border-style: none"
+              class="btn btn-secondary"
+              id="pagarReservas"
+            >
+              Reservar
             </button>
           </div>
         </div>
@@ -232,6 +298,13 @@ export default {
 <script></script>
 
 <style scoped>
+/* Estilo para el modal más pequeño */
+.modal-small .modal-dialog {
+  max-width: 300px; /* Establece el ancho deseado */
+  margin: 0 auto; /* Centra horizontalmente el modal */
+  top: 50%; /* Coloca el modal en el centro vertical */
+  transform: translateY(-50%); /* Alinea verticalmente el modal */
+}
 .link {
   text-decoration: none !important;
 }
@@ -294,7 +367,7 @@ export default {
 
 hr {
   border: none; /* Quita el borde predeterminado */
-  background-color:  #b7642d ; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
+  background-color: #b7642d; /* Cambia el color de fondo a azul (puedes usar cualquier color que desees) */
   height: 2px; /* Define el grosor de la línea horizontal */
 }
 </style>

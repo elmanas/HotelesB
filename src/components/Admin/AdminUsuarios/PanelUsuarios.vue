@@ -153,7 +153,7 @@
               </button>
               <button
                 type="button"
-                style="background-color: #fd3838; border-style: none"
+                style="background-color: #b7642d; border-style: none"
                 class="btn btn-primary"
               >
                 Editar
@@ -226,7 +226,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -234,7 +234,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color: #fd3838;
+    background-color: #b7642d;
     align-items: left;
     border-radius: 10px;
   }
@@ -283,7 +283,7 @@ th {
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #fd3838;
+  background-color: #b7642d;
   border-radius: 20px;
 }
 </style>

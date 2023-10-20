@@ -83,7 +83,7 @@
                   <div style="margin-top: -15px" class="logo">
                     <p class="logop">
                       <i
-                        style="color: #fd3838; font-size: 30px"
+                        style="color: #b7642d; font-size: 30px"
                         class="bi bi-file-earmark-arrow-up-fill"
                       ></i>
                     </p>
@@ -161,7 +161,7 @@
               </button>
               <button
                 type="button"
-                style="background-color: #fd3838; border-style: none"
+                style="background-color: #b7642d; border-style: none"
                 class="btn btn-primary"
               >
                 Editar
@@ -239,7 +239,7 @@ export default {
   object-fit: cover;
   border-radius: 10px;
   border-style: solid;
-  border-color: #fd38385b;
+  border-color: #b7642d5b;
 }
 
 .link {
@@ -275,7 +275,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right, #fd3838, transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -283,7 +283,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color: #fd3838;
+    background-color: #b7642d;
     align-items: left;
     border-radius: 10px;
   }
@@ -332,7 +332,7 @@ th {
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-  background-color: #fd3838;
+  background-color: #b7642d;
   border-radius: 20px;
 }
 </style>
