@@ -135,8 +135,8 @@
                       required=""
                     >
                       <option value="U">Usuario</option>
+                      <option value="D">Dueño</option>
                       <option value="A">Admin</option>
-                      <option value="SU">Super Usuario</option>
                     </select>
                   </div>
                 </div>

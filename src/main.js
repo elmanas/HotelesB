@@ -19,11 +19,11 @@ import Registro from "../src/components/Registro.vue";
 // Pagina principal o home
 import Home from "../src/components/Home.vue";
 
-// Galeria de habitaciones del primer hotel
-import GaleriaHotel1 from "../src/components/GaleriaHotel1.vue";
+// Galeria de habitaciones de BellaVista
+import BellaVista from "../src/components//Hoteles/BellaVista.vue";
 
-// Info habitaciones hotel1
-import Hotel1 from "../src/components/InfoHabitaciones/Hotel1.vue";
+// Info habitaciones BellaVista
+import BellaVistaH1 from "../src/components/Habitaciones/BellaVistaH1.vue";
 
 // Info Info sitios turisticos
 import SaltoDelMico from "../src/components/InfoSTuristicos/SaltoDelMico.vue";
@@ -41,8 +41,8 @@ import RegistroSitio from "../src/components/Formularios/RegistroSitio.vue";
 import RegistroProveedores from "../src/components/Formularios/RegistroProveedores.vue";
 
 // Paneles Roles
-import PanelSuperUsuario from "../src/components/Admin/PanelSuperUsuario.vue";
 import PanelAdmin from "../src/components/Admin/PanelAdmin.vue";
+import PanelDueno from "../src/components/Admin/PanelDueno.vue";
 
 
 import PanelHoteles from "../src/components/Admin/AdminHoteles/PanelHoteles.vue";
@@ -59,9 +59,9 @@ import PanelUsuarios from "../src/components/Admin/AdminUsuarios/PanelUsuarios.v
 const routes = [
   {
     path: "/", component: Home },
-  { path: "/GaleriaHotel1", component: GaleriaHotel1 },
+  { path: "/BellaVista", component: BellaVista },
 
-  { path: "/Hotel1", component: Hotel1 },
+  { path: "/BellaVistaH1", component: BellaVistaH1 },
 
   { path: "/SaltoDelMico", component: SaltoDelMico },
 
@@ -84,9 +84,9 @@ const routes = [
 
 
 // Paneles Roles
-  { path: "/PanelSuperUsuario", component: PanelSuperUsuario},
-
   { path: "/PanelAdmin", component: PanelAdmin},
+
+  { path: "/PanelDueno", component: PanelDueno},
 
 
 

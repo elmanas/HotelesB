@@ -125,7 +125,7 @@
                       ><strong>Saldo disponible:</strong></label
                     >
                     <div class="saldo">
-                      $500.00
+                      $500.000
                     </div>
                   </div>
                 </div>

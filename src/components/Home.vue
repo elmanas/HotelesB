@@ -147,7 +147,7 @@
 
       <div class="lista-imagenes hotel-images">
         <div class="imagen-con-texto">
-          <router-link class="link" to="/GaleriaHotel1">
+          <router-link class="link" to="/BellaVista">
             <img src="https://i.ibb.co/h29BtTK/2.jpg" alt="imagen-principal" />
             <p class="text-hotel">Bella Vista</p>
           </router-link>
