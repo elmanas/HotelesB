@@ -6,17 +6,18 @@
       <div>
         <div class="btn-group" role="group">
           <router-link class="link" to="/RegitroHotel">
-          <button
-            style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
-            class="btns btn-dark"
+            <button
+              style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
+              class="btns btn-dark"
+            >
+              <i class="material-icons">add_box</i>
+            </button></router-link
           >
-            <i class="material-icons">add_box</i>
-          </button></router-link>
         </div>
       </div>
 
       <!-- Tabla de hoteles -->
-      <div class="table-responsive">
+      <div style="font-size: 12px;" class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>
@@ -48,19 +49,19 @@
                   </button>
                   <!-- boton que abre el modal -->
 
-                  <!-- boton que elimina el hotel -->
+                  <!-- boton que debe elimina el hotel -->
                   <button type="button" class="btns btn btn-dark">
                     <i class="material-icons">delete</i>
                   </button>
                   <!-- boton que debe elimina el hotel -->
 
-                  <!-- boton que debe lleva a las habitaciones del hotel seleccionado -->
+                  <!-- boton que debe lleva a las habitaciones del hotel -->
                   <router-link class="link" to="/PanelHabitaciones">
-                    <button type="button" class="btns btn btn-dark">
+                    <button title="Ver habitaciones" type="button" class="btns btn btn-dark">
                       <i class="material-icons">holiday_village</i>
                     </button>
                   </router-link>
-                  <!-- boton que debe lleva a las habitaciones del hotel seleccionado -->
+                  <!-- boton que debe lleva a las habitaciones del hotel -->
                 </div>
               </td>
             </tr>

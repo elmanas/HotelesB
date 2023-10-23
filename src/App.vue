@@ -61,51 +61,103 @@ export default {
           </li>
           <!-- Icono carrito -->
 
-          <!-- <li class="nav-item">
-            <a class="nav-link"
-              ><i style="color: black" class="bi bi-house-fill"></i> Third
-              Item</a
-            >
-          </li> -->
+          <div class="dropdown">
+            <li class="nav-item" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle"
+                ><i style="color: black" class="bi bi-ui-checks"></i>
+                Formularios</a
+              >
+            </li>
 
-          <router-link class="link" to="/Login">
-            <button>login</button>
-          </router-link>
+            <ul style="font-size: 12px" class="dropdown-menu">
+              <router-link class="link" to="/RegitroHotel">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-house-add-fill"></i>
+                    Registro Hotel</a
+                  >
+                </li>
+              </router-link>
 
-          <router-link class="link" to="/Registro">
-            <button>Register</button>
-          </router-link>
+              <router-link class="link" to="/RegistroHabitaciones">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-houses-fill"></i>
+                    Registro Habitaciones</a
+                  >
+                </li>
+              </router-link>
 
-          <router-link class="link" to="/RegitroHotel">
-            <button>Registro Hotel</button>
-          </router-link>
+              <router-link class="link" to="/VistaReservas"> </router-link>
 
-          <router-link class="link" to="/RegistroHabitaciones">
-            <button>Registro Habitaciones</button>
-          </router-link>
+              <router-link class="link" to="/RegistroProveedores">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-star-fill"></i>
+                    Registro Proveedores</a
+                  >
+                </li>
+              </router-link>
 
-          <router-link class="link" to="/VistaReservas">
-            <button>Reservar Habitación</button>
-          </router-link>
+              <router-link class="link" to="/RegistroSitio">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-map"></i> Registro
+                    Sitio</a
+                  >
+                </li>
+              </router-link>
+            </ul>
+          </div>
 
-          <router-link class="link" to="/RegistroProveedores">
-            <button>Registro Proveedores</button>
-          </router-link>
+          <div class="dropdown">
+            <li class="nav-item" data-bs-toggle="dropdown">
+              <a class="nav-link dropdown-toggle"
+                ><i style="color: black" class="bi bi-ui-checks-grid"></i>
+                Administración</a
+              >
+            </li>
+            <ul style="font-size: 12px" class="dropdown-menu">
+              <router-link class="link" to="/PanelAdmin">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-gem"></i> Panel
+                    Admin</a
+                  >
+                </li>
+              </router-link>
 
-          <router-link class="link" to="/RegistroSitio">
-            <button>Registro Sitio</button>
-          </router-link>
-
-          <router-link class="link" to="/PanelAdmin">
-            <button>PanelAdmin</button>
-          </router-link>
-
-          <router-link class="link" to="/PanelDueno">
-            <button>Panel Dueño</button>
-          </router-link>
+              <router-link class="link" to="/PanelDueno">
+                <li style="margin-left: 10px" class="nav-item">
+                  <a class="nav-link"
+                    ><i style="color: black" class="bi bi-house-gear-fill"></i>
+                    Panel Dueño</a
+                  >
+                </li>
+              </router-link>
+            </ul>
+          </div>
         </ul>
+
+
+        <router-link class="link" to="/Login">
+          <button style="margin-right: 10px; border-radius: 50px; background-color: #b7642d; border-style: none;" class="btn btn-primary">
+            <i class="bi bi-box-arrow-in-right"></i>
+            Entrar
+          </button>
+        </router-link>
+
+        <router-link class="link" to="/Registro">
+          <button style="border-radius: 50px;" class="btn btn-dark">
+            <i class="bi bi-person-plus-fill"></i>
+            Registro
+          </button>
+        </router-link>
+
+
       </div>
     </div>
+
 
     <!-- Modal que hace de carrito de compras -->
     <div class="modal fade modal-small" id="carrito" tabindex="-1">
@@ -136,8 +188,9 @@ export default {
                   style="margin-bottom: 10px"
                   class="d-flex justify-content-between align-items-center"
                 >
-                <router-link class="link" to="/BellaVistaH1">
-                  <p class="mb-0 limit-text">Habitación 1</p></router-link>
+                  <router-link class="link" to="/BellaVistaH1">
+                    <p class="mb-0 limit-text">Habitación 1</p></router-link
+                  >
                   <span
                     class="badge custom-badge badge-pill"
                     style="background-color: #343a40; color: white"

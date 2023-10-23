@@ -16,7 +16,7 @@
       </div>
 
       <!-- Tabla de hoteles -->
-      <div class="table-responsive">
+      <div style="font-size: 12px;" class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>

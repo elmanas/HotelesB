@@ -32,18 +32,16 @@ import SaltoDelMico from "../src/components/InfoSTuristicos/SaltoDelMico.vue";
 
 
 
-// Zona de administrador
+// Formularios
 import RegitroHotel from "../src/components/Formularios/RegitroHotel.vue";
 import RegistroHabitaciones from "../src/components/Formularios/RegistroHabitaciones.vue";
 
-import VistaReservas from "../src/components/Formularios/VistaReservas.vue";
+import HacerReserva from "../src/components/Formularios/HacerReserva.vue";
 import RegistroSitio from "../src/components/Formularios/RegistroSitio.vue";
 import RegistroProveedores from "../src/components/Formularios/RegistroProveedores.vue";
 
-// Paneles Roles
+// Paneles Admin
 import PanelAdmin from "../src/components/Admin/PanelAdmin.vue";
-import PanelDueno from "../src/components/Admin/PanelDueno.vue";
-
 
 import PanelHoteles from "../src/components/Admin/AdminHoteles/PanelHoteles.vue";
 import PanelProveedores from "../src/components/Admin/AdminProveedores/PanelProveedores.vue";
@@ -51,11 +49,17 @@ import PanelSitios from "../src/components/Admin/AdminSitios/PanelSitios.vue";
 import PanelHabitaciones from "../src/components/Admin/AdminHabitaciones/PanelHabitaciones.vue";
 import PanelUsuarios from "../src/components/Admin/AdminUsuarios/PanelUsuarios.vue";
 
+// Paneles Dueño
+import PanelDueno from "../src/components/Dueno/PanelDueno.vue";
+
+import DPanelHotel from "../src/components/Dueno/DuneHotel/DPanelHotel.vue";
+import DPanelHabitaciones from "../src/components/Dueno/DuenoHabitaciones/DPanelHabitaciones.vue";
+import DPanelReservas from "../src/components/Dueno/DuenoReservas/DPanelReservas.vue";
 
 
 
 
-//definir rutas
+// Definir rutas
 const routes = [
   {
     path: "/", component: Home },
@@ -76,18 +80,15 @@ const routes = [
 
 
 
-  { path: "/VistaReservas", component: VistaReservas },
+  { path: "/HacerReserva", component: HacerReserva },
 
   { path: "/RegistroSitio", component: RegistroSitio },
 
   { path: "/RegistroProveedores", component: RegistroProveedores },
 
 
-// Paneles Roles
+// Paneles Admin
   { path: "/PanelAdmin", component: PanelAdmin},
-
-  { path: "/PanelDueno", component: PanelDueno},
-
 
 
   { path: "/PanelHoteles", component: PanelHoteles},
@@ -99,6 +100,19 @@ const routes = [
   { path: "/PanelHabitaciones", component: PanelHabitaciones},
 
   { path: "/PanelUsuarios", component: PanelUsuarios},
+
+
+// Paneles Dueño
+  { path: "/PanelDueno", component: PanelDueno},
+
+
+  { path: "/DPanelHotel", component: DPanelHotel},
+
+  { path: "/DPanelHabitaciones", component: DPanelHabitaciones},
+
+  { path: "/DPanelReservas", component: DPanelReservas},
+
+
 ];
 
 //objeto rutas - vue router

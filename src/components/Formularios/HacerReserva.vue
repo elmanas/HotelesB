@@ -3,21 +3,33 @@
     <div class="galeria">
       <div class="Hoteles"><h5>Reservar una habitación</h5></div>
       <!-- Start: Ludens - Create-Edit Form -->
-      <div
-        class="container"
-        style="margin-top: 20px; margin-bottom: 20px"
-      >
+      <div class="container" style="margin-top: 20px; margin-bottom: 20px">
         <form enctype="multipart/form-data" method="post">
           <div class="card shadow mb-3">
             <div class="card-header py-3">
               <p class="text-primary m-0 fw-bold">
-                <span style="color:  #b7642d"
+                <span style="color: #b7642d"
                   >Rellene los campos obligatorios *</span
                 >
               </p>
             </div>
             <div class="card-body">
               <div class="row">
+                <div class="col-sm-12 col-md-4 col-lg-4">
+                  <div class="mb-3">
+                    <label class="form-label" for="r_nombre"
+                      ><strong>Hotel *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="r_nombre"
+                      placeholder="Nombre del hotel"
+                      name="r_nombre"
+                      required=""
+                    />
+                  </div>
+                </div>
+
                 <div class="col-sm-12 col-md-4 col-lg-4">
                   <div class="mb-3">
                     <label class="form-label" for="r_nombre"
@@ -124,9 +136,7 @@
                     <label class="form-label"
                       ><strong>Saldo disponible:</strong></label
                     >
-                    <div class="saldo">
-                      $500.000
-                    </div>
+                    <div class="saldo">$100000</div>
                   </div>
                 </div>
 
@@ -151,7 +161,7 @@
               ><button
                 class="btn btn-custom btn"
                 type="submit"
-                style="background:  #b7642d; color: #fff"
+                style="background: #b7642d; color: #fff"
               >
                 <i class="bi bi-backpack2-fill"></i>
                 Reservar
@@ -184,7 +194,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right,  #b7642d, transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -192,7 +202,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color:  #b7642d;
+    background-color: #b7642d;
     align-items: left;
     border-radius: 10px;
   }

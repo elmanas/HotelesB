@@ -211,7 +211,7 @@
                 <div class="col-6">
                   <div class="mb-3">
                     <label class="form-label" for="h_servicios"
-                      ><strong>Aire acondicionado *</strong></label
+                      ><strong>Aire AC *</strong></label
                     >
                     <select
                       class="form-select"

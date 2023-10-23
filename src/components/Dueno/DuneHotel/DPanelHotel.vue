@@ -1,37 +1,27 @@
 <template>
   <div class="galeria">
-    <div class="Hoteles"><h5>Administrar proveedores</h5></div>
+    <div class="Hoteles"><h5>Admistrar mi hotel</h5></div>
     <div>
-      <!-- Botón para agregar nuevo proveedor -->
-      <div>
-        <div class="btn-group" role="group">
-          <router-link class="link" to="/RegistroProveedores">
-            <button
-              style="margin-bottom: 5px; margin-top: 30px; margin-right: 5px"
-              class="btns btn-dark"
-            >
-              <i class="material-icons">add_box</i>
-            </button></router-link
-          >
-        </div>
-      </div>
-
-      <!-- Tabla de proveedores -->
+      <!-- Tabla de hoteles -->
       <div style="font-size: 12px;" class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>
+              <th>Dirección</th>
               <th>Nombre</th>
+              <th>Rlegal</th>
               <th>Telefono</th>
-              <th>Sitio</th>
+              <th>Correo</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="proveedor in proveedores">
-              <td>{{ proveedor.alias }}</td>
-              <td>{{ proveedor.tel }}</td>
-              <td>{{ proveedor.sitio }}</td>
+            <tr v-for="photel in hoteles">
+              <td>{{ photel.direccion }}</td>
+              <td>{{ photel.nombre }}</td>
+              <td>{{ photel.rlagal }}</td>
+              <td>{{ photel.tel }}</td>
+              <td>{{ photel.correo }}</td>
               <td>
                 <div class="btn-container">
                   <!-- boton que abre el modal -->
@@ -39,17 +29,17 @@
                     type="button"
                     class="btns btn btn-dark"
                     data-bs-toggle="modal"
-                    data-bs-target="#editarp"
+                    data-bs-target="#editarDHotel"
                   >
                     <i class="material-icons">edit</i>
                   </button>
                   <!-- boton que abre el modal -->
 
-                  <!-- boton que debe eliminar el proveedor -->
+                  <!-- boton que debe elimina el hotel -->
                   <button type="button" class="btns btn btn-dark">
                     <i class="material-icons">delete</i>
                   </button>
-                  <!-- boton que debe eliminar el proveedor -->
+                  <!-- boton que debe elimina el hotel -->
                 </div>
               </td>
             </tr>
@@ -60,7 +50,7 @@
       <!-- espacio para el modal -->
       <div
         class="modal fade modal-small"
-        id="editarp"
+        id="editarDHotel"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -69,7 +59,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Editar proveedor
+                Editar hotel
               </h1>
               <button
                 type="button"
@@ -108,13 +98,27 @@
               <div class="row">
                 <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="nombre_proveedor"
+                    <label class="form-label" for="direccion_hotel"
+                      ><strong>Dirección *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="direccion_hotel"
+                      name="direccion_hotel"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="nombre_hotel"
                       ><strong>Nombre *</strong></label
                     ><input
                       class="form-control"
                       type="text"
-                      id="nombre_proveedor"
-                      name="nombre_proveedor"
+                      id="nombre_hotel"
+                      name="nombre_hotel"
                       required=""
                     />
                   </div>
@@ -122,13 +126,27 @@
 
                 <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="telefono_proveedor"
+                    <label class="form-label" for="r_legal"
+                      ><strong>Representante legal *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="r_legal"
+                      name="r_legal"
+                      required=""
+                    />
+                  </div>
+                </div>
+
+                <div class="col-15">
+                  <div class="mb-3">
+                    <label class="form-label" for="tel_hotel"
                       ><strong>Telefono *</strong></label
                     ><input
                       class="form-control"
                       type="number"
-                      id="telefono_proveedor"
-                      name="telefono_proveedor"
+                      id="tel_hotel"
+                      name="tel_hotel"
                       required=""
                     />
                   </div>
@@ -136,13 +154,13 @@
 
                 <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="sitio_asignado"
-                      ><strong>Sitio *</strong></label
+                    <label class="form-label" for="correo_hotel"
+                      ><strong>Correo *</strong></label
                     ><input
                       class="form-control"
                       type="text"
-                      id="sitio_asignado"
-                      name="sitio_asignado"
+                      id="correo_hotel"
+                      name="correo_hotel"
                       required=""
                     />
                   </div>
@@ -178,21 +196,13 @@
 export default {
   data() {
     return {
-      proveedores: [
+      hoteles: [
         {
-          alias: "HCulona Barichara",
+          direccion: "Carrera 2A #6-12",
+          nombre: "Bella Vista",
+          rlagal: "Juan Romero",
           tel: "3222431440",
-          sitio: "Salto del mico",
-        },
-        {
-          alias: "SUXpress Barichara  ",
-          tel: "3222431440",
-          sitio: "Salto del mico",
-        },
-        {
-          alias: "Recorridos BCarlos",
-          tel: "3222431440",
-          sitio: "Salto del mico",
+          correo: "juanr@gmail.com",
         },
       ],
     };
@@ -251,6 +261,9 @@ export default {
   border-color: #b7642d5b;
 }
 
+.link {
+  text-decoration: none !important;
+}
 .btn-container {
   display: flex;
   justify-content: center;

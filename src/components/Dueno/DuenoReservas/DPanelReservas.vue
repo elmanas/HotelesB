@@ -1,11 +1,13 @@
 <template>
   <div class="galeria">
-    <div class="Hoteles"><h5>Administrar habitaciones</h5></div>
+    <div class="Hoteles">
+      <h5>Administra las reservas de tus habitaciones</h5>
+    </div>
     <div>
       <!-- Botón para agregar nueva habitación -->
       <div>
         <div class="btn-group" role="group">
-          <router-link class="link" to="/RegistroHabitaciones">
+          <router-link class="link" to="/HacerReserva">
             <button
               style="margin-bottom: 5px; margin-top: 30px"
               class="btns btn btn-dark"
@@ -18,12 +20,17 @@
       </div>
 
       <!-- Tabla de habitaciones -->
-      <div style="font-size: 12px;" class="table-responsive">
+      <div style="font-size: 12px" class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>
               <th>Alias</th>
               <th>Estado</th>
+
+              <th>Persona</th>
+              <th>Correo</th>
+              <th>Número</th>
+
               <th>Precio</th>
               <th>Acciones</th>
             </tr>
@@ -58,19 +65,27 @@
                   </button>
                 </div>
               </td>
+
+              <td>{{ room.persona }}</td>
+
+              <td>{{ room.correo }}</td>
+
+              <td>{{ room.numeroTel }}</td>
+
               <td>{{ Number(room.precio) }}</td>
               <td>
                 <div class="btn-container">
                   <button
+                    style="max-height: 30px"
                     type="button"
                     class="btns btn btn-dark"
                     data-bs-toggle="modal"
-                    data-bs-target="#editarp"
+                    data-bs-target="#editarDHabitaciones"
                   >
                     <i class="material-icons">edit</i>
                   </button>
 
-                  <button class="btns btn btn-dark">
+                  <button style="max-height: 30px" class="btns btn btn-dark">
                     <i class="material-icons">delete</i>
                   </button>
 
@@ -97,7 +112,7 @@
       <!-- espacio para el modal -->
       <div
         class="modal fade modal-small"
-        id="editarp"
+        id="editarDHabitaciones"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -357,7 +372,6 @@
                       type="number"
                       id="precio_habitacion"
                       name="precio_habitacion"
-                      placeholder="$"
                       required=""
                     />
                   </div>
@@ -410,6 +424,9 @@ export default {
       rooms: [
         {
           alias: "Habitación 1",
+          persona: "Dilan",
+          correo: "dilandrog@gmail.com",
+          numeroTel: "3222432430",
           precio: 50000,
         },
       ],

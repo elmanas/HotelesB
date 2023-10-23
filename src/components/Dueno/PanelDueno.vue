@@ -6,9 +6,9 @@
       <div class="contenedor">
         <center>
           <div class="contenedor-conciertos">
-            <router-link class="lg4" to="/" title="APanelHotel">
+            <router-link class="lg4" to="/DPanelHotel" title="DPanelHotel">
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="APanelHotel">
+                <div class="textos" title="DPanelHotel">
                   <center><h6>Mi Hotel</h6></center>
 
                   <i class="material-icons">settings</i>
@@ -16,12 +16,30 @@
               </div>
             </router-link>
 
-            <router-link class="lg4" to="/" title="APanelHabitaciones">
+            <router-link
+              class="lg4"
+              to="/DPanelHabitaciones"
+              title="DPanelHabitaciones"
+            >
               <div class="card" style="background-color: #ffffff">
-                <div class="textos" title="APanelHabitaciones">
+                <div class="textos" title="DPanelHabitaciones">
                   <center><h6>Mis Habitaciones</h6></center>
 
                   <i class="material-icons">holiday_village</i>
+                </div>
+              </div>
+            </router-link>
+
+            <router-link
+              class="lg4"
+              to="/DPanelReservas"
+              title="DPanelReservas"
+            >
+              <div class="card" style="background-color: #ffffff">
+                <div class="textos" title="DPanelReservas">
+                  <center><h6>Mis Reservadas</h6></center>
+
+                  <i class="material-icons">checklist</i>
                 </div>
               </div>
             </router-link>
@@ -47,7 +65,7 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right,  #b7642d, transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -55,7 +73,7 @@ h5 {
 
 @media screen and (max-width: 500px) {
   .Hoteles {
-    background-color:  #b7642d;
+    background-color: #b7642d;
     align-items: left;
     border-radius: 10px;
   }
@@ -110,7 +128,7 @@ h5 {
   background-size: cover;
   background-position: center center;
 
-  border-color:  #b7642d5b;
+  border-color: #b7642d5b;
   border-width: 5px;
   border-style: solid;
 
