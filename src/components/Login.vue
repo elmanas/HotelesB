@@ -32,7 +32,7 @@
                     class="form-control"
                     type="email"
                     name="email"
-                    placeholder="Email"
+                    placeholder="Correo"
                     required
                   />
                 </div>
@@ -55,9 +55,9 @@
                     Iniciar Sesión
                   </button>
                 </div>
-                <router-link class="link" to="/Registro">
+                <!-- <router-link class="link" to="/Registro">
                 <p class="text-muted">¿No esta registrado? Regístrese&nbsp;</p>
-              </router-link>
+              </router-link> -->
               </form>
             </div>
           </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="galeria">
     <div class="Hoteles">
-      <h5>Administra las reservas de tus habitaciones</h5>
+      <h5>Administra las reservas</h5>
     </div>
     <div>
       <!-- Botón para agregar nueva habitación -->
@@ -121,7 +121,7 @@
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Editar habitación
+                Editar reserva
               </h1>
               <button
                 type="button"
@@ -131,34 +131,8 @@
               ></button>
             </div>
             <div class="modal-body">
-              <div class="col-15">
-                <div class="mb-3">
-                  <strong>Imágenes *</strong>
-                  <p>{{ imagesSelected }} imágenes seleccionadas (Máximo 4)</p>
-                  <div style="margin-top: -15px" class="logo">
-                    <p class="logop">
-                      <i
-                        style="color: #b7642d; font-size: 30px"
-                        class="bi bi-file-earmark-arrow-up-fill"
-                      ></i>
-                    </p>
-                    <br />
-                    <input
-                      class="foto"
-                      style="margin-top: 13px"
-                      :required="imagesSelected !== 4"
-                      type="file"
-                      ref="fileInput"
-                      accept="image/*"
-                      multiple
-                      @change="handleFileUpload"
-                    />
-                  </div>
-                </div>
-              </div>
-
               <div class="row">
-                <div class="col-6">
+                <div class="col-15">
                   <div class="mb-3">
                     <label class="form-label" for="alias_habitacion"
                       ><strong>Alias *</strong></label
@@ -171,199 +145,49 @@
                     />
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="direccion_habitacion"
-                      ><strong>Dirección *</strong></label
+                    <label class="form-label" for="nombre_reservante"
+                      ><strong>Persona *</strong></label
                     ><input
                       class="form-control"
                       type="text"
-                      id="direccion_habitacion"
-                      name="direccion_habitacion"
+                      id="nombre_reservante"
+                      name="nombre_reservante"
                       required=""
                     />
                   </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="capacidad_maxima"
-                      ><strong>Capacidad max *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="capacidad_maxima"
-                      name="capacidad_maxima"
+                    <label class="form-label" for="correo_reservante"
+                      ><strong>Correo *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="correo_reservante"
+                      name="correo_reservante"
                       required=""
-                    >
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                      <option value="6">6</option>
-                      <option value="7">7</option>
-                      <option value="8">8</option>
-                      <option value="9">9</option>
-                      <option value="10">10</option>
-                    </select>
+                    />
                   </div>
                 </div>
 
-                <div class="col-6">
+                <div class="col-15">
                   <div class="mb-3">
-                    <label class="form-label" for="c_dobles"
-                      ><strong>Camas dobles *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="c_dobles"
-                      name="c_dobles"
+                    <label class="form-label" for="nro_reservante"
+                      ><strong>Número *</strong></label
+                    ><input
+                      class="form-control"
+                      type="text"
+                      id="nro_reservante"
+                      name="nro_reservante"
                       required=""
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
+                    />
                   </div>
                 </div>
 
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="c_sencillas"
-                      ><strong>Camas sencillas *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="c_sencillas"
-                      name="c_sencillas"
-                      required=""
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_camarotes"
-                      ><strong>Camarotes *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_camarotes"
-                      name="h_camarotes"
-                      required=""
-                    >
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_ventiladores"
-                      ><strong>Ventiladores *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_ventiladores"
-                      name="h_ventiladores"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_closet"
-                      ><strong>Closet *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="h_closet"
-                      name="h_closet"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="bano"
-                      ><strong>Baño *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="bano"
-                      name="bano"
-                      required=""
-                    >
-                      <option value="Privado">Privado</option>
-                      <option value="Compartido">Compartido</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>Wi-Fi *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="wifi"
-                      name="wifi"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>TV *</strong></label
-                    >
-                    <select class="form-select" id="tv" name="tv" required="">
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
-                  <div class="mb-3">
-                    <label class="form-label" for="h_servicios"
-                      ><strong>Aire acondicionado *</strong></label
-                    >
-                    <select
-                      class="form-select"
-                      id="aire"
-                      name="aire"
-                      required=""
-                    >
-                      <option value="S">Si</option>
-                      <option value="N">No</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="col-6">
+                <div class="col-15">
                   <div class="mb-3">
                     <label class="form-label" for="precio_habitacion"
                       ><strong>Precio *</strong></label
@@ -375,20 +199,6 @@
                       required=""
                     />
                   </div>
-                </div>
-
-                <!-- Descripción del hotel -->
-                <div style="margin-bottom: 15px" class="col-6">
-                  <label class="form-label" for="des_habitacion"
-                    ><strong>Descripción *</strong></label
-                  >
-                  <textarea
-                    class="form-control"
-                    id="des_habitacion"
-                    name="des_habitacion"
-                    rows="1"
-                    required=""
-                  ></textarea>
                 </div>
               </div>
             </div>
@@ -444,7 +254,10 @@ export default {
 }
 
 .modal-small .modal-dialog {
-  transform: translateY(0%); /* Alinea verticalmente el modal */
+  max-width: 300px; /* Establece el ancho deseado */
+  margin: 0 auto; /* Centra horizontalmente el modal */
+  top: 50%; /* Coloca el modal en el centro vertical */
+  transform: translateY(-50%); /* Alinea verticalmente el modal */
 }
 
 .logo {

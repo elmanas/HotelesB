@@ -110,7 +110,7 @@ export default {
             </ul>
           </div>
 
-          <div class="dropdown">
+          <div style="margin-bottom: 15px;" class="dropdown">
             <li class="nav-item" data-bs-toggle="dropdown">
               <a class="nav-link dropdown-toggle"
                 ><i style="color: black" class="bi bi-ui-checks-grid"></i>
@@ -139,25 +139,29 @@ export default {
           </div>
         </ul>
 
-
         <router-link class="link" to="/Login">
-          <button style="margin-right: 10px; border-radius: 50px; background-color: #b7642d; border-style: none;" class="btn btn-primary">
+          <button
+            style="
+              margin-right: 10px;
+              border-radius: 50px;
+              background-color: #b7642d;
+              border-style: none;
+            "
+            class="btn btn-primary"
+          >
             <i class="bi bi-box-arrow-in-right"></i>
             Entrar
           </button>
         </router-link>
 
-        <router-link class="link" to="/Registro">
-          <button style="border-radius: 50px;" class="btn btn-dark">
+        <!-- <router-link class="link" to="/Registro">
+          <button style="border-radius: 50px" class="btn btn-dark">
             <i class="bi bi-person-plus-fill"></i>
             Registro
           </button>
-        </router-link>
-
-
+        </router-link> -->
       </div>
     </div>
-
 
     <!-- Modal que hace de carrito de compras -->
     <div class="modal fade modal-small" id="carrito" tabindex="-1">
