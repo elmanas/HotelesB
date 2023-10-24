@@ -3,7 +3,7 @@
     <div class="Hoteles"><h5>Admistrar mi hotel</h5></div>
     <div>
       <!-- Tabla de hoteles -->
-      <div style="font-size: 12px;" class="table-responsive">
+      <div style="font-size: 12px" class="table-responsive">
         <table class="table table-bordered">
           <thead style="align-items: center; text-align: center">
             <tr>

@@ -124,10 +124,6 @@
   <!-- Inicio de scroll de hoteles y sitios -->
   <main>
     <div class="galeria">
-      <div class="imagen-principal">
-        <!-- <img src="Img/1.png" alt="imagen-principal" /> -->
-      </div>
-
       <div class="Hoteles"><h5>Hoteles</h5></div>
       <button
         type="button"
@@ -224,8 +220,6 @@
       </div>
     </div>
   </main>
-
-  <!-- <router-link to="/GaleriaHotel1"><button>GaleriaHotel1</button></router-link> -->
 </template>
 
 <script>
@@ -250,7 +244,6 @@ export default {
 }
 
 .btn.btn-custom {
-  /* Otros estilos de tu icono */
   transition: transform 0.3s; /* Transición de transformación */
 }
 
@@ -277,7 +270,7 @@ export default {
 .text-hotel {
   margin-right: 10px;
   text-align: center;
-  background-color:  #b7642d ;
+  background-color: #b7642d;
   color: #fff;
   border-radius: 0 0 10px 10px; /* Redondear solo las esquinas superiores */
 }
@@ -288,37 +281,21 @@ export default {
 }
 
 .lista-imagenes::-webkit-scrollbar-thumb {
-  background-color:  #b7642d ;
+  background-color: #b7642d;
   border-radius: 20px;
 }
 
 /* Estilos para botones de scroll */
 .btn.btn-custom {
-  background-color:  #b7642d 00;
+  background-color: #b7642d 00;
   color: #fff;
 }
-
-/* Estilos para hoteles y sitios home */
-
-/* .lista-imagenes {
-  display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden; 
-  margin-top: 10px;
-} */
 
 .galeria {
   padding: 16px;
   margin-top: 8px;
   transform: 1s;
 }
-
-/* 
-    .imagen-principal img {
-      width: 100%;
-      object-fit: cover;
-      display: block;
-    } */
 
 .lista-imagenes img {
   width: 100%;
@@ -343,14 +320,14 @@ h5 {
 }
 
 .Hoteles {
-  background: linear-gradient(to right,  #b7642d , transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
 }
 
 .Sitios {
-  background: linear-gradient(to right,  #b7642d , transparent);
+  background: linear-gradient(to right, #b7642d, transparent);
   align-items: center;
   border-radius: 10px;
   transition: 1s;
@@ -412,13 +389,13 @@ h5 {
   }
 
   .Sitios {
-    background:  #b7642d ;
+    background: #b7642d;
     align-items: center;
     border-radius: 10px;
   }
 
   .Hoteles {
-    background-color:  #b7642d ;
+    background-color: #b7642d;
     align-items: left;
     border-radius: 10px;
   }

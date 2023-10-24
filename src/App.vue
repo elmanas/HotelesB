@@ -110,7 +110,7 @@ export default {
             </ul>
           </div>
 
-          <div style="margin-bottom: 15px;" class="dropdown">
+          <div style="margin-bottom: 15px" class="dropdown">
             <li class="nav-item" data-bs-toggle="dropdown">
               <a class="nav-link dropdown-toggle"
                 ><i style="color: black" class="bi bi-ui-checks-grid"></i>
@@ -278,9 +278,9 @@ export default {
 
 <style scoped>
 .limit-text {
-  max-width: 90px; /* Define el ancho máximo deseado */
+  max-width: 90px; /* Define el ancho máximo */
   word-wrap: break-word; /* Permite saltos de línea en palabras largas */
-  line-height: 1.2; /* Ajusta el espaciado entre líneas (puedes ajustar este valor según tus preferencias) */
+  line-height: 1.2; /* Ajusta el espaciado entre líneas */
 }
 
 /* Estilo para el modal más pequeño */

@@ -52,7 +52,7 @@
                     class="btn btn-primary d-block w-100"
                     style="background:  #b7642d; border-style: none;"
                   >
-                    Iniciar Sesión
+                    Entrar
                   </button>
                 </div>
                 <!-- <router-link class="link" to="/Registro">

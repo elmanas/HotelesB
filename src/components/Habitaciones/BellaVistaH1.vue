@@ -196,18 +196,6 @@ h5 {
   transition: 1s;
 }
 
-/* CSS para dispositivos con un ancho mínimo de 800px */
-@media (min-width: 800px) {
-  .pro-container {
-    display: flex; /* Utilizamos flexbox para los elementos hijos */
-    gap: 20px;
-  }
-  .pro {
-    flex: 1; /* Los elementos ocuparán el mismo espacio en el contenedor */
-    margin-bottom: 20px;
-  }
-}
-
 @media screen and (max-width: 500px) {
   .Hoteles {
     background-color: #b7642d;
@@ -252,21 +240,6 @@ body {
   font-family: sans-serif;
 }
 
-/* .galeria{
-          font-family:'open sans';
-      } */
-
-/* .galeria h1{
-          text-align: center;
-          margin: 20px 0 15px 0;
-          font-weight: 300px;
-      } */
-
-/* .linea{
-          border-top: 5px solid #dc7633;
-          margin-bottom: 40px;
-      } */
-
 .contenedor-imagenes {
   display: flex;
   width: 100%;
@@ -291,73 +264,6 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: #b7642d72;
-  width: 100%;
-  height: 0%;
-  transition: 0.5s ease;
-  overflow: hidden;
-}
-
-.overlay button {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 92%;
-  right: -10px;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.round-btn {
-  border-radius: 50%; /* Hace que el botón sea redondo */
-  width: 30px; /* Define el ancho del botón */
-  height: 30px; /* Define la altura del botón */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px; /* Tamaño del icono */
-  background-color: #b7642d72;
-  border-style: none;
-}
-
-.overlay h2 {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-.overlay h3 {
-  color: #fff;
-  font-weight: 30;
-  font-size: 20px;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%);
-}
-
-/* .overlay h4 {
-        color: #fff;
-        font-weight: 30;
-        font-size: 20px;
-        position: absolute;
-        top: 5%;
-        left: 50%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-      } */
 
 .imagen:hover .overlay {
   height: 100%;
@@ -413,11 +319,6 @@ body {
   .contenedor-imagenes .imagen {
     /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
     width: calc(25% - 10px); /* Dividir en filas de 2 con espaciado */
-  }
-
-  .overlay {
-    height: 100%;
-    background-color: #dc773300;
   }
 }
 

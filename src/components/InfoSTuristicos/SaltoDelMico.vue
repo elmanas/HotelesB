@@ -91,12 +91,6 @@
         </div>
       </div>
     </div>
-
-    <!-- ----------- -->
-
-    <!-- Contenedor proveedores -->
-
-    <!-- ----------- -->
   </div>
 </template>
 

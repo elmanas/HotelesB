@@ -464,11 +464,6 @@ h5 {
     flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
     max-width: 25%;
   }
-
-  .col-lg-2 {
-    flex: 0 0 20%; /* Establece un ancho del 25% para cada columna en pantallas de 1000px o más */
-    max-width: 25%;
-  }
 }
 
 @media screen and (max-width: 500px) {
@@ -481,62 +476,6 @@ h5 {
   .d-flex {
     display: flex;
     flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
-  }
-}
-
-@media screen and (min-width: 600px) {
-  .contenedor-imagenes {
-    width: 90%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 48%;
-  }
-
-  .contenedor-imagenes .imagen {
-    width: calc(25% - 10px);
-    /* width: calc(50% - 10px); Dividir en filas de 2 con espaciado */
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .contenedor-imagenes {
-    width: 100%;
-  }
-  .contenedor-imagenes .imagen {
-    width: 80%;
-  }
-
-  .contenedor-imagenes .imagen {
-    /* width: calc(33.333% - 10px); Dividir en filas de 3 con espaciado */
-    width: calc(50% - 10px); /* Dividir en filas de 2 con espaciado */
   }
 }
 </style>
